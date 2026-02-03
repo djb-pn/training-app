@@ -5,4 +5,9 @@ compatibility_date = "2024-01-01"
 [[d1_databases]]
 binding = "DB" 
 database_name = "training-db"
-database_id = "PASTE_YOUR_D1_DATABASE_ID_FROM_CLOUDFLARE_DASHBOARD"
+database_id = "9d097bad-96f9-42cc-ad7c-f1c2dad59f7e"
+
+[observability]
+[observability.logs]
+enabled = false
+invocation_logs = true
