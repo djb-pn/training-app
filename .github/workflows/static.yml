@@ -25,12 +25,12 @@ jobs:
         run: |
           cd frontend
           npm install
+          # Vite will now use the base path we set above
           npm run build
       
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
         with:
-          # This tells GitHub exactly where the final files are
           path: "./frontend/dist"
 
   deploy:
