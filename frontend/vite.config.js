@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  // Use the name of your GitHub repository here
-  base: '/training-app/', 
+  // Changing to './' allows the app to load from any directory or domain
+  base: './', 
 })
