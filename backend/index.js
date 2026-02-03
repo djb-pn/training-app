@@ -15,7 +15,7 @@ export default {
       const token = crypto.randomUUID();
       const expires = new Date(Date.now() + 15 * 60000).toISOString(); // 15 mins
 
-      await env.training-db.prepare("INSERT INTO auth_tokens (token, email, expires_at) VALUES (?, ?, ?)")
+      await env.DB.prepare("INSERT INTO auth_tokens (token, email, expires_at) VALUES (?, ?, ?)")
         .bind(token, email, expires).run();
 
       const magicLink = `https://training.picksgallery.com/login?token=${token}`;
@@ -23,7 +23,7 @@ export default {
       // Send via Resend
       await fetch("https://api.resend.com/emails", {
         method: "POST",
-        headers: { "Authorization": `Bearer ${env.re_emeaZVgU_GkW4x5RcXx4NAXuM5A6RtxrV}`, "Content-Type": "application/json" },
+        headers: { "Authorization": `Bearer ${env.RESEND_API_KEY}`, "Content-Type": "application/json" },
         body: JSON.stringify({
           from: "Picks Gallery Auth <no-reply@auth.picksgallery.com>",
           to: email,
@@ -41,7 +41,7 @@ export default {
 
       await fetch("https://api.resend.com/emails", {
         method: "POST",
-        headers: { "Authorization": `Bearer ${env.re_emeaZVgU_GkW4x5RcXx4NAXuM5A6RtxrV}`, "Content-Type": "application/json" },
+        headers: { "Authorization": `Bearer ${env.RESEND_API_KEY}`, "Content-Type": "application/json" },
         body: JSON.stringify({
           from: "Training Monitor <flags@auth.picksgallery.com>",
           to: "darin@picksgallery.com",
