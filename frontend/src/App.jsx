@@ -2,48 +2,46 @@ import React, { useState } from 'react';
 import { AppConfig, HDS_Modules } from './AppConfiguration';
 import { HearthDesignSpecialistQuestions } from './data/HDS_Sales_Questions';
 import QuestionEngine from './components/QuestionEngine';
-import './App.css';
 
 function App() {
+  // These variables remember where the user is in the app
   const [path, setPath] = useState(null); 
   const [section, setSection] = useState(null); 
   const [module, setModule] = useState(null); 
 
+  // Function to jump back to the very beginning
   const resetAll = () => { 
     setPath(null); 
     setSection(null); 
     setModule(null); 
   };
 
-  // 1. Initial Path Selection Screen (Replaces old Dashboard)
+  // STEP 1: Main Menu (Nurse Practitioner vs Hearth Specialists)
   if (!path) {
     return (
-      <div className="container">
-        <header className="app-header">
-          <h1>Training App v2.0</h1>
-          <p>Select your certification path to begin</p>
-        </header>
-        <div className="grid">
+      <div className="app-container">
+        <h1>Training App v2.0</h1>
+        <div className="path-selection">
           {AppConfig.study_areas.map(area => (
-            <button key={area.id} className="path-card" onClick={() => setPath(area)}>
+            <div key={area.id} className="selection-card" onClick={() => setPath(area)}>
               <span className="icon">{area.icon}</span>
               <h2>{area.title}</h2>
-            </button>
+            </div>
           ))}
         </div>
       </div>
     );
   }
 
-  // 2. Certification Track Selection (Core vs Sales vs Gas vs Wood)
+  // STEP 2: Sub-Menu (e.g., Choosing between Sales, Gas, or Wood)
   if (!section) {
     return (
-      <div className="container">
-        <button className="back-btn" onClick={resetAll}>← Main Menu</button>
+      <div className="app-container">
+        <button onClick={resetAll}>← Main Menu</button>
         <h1>{path.title}</h1>
-        <div className="list">
+        <div className="section-list">
           {path.sections.map(s => (
-            <button key={s.id} className="menu-item" onClick={() => setSection(s)}>
+            <button key={s.id} onClick={() => setSection(s)}>
               {s.title}
             </button>
           ))}
@@ -52,15 +50,15 @@ function App() {
     );
   }
 
-  // 3. Module Selection (HDS Sales Specific)
+  // STEP 3: Sales Modules (Specific to Hearth Design Specialist)
   if (section.id === "SALES" && !module) {
     return (
-      <div className="container">
-        <button className="back-btn" onClick={() => setSection(null)}>← Back to Tracks</button>
+      <div className="app-container">
+        <button onClick={() => setSection(null)}>← Back</button>
         <h1>{section.title}</h1>
-        <div className="list">
+        <div className="module-list">
           {HDS_Modules.map(m => (
-            <button key={m.id} className="menu-item" onClick={() => setModule(m)}>
+            <button key={m.id} onClick={() => setModule(m)}>
               {m.title}
             </button>
           ))}
@@ -69,35 +67,32 @@ function App() {
     );
   }
 
-  // 4. "Coming Soon" Safety Gate for empty tracks
+  // STEP 4: Coming Soon (Safety gate for empty sections like Wood/Gas/Nurse Weeks)
   if (!module && section.id !== "SALES") {
     return (
-      <div className="container">
-        <button className="back-btn" onClick={() => setSection(null)}>← Back</button>
+      <div className="app-container">
+        <button onClick={() => setSection(null)}>← Back</button>
         <h2>{section.title}</h2>
-        <div className="placeholder-box">
-          <p>The manual for {section.title} is currently being processed.</p>
+        <div className="coming-soon-message">
+          <p>This training module is currently being finalized.</p>
         </div>
       </div>
     );
   }
 
-  // 5. Quiz Logic Execution
+  // STEP 5: The Quiz (Loads the 70 questions we've mapped)
   const moduleQuestions = HearthDesignSpecialistQuestions[module?.title];
 
   return (
-    <div className="container">
-      <div className="quiz-header">
-        <button className="back-btn" onClick={() => setModule(null)}>← Change Module</button>
-        <h2>{module.title}</h2>
-      </div>
+    <div className="app-container">
+      <button onClick={() => setModule(null)}>← Back to Modules</button>
       {moduleQuestions ? (
         <QuestionEngine 
           moduleData={moduleQuestions} 
           title={module.title}
         />
       ) : (
-        <p>Data synchronization error: Questions not found for this module.</p>
+        <p>Questions for this specific selection are coming soon.</p>
       )}
     </div>
   );
