@@ -12,3 +12,20 @@
 .icon { font-size: 3rem; display: block; margin-bottom: 10px; }
 .list { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
 .list button { padding: 15px; font-size: 1.1rem; }
+.back-btn {
+  margin-bottom: 20px;
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.coming-soon {
+  padding: 40px;
+  background: #f8f9fa;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  color: #666;
+}
