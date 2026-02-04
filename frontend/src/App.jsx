@@ -9,36 +9,42 @@ function App() {
   const [view, setView] = useState({ path: null, section: null, module: null });
   const [authStatus, setAuthStatus] = useState('idle');
 
-  const COLORS = { maroon: '#670000', gray: '#595959', white: '#ffffff' };
+  const BRAND = { maroon: '#670000', gray: '#595959', white: '#ffffff' };
 
   useEffect(() => {
     const saved = localStorage.getItem('picks_session');
     if (saved) setUser(JSON.parse(saved));
   }, []);
 
-  const requestMagicLink = (e) => {
+  const handleLogin = (e) => {
     e.preventDefault();
     setAuthStatus('sending');
-    // Handshake logic to be wired to your Resend backend later
+    // Simulated Resend Handshake (Later wire to actual API)
     setTimeout(() => {
       setAuthStatus('sent');
-      // For immediate entry during your local testing:
-      // setUser({ email, stats: {}, progress: {} }); 
+      // For immediate bypass during testing: 
+      // setUser({ email, stats: {} }); 
     }, 1200);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem('picks_session');
+    setUser(null);
+    setView({ path: null, section: null, module: null });
   };
 
   if (!user) {
     return (
-      <div className="auth-bg" style={{ background: '#f4f4f4', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <div className="auth-card" style={{ background: COLORS.white, padding: '40px', borderRadius: '12px', textAlign: 'center', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
-          <h1 style={{ color: COLORS.maroon, margin: '0 0 20px 0' }}>Training App v2.0</h1>
+      <div style={{ background: '#f4f4f4', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <div style={{ background: BRAND.white, padding: '40px', borderRadius: '12px', textAlign: 'center', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', width: '380px' }}>
+          <h1 style={{ color: BRAND.maroon, marginBottom: '20px' }}>Training App v2.0</h1>
           {authStatus === 'sent' ? (
-            <p>Check your email for your secure login link!</p>
+            <p style={{ color: BRAND.gray }}>Check your email for your secure login link!</p>
           ) : (
-            <form onSubmit={requestMagicLink}>
-              <p style={{ color: COLORS.gray }}>Enter your email to access study paths.</p>
+            <form onSubmit={handleLogin}>
+              <p style={{ color: BRAND.gray }}>Enter email for MagicLink access.</p>
               <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="email@example.com" required style={{ width: '100%', padding: '12px', marginBottom: '20px', borderRadius: '6px', border: '1px solid #ddd' }} />
-              <button type="submit" style={{ width: '100%', padding: '12px', background: COLORS.maroon, color: COLORS.white, border: 'none', borderRadius: '6px', cursor: 'pointer', fontWeight: 'bold' }}>
+              <button type="submit" style={{ width: '100%', padding: '12px', background: BRAND.maroon, color: BRAND.white, border: 'none', borderRadius: '6px', cursor: 'pointer', fontWeight: 'bold' }}>
                 {authStatus === 'sending' ? 'Sending...' : 'Send MagicLink'}
               </button>
             </form>
@@ -50,17 +56,17 @@ function App() {
 
   if (!view.path) {
     return (
-      <div className="dashboard-container" style={{ maxWidth: '1000px', margin: '0 auto', padding: '40px 20px' }}>
-        <header style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '40px' }}>
-          <h1 style={{ color: COLORS.maroon, margin: 0 }}>Dashboard</h1>
-          <button onClick={() => { localStorage.removeItem('picks_session'); setUser(null); }} style={{ background: 'none', border: 'none', color: COLORS.gray, textDecoration: 'underline', cursor: 'pointer' }}>Logout</button>
+      <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '40px 20px' }}>
+        <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '40px' }}>
+          <h1 style={{ color: BRAND.maroon, margin: 0 }}>Dashboard</h1>
+          <button onClick={handleLogout} style={{ background: 'none', border: 'none', color: BRAND.gray, textDecoration: 'underline', cursor: 'pointer' }}>Logout</button>
         </header>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
           {AppConfig.study_areas.map(area => (
-            <div key={area.id} className="picks-card" onClick={() => setView({...view, path: area})} style={{ background: COLORS.white, borderRadius: '8px', padding: '30px', position: 'relative', overflow: 'hidden', boxShadow: '0 4px 10px rgba(0,0,0,0.05)', cursor: 'pointer', borderLeft: `6px solid ${COLORS.maroon}` }}>
-              <span style={{ fontSize: '2rem' }}>{area.icon}</span>
-              <h2 style={{ color: COLORS.gray }}>{area.title}</h2>
-              <button style={{ background: COLORS.maroon, color: COLORS.white, border: 'none', padding: '10px 20px', borderRadius: '4px', fontWeight: 'bold', textTransform: 'uppercase', cursor: 'pointer' }}>Explore Track</button>
+            <div key={area.id} onClick={() => setView({...view, path: area})} style={{ background: BRAND.white, borderRadius: '8px', padding: '35px', position: 'relative', overflow: 'hidden', boxShadow: '0 4px 10px rgba(0,0,0,0.05)', cursor: 'pointer', borderLeft: `6px solid ${BRAND.maroon}` }}>
+              <span style={{ fontSize: '2.5rem' }}>{area.icon}</span>
+              <h2 style={{ color: BRAND.gray, margin: '15px 0' }}>{area.title}</h2>
+              <button style={{ background: BRAND.maroon, color: BRAND.white, border: 'none', padding: '12px 24px', borderRadius: '4px', fontWeight: 'bold', textTransform: 'uppercase', cursor: 'pointer' }}>Explore Track</button>
             </div>
           ))}
         </div>
@@ -71,13 +77,13 @@ function App() {
   if (!view.module) {
     const items = !view.section ? view.path.sections : HDS_Modules;
     return (
-      <div className="dashboard-container" style={{ maxWidth: '800px', margin: '0 auto', padding: '40px 20px' }}>
-        <button onClick={() => view.section ? setView({...view, section: null}) : setView({...view, path: null})} style={{ marginBottom: '20px', color: COLORS.maroon, background: 'none', border: 'none', fontWeight: 'bold', cursor: 'pointer' }}>← Back</button>
-        <h1 style={{ color: COLORS.gray }}>{!view.section ? view.path.title : view.section.title}</h1>
+      <div style={{ maxWidth: '800px', margin: '0 auto', padding: '40px 20px' }}>
+        <button onClick={() => view.section ? setView({...view, section: null}) : setView({...view, path: null})} style={{ marginBottom: '20px', color: BRAND.maroon, background: 'none', border: 'none', fontWeight: 'bold', cursor: 'pointer' }}>← Back</button>
+        <h1 style={{ color: BRAND.gray }}>{!view.section ? view.path.title : view.section.title}</h1>
         {items.map(item => (
-          <div key={item.id} onClick={() => !view.section ? setView({...view, section: item}) : setView({...view, module: item})} style={{ background: COLORS.white, padding: '20px', marginBottom: '15px', borderRadius: '8px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', boxShadow: '0 2px 5px rgba(0,0,0,0.05)', cursor: 'pointer', borderLeft: `4px solid ${COLORS.maroon}` }}>
-            <h3 style={{ margin: 0, color: COLORS.gray }}>{item.title}</h3>
-            <span style={{ color: COLORS.maroon, fontWeight: 'bold' }}>GO →</span>
+          <div key={item.id} onClick={() => !view.section ? setView({...view, section: item}) : setView({...view, module: item})} style={{ background: BRAND.white, padding: '25px', marginBottom: '15px', borderRadius: '8px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', boxShadow: '0 2px 5px rgba(0,0,0,0.05)', cursor: 'pointer', borderLeft: `4px solid ${BRAND.maroon}` }}>
+            <h3 style={{ margin: 0, color: BRAND.gray }}>{item.title}</h3>
+            <span style={{ color: BRAND.maroon, fontWeight: 'bold' }}>GO →</span>
           </div>
         ))}
       </div>
@@ -89,7 +95,7 @@ function App() {
       moduleData={HearthDesignSpecialistQuestions[view.module.title]} 
       title={view.module.title}
       onBack={() => setView({...view, module: null})}
-      accentColor={COLORS.maroon}
+      accent={BRAND.maroon}
     />
   );
 }
