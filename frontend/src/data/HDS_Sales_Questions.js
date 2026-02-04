@@ -6,7 +6,7 @@ export const HearthDesignSpecialistQuestions = {
         "question": "Which division is the professional certification branch of the Hearth, Patio & Barbecue Education Foundation (HPBEF)?",
         "options": ["The International Code Conference (ICC).", "Underwriters Laboratories (UL).", "The National Fireplace Institute (NFI).", "The National Fire Protection Association (NFPA)."],
         "answer": "The National Fireplace Institute (NFI).",
-        "source": "[cite: 165]"
+        [cite_start]"source": "[cite: 165]"
       }
     ],
     "Chapter 1: What is a Specialist": [
@@ -258,13 +258,6 @@ export const HearthDesignSpecialistQuestions = {
         [cite_start]"source": "[cite: 1204]"
       },
       {
-        "id": 66,
-        "question": "Which appliances are currently exempt from the EPA NSPS particulate emission regulations?",
-        "options": ["Pellet stoves.", "Fireplace inserts.", "New indoor fireplaces.", "Hydronic heaters."],
-        "answer": "New indoor fireplaces.",
-        [cite_start]"source": "[cite: 1381]"
-      },
-      {
         "id": 67,
         "question": "To be 'Qualified' under the voluntary EPA Wood-Burning Fireplace Program, a new fireplace must meet an emission level of:",
         "options": ["4.5 g/hr or lower.", "5.1 g/kg or lower.", "7.5 g/hr or lower.", "2.5 g/kg or lower."],
@@ -484,14 +477,14 @@ export const HearthDesignSpecialistQuestions = {
         "question": "Why is the lower flammability limit of propane (2.15%) significant for safety compared to natural gas (4.1%)?",
         "options": ["Propane is harder to ignite in small rooms.", "Propane requires more secondary air for complete combustion.", "Propane will ignite at a lower concentration of gas in the air.", "Propane produces more aldehydes during cold startup."],
         "answer": "Propane will ignite at a lower concentration of gas in the air.",
-        "source": ""
+        [cite_start]"source": "[cite: 3712]"
       },
       {
         "id": 57,
         "question": "How does a millivolt gas control valve system generate the electricity to operate the valve?",
         "options": ["From a standard 120V household outlet.", "Through a built-in battery backup system.", "A thermopile or thermocouple converts heat into current.", "Through a piezo-electric spark generator."],
         "answer": "A thermopile or thermocouple converts heat into current.",
-        "source": ""
+        [cite_start]"source": "[cite: 3711]"
       },
       {
         "id": 59,
@@ -499,7 +492,7 @@ export const HearthDesignSpecialistQuestions = {
         "options": ["It relies on a draft hood for dilution air.", "It draws all combustion air from outdoors and is a sealed system.", "It operates exclusively under natural negative pressure.", "It uses a single-wall aluminum pipe for exhaust."],
         "answer": "It draws all combustion air from outdoors and is a sealed system.",
         "image_asset": "Direct vent: horizontal (Page 105)",
-        "source": ""
+        [cite_start]"source": "[cite: 1189]"
       },
       {
         "id": 60,
@@ -507,7 +500,7 @@ export const HearthDesignSpecialistQuestions = {
         "options": ["The storm collar.", "The air shutter.", "The draft hood.", "The ODS sensor."],
         "answer": "The draft hood.",
         "image_asset": "Draft hood backdraft (Page 111)",
-        "source": ""
+        [cite_start]"source": "[cite: 1110]"
       }
     ],
     "Chapter 15: Pellet Hearth Systems": [

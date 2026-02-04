@@ -5,26 +5,22 @@
     {
       "id": "M1",
       "title": "Module 1: Role & Sales Strategy",
-      "chapters": ["Intro", 1, 2],
-      "description": "Foundations of the Specialist role and effective sales techniques."
+      "chapters": ["Intro", 1, 2]
     },
     {
       "id": "M2",
       "title": "Module 2: Client Assessment & Products",
-      "chapters": [3, 4, 5, 8],
-      "description": "Understanding client goals, home suitability, and appliance types."
+      "chapters": [3, 4, 5, 8]
     },
     {
       "id": "M3",
       "title": "Module 3: Technical Standards",
-      "chapters": [6, 7, 9],
-      "description": "Core principles of combustion, efficiency, and safety codes."
+      "chapters": [6, 7, 9]
     },
     {
       "id": "M4",
       "title": "Module 4: Installation & Fuel Types",
-      "chapters": [10, 11, 12, 13, 14, 15],
-      "description": "Planning installations, venting requirements, and fuel-specific systems."
+      "chapters": [10, 11, 12, 13, 14, 15]
     }
   ]
 }
