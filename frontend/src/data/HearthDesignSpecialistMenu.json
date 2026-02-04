@@ -1,0 +1,26 @@
+{
+  "menu_id": "HDS_SALES",
+  "title": "Hearth Design Specialist (Sales)",
+  "modules": [
+    {
+      "module_id": "M1",
+      "title": "Module 1: Role & Sales Strategy",
+      "chapters": ["Intro", 1, 2]
+    },
+    {
+      "module_id": "M2",
+      "title": "Module 2: Client Assessment & Products",
+      "chapters": [3, 4, 5, 8]
+    },
+    {
+      "module_id": "M3",
+      "title": "Module 3: Technical Standards",
+      "chapters": [6, 7, 9]
+    },
+    {
+      "module_id": "M4",
+      "title": "Module 4: Installation & Fuel Types",
+      "chapters": [10, 11, 12, 13, 14, 15]
+    }
+  ]
+}

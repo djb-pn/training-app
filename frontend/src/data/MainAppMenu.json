@@ -1,0 +1,24 @@
+{
+  "app_title": "Training App v2.0",
+  "main_study_areas": [
+    {
+      "id": "NP_PATH",
+      "title": "Nurse Practitioner",
+      "sub_menus": [
+        { "id": "NP_W2", "title": "Week 2" },
+        { "id": "NP_W3", "title": "Week 3" },
+        { "id": "NP_W4", "title": "Week 4" }
+      ]
+    },
+    {
+      "id": "HEARTH_PATH",
+      "title": "Hearth Specialists",
+      "sub_menus": [
+        { "id": "CORE_KNOW", "title": "Core Knowledge (Everyone)" },
+        { "id": "HDS_SALES", "title": "Hearth Design Specialist (Sales)" },
+        { "id": "GAS_SPEC", "title": "Gas Specialist" },
+        { "id": "WOOD_SPEC", "title": "Wood Specialist" }
+      ]
+    }
+  ]
+}
