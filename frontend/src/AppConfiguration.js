@@ -25,8 +25,8 @@ export const AppConfig = {
 };
 
 export const HDS_Modules = [
-  { id: "M1", title: "Module 1: Role & Sales Strategy" }, // Chapters 1-2
-  { id: "M2", title: "Module 2: Client Assessment & Products" }, // Chapters 3-5, 8
-  { id: "M3", title: "Module 3: Technical Standards" }, // Chapters 6-7, 9
-  { id: "M4", title: "Module 4: Installation & Fuel Types" } // Chapters 10-15
+  { id: "M1", title: "Module 1: Role & Sales Strategy" },
+  { id: "M2", title: "Module 2: Client Assessment & Products" },
+  { id: "M3", title: "Module 3: Technical Standards" },
+  { id: "M4", title: "Module 4: Installation & Fuel Types" }
 ];

@@ -1,51 +1,25 @@
-/* Container & Layout */
-.dashboard-container { padding: 40px; max-width: 1000px; margin: 0 auto; background: #fafafa; min-height: 100vh; }
-.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; margin-top: 20px; }
+.dashboard-container { padding: 20px; max-width: 1200px; margin: 0 auto; }
+.dash-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
 
-/* The Professional Card Style */
-.training-card {
-  background: white;
-  border-radius: 4px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-  border: 1px solid #eee;
+.picks-card {
+  background: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  position: relative; overflow: hidden; cursor: pointer; transition: transform 0.2s;
+}
+.picks-card:hover { transform: translateY(-5px); }
+.card-accent { position: absolute; left: 0; top: 0; bottom: 0; width: 6px; }
+.card-body { padding: 30px 20px; text-align: center; }
+
+.list-menu { display: flex; flex-direction: column; gap: 15px; }
+.menu-row { 
+  background: white; padding: 20px; border-radius: 8px; border: 1px solid #eee;
+  display: flex; justify-content: space-between; align-items: center; cursor: pointer;
 }
 
-.training-card::before {
-  content: "";
-  position: absolute;
-  left: 0; top: 0; bottom: 0;
-  width: 6px;
-  background: #800000; /* Dark Red Accent */
-}
+.quiz-container { max-width: 600px; margin: 40px auto; padding: 20px; background: white; border-radius: 12px; }
+.options-grid { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
+.option-btn { padding: 15px; border: 1px solid #ddd; border-radius: 6px; background: none; cursor: pointer; text-align: left; font-size: 1rem; }
+.option-btn:hover { background: #f9f9f9; }
 
-.training-card:hover { transform: translateY(-4px); }
-
-.card-content { padding: 24px; }
-.card-content h2 { font-size: 1.5rem; color: #333; margin: 10px 0; }
-.card-content p { color: #666; font-size: 0.95rem; margin-bottom: 20px; }
-
-/* Buttons */
-.start-btn {
-  background: #800000;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  font-weight: bold;
-  cursor: pointer;
-  text-transform: uppercase;
-}
-
-.primary-btn { width: 100%; padding: 15px; background: #800000; color: white; border: none; border-radius: 4px; font-size: 1.1rem; cursor: pointer; }
-
-/* Auth/Login View */
-.login-wrapper { display: flex; align-items: center; justify-content: center; height: 100vh; background: #222; }
-.login-card { background: white; padding: 40px; border-radius: 8px; width: 400px; text-align: center; }
-
-/* Navigation links */
-.back-link { background: none; border: none; color: #800000; font-weight: bold; cursor: pointer; margin-bottom: 10px; padding: 0; }
-.text-link { background: none; border: none; color: #666; cursor: pointer; text-decoration: underline; }
+.progress-bar { height: 8px; background: #eee; border-radius: 4px; overflow: hidden; margin-bottom: 20px; }
+.progress-bar .fill { height: 100%; transition: width 0.3s; }

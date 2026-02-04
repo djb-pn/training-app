@@ -2,59 +2,90 @@ import React, { useState, useEffect } from 'react';
 import { AppConfig, HDS_Modules } from './AppConfiguration';
 import { HearthDesignSpecialistQuestions } from './data/HDS_Sales_Questions';
 import QuestionEngine from './components/QuestionEngine';
+import theme from './theme'; 
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [email, setEmail] = useState('');
+  const [loginStatus, setLoginStatus] = useState('idle');
   const [path, setPath] = useState(null); 
   const [section, setSection] = useState(null); 
   const [module, setModule] = useState(null);
 
-  // MagicLink Auth Persistence
   useEffect(() => {
-    const user = localStorage.getItem('user_session');
-    if (user) setIsLoggedIn(true);
+    const checkSession = () => {
+      const saved = localStorage.getItem('training_auth_session');
+      if (saved) setUser(JSON.parse(saved));
+      setLoading(false);
+    };
+    checkSession();
   }, []);
 
-  const handleLogin = () => {
-    setIsLoggedIn(true);
-    localStorage.setItem('user_session', 'active');
+  const handleRequestLink = async (e) => {
+    e.preventDefault();
+    setLoginStatus('sending');
+    try {
+      const response = await fetch('/api/auth/magic-link', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
+      });
+      if (response.ok) setLoginStatus('sent');
+      else throw new Error();
+    } catch (err) {
+      setLoginStatus('idle');
+      // For local testing if backend is down:
+      // setUser({ email, progress: {}, stats: {} }); 
+    }
   };
 
   const handleLogout = () => {
-    setIsLoggedIn(false);
-    localStorage.removeItem('user_session');
+    localStorage.removeItem('training_auth_session');
+    setUser(null);
     setPath(null); setSection(null); setModule(null);
   };
 
-  // 1. MagicLink Login Screen
-  if (!isLoggedIn) {
+  if (loading) return <div className="loading">Loading...</div>;
+
+  // SCREEN 1: MagicLink Login
+  if (!user) {
     return (
-      <div className="login-wrapper">
+      <div className="login-wrapper" style={{ backgroundColor: theme.colors.background }}>
         <div className="login-card">
-          <h1>Training App v2.0</h1>
-          <p>Please log in to access your study paths.</p>
-          <button className="primary-btn" onClick={handleLogin}>Login with MagicLink</button>
+          <h1 style={{ color: theme.colors.primary }}>Training App</h1>
+          {loginStatus === 'sent' ? (
+            <p className="success-msg">Login link sent! Check your inbox.</p>
+          ) : (
+            <form onSubmit={handleRequestLink}>
+              <p>Enter email to receive your secure MagicLink.</p>
+              <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="email@example.com" required />
+              <button type="submit" style={{ backgroundColor: theme.colors.accent }}>
+                {loginStatus === 'sending' ? 'Sending...' : 'Send MagicLink'}
+              </button>
+            </form>
+          )}
         </div>
       </div>
     );
   }
 
-  // 2. Main Dashboard (Path Selection)
+  // SCREEN 2: Path Selection (Hearth vs Nurse)
   if (!path) {
     return (
       <div className="dashboard-container">
         <header className="dash-header">
-          <h1>Dashboard</h1>
-          <button className="text-link" onClick={handleLogout}>Logout</button>
+          <h1 style={{ color: theme.colors.primary }}>Dashboard</h1>
+          <button className="text-btn" onClick={handleLogout}>Logout</button>
         </header>
         <div className="card-grid">
           {AppConfig.study_areas.map(area => (
-            <div key={area.id} className="training-card" onClick={() => setPath(area)}>
-              <div className="card-content">
-                <span className="icon-badge">{area.icon}</span>
+            <div key={area.id} className="picks-card" onClick={() => setPath(area)}>
+              <div className="card-accent" style={{ background: theme.colors.accent }}></div>
+              <div className="card-body">
+                <span className="card-icon">{area.icon}</span>
                 <h2>{area.title}</h2>
-                <p>Access your {area.title} certification track.</p>
-                <button className="start-btn">VIEW TRACK</button>
+                <button className="start-btn" style={{ backgroundColor: theme.colors.accent }}>EXPLORE</button>
               </div>
             </div>
           ))}
@@ -63,19 +94,18 @@ function App() {
     );
   }
 
-  // 3. Track Selection (SALES, CORE, GAS, WOOD)
-  if (!section) {
+  // SCREEN 3: Section/Module Selection
+  if (!module) {
+    const items = !section ? path.sections : HDS_Modules;
     return (
       <div className="dashboard-container">
-        <button className="back-link" onClick={() => setPath(null)}>← All Tracks</button>
-        <h1>{path.title}</h1>
-        <div className="card-grid">
-          {path.sections.map(s => (
-            <div key={s.id} className="training-card" onClick={() => setSection(s)}>
-              <div className="card-content">
-                <h2>{s.title}</h2>
-                <button className="start-btn">OPEN</button>
-              </div>
+        <button className="back-btn" onClick={() => section ? setSection(null) : setPath(null)}>← Back</button>
+        <h1>{!section ? path.title : section.title}</h1>
+        <div className="list-menu">
+          {items.map(item => (
+            <div key={item.id} className="menu-row" onClick={() => !section ? setSection(item) : setModule(item)}>
+              <h3>{item.title}</h3>
+              <button className="row-btn">OPEN</button>
             </div>
           ))}
         </div>
@@ -83,55 +113,14 @@ function App() {
     );
   }
 
-  // 4. Module Selection (Specific to Sales Track)
-  if (section.id === "SALES" && !module) {
-    return (
-      <div className="dashboard-container">
-        <button className="back-link" onClick={() => setSection(null)}>← {path.title}</button>
-        <h1>Hearth Design Specialist (Sales)</h1>
-        <div className="card-grid">
-          {HDS_Modules.map(m => (
-            <div key={m.id} className="training-card" onClick={() => setModule(m)}>
-              <div className="card-content">
-                <h2>{m.title}</h2>
-                <p>Quiz based on manual chapters.</p>
-                <button className="start-btn">START TRAINING</button>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  }
-
-  // 5. "Coming Soon" Gate
-  if (!module && section.id !== "SALES") {
-    return (
-      <div className="dashboard-container">
-        <button className="back-link" onClick={() => setSection(null)}>← Back</button>
-        <div className="coming-soon-box">
-          <h2>{section.title}</h2>
-          <p>Training material is currently being finalized for this section.</p>
-        </div>
-      </div>
-    );
-  }
-
-  // 6. The Quiz View
-  const moduleQuestions = HearthDesignSpecialistQuestions[module?.title];
-
+  // SCREEN 4: Quiz Engine (Finalized)
   return (
-    <div className="quiz-container">
-      <nav className="quiz-nav">
-        <button className="back-link" onClick={() => setModule(null)}>← Back to Modules</button>
-        <h3>{module.title}</h3>
-      </nav>
-      {moduleQuestions ? (
-        <QuestionEngine moduleData={moduleQuestions} title={module.title} />
-      ) : (
-        <p>Error: No questions found.</p>
-      )}
-    </div>
+    <QuestionEngine 
+      moduleData={HearthDesignSpecialistQuestions[module.title]} 
+      title={module.title}
+      onBack={() => setModule(null)}
+      userStats={user.stats || {}}
+    />
   );
 }
 
