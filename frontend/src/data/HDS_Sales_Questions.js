@@ -303,4 +303,209 @@ export const HearthDesignSpecialistQuestions = {
       {
         "id": 34,
         "question": "Which of the following is identified as a 'competing source of negative pressure' in a house?",
-        "options": ["A direct vent appliance.", "A downdraft kitchen range exhaust fan.", "A 10/12 pitch roof ridge.", "A
+        "options": ["A direct vent appliance.", "A downdraft kitchen range exhaust fan.", "A 10/12 pitch roof ridge.", "A double-wall chimney connector."],
+        "answer": "A downdraft kitchen range exhaust fan.",
+        "source": "cite: 1531"
+      }
+    ],
+    "Chapter 11: Installation Planning": [
+      {
+        "id": 35,
+        "question": "What is the process called where the ignition temperature of combustibles may become lower over time through long-term exposure to heat?",
+        "options": ["Thermal degradation", "Pyrolysis", "Conductive reduction", "Carbonization"],
+        "answer": "Pyrolysis",
+        "source": "cite: 1607, 1645"
+      },
+      {
+        "id": 36,
+        "question": "Which of the following materials must be treated as combustible, even if it is fire-rated?",
+        "options": ["Plaster on metal lath.", "Slate or concrete.", "Gypsum board (sheetrock) with paper facing.", "Fiber-glass faced drywall."],
+        "answer": "Gypsum board (sheetrock) with paper facing.",
+        "source": "cite: 1622, 1623, 1625"
+      },
+      {
+        "id": 37,
+        "question": "Using the corner installation formula, what is the distance from a corner to the front of an appliance (Y) if clearance (E) is 4\", width (W) is 26\", and depth (D) is 26\"?",
+        "options": ["51 inches.", "45 inches.", "38 inches.", "56 inches."],
+        "answer": "45 inches.",
+        "source": "cite: 1688, 1689"
+      }
+    ],
+    "Chapter 12: Communication with Owners": [
+      {
+        "id": 47,
+        "question": "When disposing of ashes, where should the covered metal container be placed once removed from the fireplace?",
+        "options": ["In a heavy-duty plastic disposal bag.", "In a cardboard box on a concrete porch.", "Outside, away from buildings, vehicles, and combustibles.", "Immediately in a trash receptacle for pickup."],
+        "answer": "Outside, away from buildings, vehicles, and combustibles.",
+        "source": "cite: 2003"
+      },
+      {
+        "id": 48,
+        "question": "How can a user check if an appliance door gasket is sealing properly?",
+        "options": ["By using a high-pressure air hose on the exterior seams.", "By closing the door on a dollar bill to see if it can be pulled out easily.", "By applying furnace cement to the gasket and checking for cracks.", "By checking for white spots on the interior refractory panels."],
+        "answer": "By closing the door on a dollar bill to see if it can be pulled out easily.",
+        "source": "cite: 2015, 2016"
+      }
+    ],
+    "Chapter 13: Woodburning Systems": [
+      {
+        "id": 38,
+        "question": "The '3-foot, 2-foot, 10-foot rule' states that a chimney must be at least 2 feet higher than any portion of any structure within what horizontal distance?",
+        "options": ["3 feet.", "5 feet.", "10 feet.", "15 feet."],
+        "answer": "10 feet.",
+        "source": "cite: 2322"
+      },
+      {
+        "id": 39,
+        "question": "Which stage of wood combustion involves moisture evaporation, where heat is absorbed rather than released?",
+        "options": ["Stage I.", "Stage II.", "Stage III.", "Stage IV."],
+        "answer": "Stage I.",
+        "source": "cite: 2139, 2140"
+      },
+      {
+        "id": 40,
+        "question": "What is the primary function of a catalytic combustor in a woodburning appliance?",
+        "options": ["To increase room air intake for dilution.", "To raise the firebox temperature to 1,225°F.", "To substantially lower the ignition temperature of unburned gases.", "To prevent moisture evaporation during Stage I."],
+        "answer": "To substantially lower the ignition temperature of unburned gases.",
+        "source": "cite: 2209"
+      },
+      {
+        "id": 41,
+        "question": "What is the maximum recommended moisture content for firewood to ensure suitable burning in solid fuel appliances?",
+        "options": ["10%.", "20%.", "35%.", "50%."],
+        "answer": "20%.",
+        "source": "cite: 2226, 3323"
+      },
+      {
+        "id": 42,
+        "question": "When installing a single-wall chimney connector, which end should point downward toward the appliance for a 'drip-free' connection?",
+        "options": ["The non-crimped end.", "The larger collar end.", "The small, or crimped, end.", "The telescoping slip joint."],
+        "answer": "The small, or crimped, end.",
+        "source": "cite: 2723"
+      },
+      {
+        "id": 49,
+        "question": "In Europe, why does the 'Lower Heating Value' (LHV) test method result in a higher efficiency rating for wood?",
+        "options": ["It assumes the wood is oven-dry (0% moisture).", "It subtracts the energy used to drive out moisture from the input rating.", "It uses 8,600 BTUs per pound as the standard input.", "It is only used for catalytic hybrid appliances."],
+        "answer": "It subtracts the energy used to drive out moisture from the input rating.",
+        "source": "cite: 2182, 2183, 2188"
+      },
+      {
+        "id": 50,
+        "question": "During wood combustion, what is the term for chemical changes caused by heat that break down molecules and release hydrocarbon vapors?",
+        "options": ["Oxidation.", "Char burning.", "Pyrolysis.", "Evaporation."],
+        "answer": "Pyrolysis.",
+        "source": "cite: 2144, 2145"
+      },
+      {
+        "id": 51,
+        "question": "According to NFPA 211 (2003 edition), what is the maximum flue size for a masonry chimney with one or more walls exposed to the outside?",
+        "options": ["3 times the cross-sectional area of the appliance flue collar.", "2 times the cross-sectional area of the appliance flue collar.", "Exactly matching the appliance flue collar.", "1/4 inch per foot of total vertical rise."],
+        "answer": "2 times the cross-sectional area of the appliance flue collar.",
+        "source": "cite: 2276"
+      },
+      {
+        "id": 58,
+        "question": "Which condition is the most likely cause of catalytic combustor 'peeling'?",
+        "options": ["Excessive fly ash from burning cardboard.", "Using too much newspaper during cold startup.", "Extreme temperatures over 1,800°F or flame impingement.", "Cleaning the combustor with a soft paintbrush."],
+        "answer": "Extreme temperatures over 1,800°F or flame impingement.",
+        "source": "cite: 3684"
+      },
+      {
+        "id": 62,
+        "question": "What is the absolute minimum clearance allowed for a single-wall chimney connector after using an approved clearance reduction method?",
+        "options": ["6 inches.", "9 inches.", "12 inches.", "18 inches."],
+        "answer": "6 inches.",
+        "source": "cite: 2718, 2721"
+      },
+      {
+        "id": 63,
+        "question": "According to NFPA 211, what is the maximum allowable horizontal run for a woodburning chimney connector?",
+        "options": ["75% of the height of the chimney above the connector.", "50% of the height of the chimney above the connector.", "Exactly 10 feet regardless of chimney height.", "1/4 inch per foot of total vertical rise."],
+        "answer": "50% of the height of the chimney above the connector.",
+        "source": "cite: 2677"
+      },
+      {
+        "id": 64,
+        "question": "Which type of factory-built chimney is required by NFPA 211 and IMC for closed combustion woodstoves?",
+        "options": ["UL 103 Standard.", "UL 103 'Type HT' (High Temperature).", "UL 127 Standard.", "UL 641 Type L."],
+        "answer": "UL 103 'Type HT' (High Temperature).",
+        "source": "cite: 2424, 2426"
+      },
+      {
+        "id": 65,
+        "question": "When installing a factory-built chimney through a flat ceiling, what maintains the 2-inch clearance from attic insulation?",
+        "options": ["The roof flashing.", "The storm collar.", "The attic insulation shield.", "The radiation shield."],
+        "answer": "The attic insulation shield.",
+        "source": "cite: 2452, 2453, 2455"
+      }
+    ],
+    "Chapter 14: Gas Hearth Systems": [
+      {
+        "id": 43,
+        "question": "Which physical characteristic of Propane (LPG) requires it to be handled with more care than natural gas if a leak occurs?",
+        "options": ["It has a higher ignition temperature.", "It is heavier than air and tends to sink and pool in low areas.", "It is naturally toxic to humans.", "It rises rapidly into the atmosphere on release."],
+        "answer": "It is heavier than air and tends to sink and pool in low areas.",
+        "source": "cite: 3729, 3738"
+      },
+      {
+        "id": 44,
+        "question": "What is the function of an Oxygen Depletion Sensor (ODS) on an unvented gas room heater?",
+        "options": ["To adjust the air shutter for a blue flame.", "To measure the BTU input of natural gas.", "To shut off fuel flow in the event of low oxygen levels.", "To prevent pilot outage in high-wind conditions."],
+        "answer": "To shut off fuel flow in the event of low oxygen levels.",
+        "source": "cite: 1198"
+      },
+      {
+        "id": 53,
+        "question": "What is the standard specific gravity assigned to natural gas for pipe sizing and code purposes?",
+        "options": ["0.4.", "0.6.", "1.0.", "1.52."],
+        "answer": "0.6.",
+        "source": "cite: 3744"
+      },
+      {
+        "id": 54,
+        "question": "Why is the lower flammability limit of propane (2.15%) significant for safety compared to natural gas (4.1%)?",
+        "options": ["Propane is harder to ignite in small rooms.", "Propane requires more secondary air for complete combustion.", "Propane will ignite at a lower concentration of gas in the air.", "Propane produces more aldehydes during cold startup."],
+        "answer": "Propane will ignite at a lower concentration of gas in the air.",
+        "source": "cite: 3744"
+      },
+      {
+        "id": 57,
+        "question": "How does a millivolt gas control valve system generate the electricity to operate the valve?",
+        "options": ["From a standard 120V household outlet.", "Through a built-in battery backup system.", "A thermopile or thermocouple converts heat into current.", "Through a piezo-electric spark generator."],
+        "answer": "A thermopile or thermocouple converts heat into current.",
+        "source": "cite: 3712"
+      },
+      {
+        "id": 59,
+        "question": "What is a defining characteristic of a Direct Vent system compared to a Type B vent?",
+        "options": ["It relies on a draft hood for dilution air.", "It draws all combustion air from outdoors and is a sealed system.", "It operates exclusively under natural negative pressure.", "It uses a single-wall aluminum pipe for exhaust."],
+        "answer": "It draws all combustion air from outdoors and is a sealed system.",
+        "source": "cite: 1580"
+      },
+      {
+        "id": 60,
+        "question": "Which component in a Type B venting system is designed to provide an escape for backdrafts and neutralize different chimney heights?",
+        "options": ["The storm collar.", "The air shutter.", "The draft hood.", "The ODS sensor."],
+        "answer": "The draft hood.",
+        "source": "cite: 1470"
+      }
+    ],
+    "Chapter 15: Pellet Hearth Systems": [
+      {
+        "id": 45,
+        "question": "Since 2004, what fuel hopper safety feature has been required for pellet appliances by standard ASTM E 1509?",
+        "options": ["A ceramic wool thermal blanket.", "A lid interlock that disables the fuel auger when opened.", "A mandatory 100lb capacity hopper.", "A secondary manual bypass handle."],
+        "answer": "A lid interlock that disables the fuel auger when opened.",
+        "source": "cite: 1263"
+      },
+      {
+        "id": 46,
+        "question": "In a pellet appliance, what is the definition of 'burnback'?",
+        "options": ["Excessive ash buildup in the burn pot.", "Using pellets with too high a moisture content.", "Smoke or fire within the fuel delivery system or hopper.", "The convection blower tripping the high limit switch."],
+        "answer": "Smoke or fire within the fuel delivery system or hopper.",
+        "source": "cite: 1265"
+      }
+    ]
+  }
+};
