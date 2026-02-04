@@ -1,26 +1,28 @@
-{
-  "menu_id": "HDS_SALES",
-  "title": "Hearth Design Specialist (Sales)",
-  "modules": [
-    {
-      "module_id": "M1",
-      "title": "Module 1: Role & Sales Strategy",
-      "chapters": ["Intro", 1, 2]
-    },
-    {
-      "module_id": "M2",
-      "title": "Module 2: Client Assessment & Products",
-      "chapters": [3, 4, 5, 8]
-    },
-    {
-      "module_id": "M3",
-      "title": "Module 3: Technical Standards",
-      "chapters": [6, 7, 9]
-    },
-    {
-      "module_id": "M4",
-      "title": "Module 4: Installation & Fuel Types",
-      "chapters": [10, 11, 12, 13, 14, 15]
-    }
-  ]
-}
+export const HearthDesignSpecialistQuestions = {
+  "Module 1: Role & Sales Strategy": {
+    "Intro": [
+      {
+        "id": 12,
+        "question": "Which division is the professional certification branch of the Hearth, Patio & Barbecue Education Foundation (HPBEF)?",
+        "options": ["ICC", "UL", "National Fireplace Institute (NFI)", "NFPA"],
+        "answer": "National Fireplace Institute (NFI).",
+        "source": "[cite: 165]"
+      }
+    ],
+    "Chapter 1: What is a Specialist": [
+      {
+        "id": 1,
+        "question": "According to the manual, what is the primary objective of the relationship the Hearth Design Specialist develops with a client?",
+        "options": [
+          "To maximize the total investment of the hearth package.",
+          "To provide the client with peace of mind that comes from working with an expert.",
+          "To complete the technical installation plan before the initial meeting.",
+          "To ensure the client chooses a gas appliance over wood or pellet options."
+        ],
+        "answer": "To provide the client with peace of mind that comes from working with an expert.",
+        [cite_start]"source": "[cite: 283, 284]"
+      }
+    ]
+    // ... Repeat this pattern for all other modules and chapters
+  }
+};
