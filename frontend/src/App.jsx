@@ -1,103 +1,135 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { AppConfig, HDS_Modules } from './AppConfiguration';
 import { HearthDesignSpecialistQuestions } from './data/HDS_Sales_Questions';
 import QuestionEngine from './components/QuestionEngine';
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [path, setPath] = useState(null); 
   const [section, setSection] = useState(null); 
-  const [module, setModule] = useState(null); 
+  const [module, setModule] = useState(null);
 
-  const resetAll = () => { 
-    setPath(null); 
-    setSection(null); 
-    setModule(null); 
+  // MagicLink Auth Persistence
+  useEffect(() => {
+    const user = localStorage.getItem('user_session');
+    if (user) setIsLoggedIn(true);
+  }, []);
+
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+    localStorage.setItem('user_session', 'active');
   };
 
-  // 1. MAIN PATH SELECTION (Splash Screen)
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+    localStorage.removeItem('user_session');
+    setPath(null); setSection(null); setModule(null);
+  };
+
+  // 1. MagicLink Login Screen
+  if (!isLoggedIn) {
+    return (
+      <div className="login-wrapper">
+        <div className="login-card">
+          <h1>Training App v2.0</h1>
+          <p>Please log in to access your study paths.</p>
+          <button className="primary-btn" onClick={handleLogin}>Login with MagicLink</button>
+        </div>
+      </div>
+    );
+  }
+
+  // 2. Main Dashboard (Path Selection)
   if (!path) {
     return (
-      <div className="app-container">
-        <header className="main-header">
-          <h1>Training App v2.0</h1>
-          <p>Choose a Study Track</p>
+      <div className="dashboard-container">
+        <header className="dash-header">
+          <h1>Dashboard</h1>
+          <button className="text-link" onClick={handleLogout}>Logout</button>
         </header>
-        <div className="selection-grid">
+        <div className="card-grid">
           {AppConfig.study_areas.map(area => (
-            <button key={area.id} className="card-button" onClick={() => setPath(area)}>
-              <span className="icon">{area.icon}</span>
+            <div key={area.id} className="training-card" onClick={() => setPath(area)}>
               <div className="card-content">
+                <span className="icon-badge">{area.icon}</span>
                 <h2>{area.title}</h2>
+                <p>Access your {area.title} certification track.</p>
+                <button className="start-btn">VIEW TRACK</button>
               </div>
-            </button>
+            </div>
           ))}
         </div>
       </div>
     );
   }
 
-  // 2. SECTION SELECTION (Core, Sales, Gas, Wood)
+  // 3. Track Selection (SALES, CORE, GAS, WOOD)
   if (!section) {
     return (
-      <div className="app-container">
-        <button className="nav-back" onClick={resetAll}>← Home</button>
+      <div className="dashboard-container">
+        <button className="back-link" onClick={() => setPath(null)}>← All Tracks</button>
         <h1>{path.title}</h1>
-        <div className="menu-list">
+        <div className="card-grid">
           {path.sections.map(s => (
-            <button key={s.id} className="menu-button" onClick={() => setSection(s)}>
-              {s.title}
-            </button>
+            <div key={s.id} className="training-card" onClick={() => setSection(s)}>
+              <div className="card-content">
+                <h2>{s.title}</h2>
+                <button className="start-btn">OPEN</button>
+              </div>
+            </div>
           ))}
         </div>
       </div>
     );
   }
 
-  // 3. MODULE SELECTION (Grouped Chapters from Manual)
+  // 4. Module Selection (Specific to Sales Track)
   if (section.id === "SALES" && !module) {
     return (
-      <div className="app-container">
-        <button className="nav-back" onClick={() => setSection(null)}>← Back to Tracks</button>
-        <h1>{section.title}</h1>
-        <div className="menu-list">
+      <div className="dashboard-container">
+        <button className="back-link" onClick={() => setSection(null)}>← {path.title}</button>
+        <h1>Hearth Design Specialist (Sales)</h1>
+        <div className="card-grid">
           {HDS_Modules.map(m => (
-            <button key={m.id} className="menu-button" onClick={() => setModule(m)}>
-              {m.title}
-            </button>
+            <div key={m.id} className="training-card" onClick={() => setModule(m)}>
+              <div className="card-content">
+                <h2>{m.title}</h2>
+                <p>Quiz based on manual chapters.</p>
+                <button className="start-btn">START TRAINING</button>
+              </div>
+            </div>
           ))}
         </div>
       </div>
     );
   }
 
-  // 4. PLACEHOLDER (For sections not yet filled with manual data)
+  // 5. "Coming Soon" Gate
   if (!module && section.id !== "SALES") {
     return (
-      <div className="app-container">
-        <button className="nav-back" onClick={() => setSection(null)}>← Back</button>
-        <div className="placeholder-container">
+      <div className="dashboard-container">
+        <button className="back-link" onClick={() => setSection(null)}>← Back</button>
+        <div className="coming-soon-box">
           <h2>{section.title}</h2>
-          <p>Manual content for this section is coming soon.</p>
+          <p>Training material is currently being finalized for this section.</p>
         </div>
       </div>
     );
   }
 
-  // 5. QUIZ ENGINE (Loads the 70 questions)
+  // 6. The Quiz View
   const moduleQuestions = HearthDesignSpecialistQuestions[module?.title];
 
   return (
-    <div className="app-container">
-      <button className="nav-back" onClick={() => setModule(null)}>← Change Module</button>
+    <div className="quiz-container">
+      <nav className="quiz-nav">
+        <button className="back-link" onClick={() => setModule(null)}>← Back to Modules</button>
+        <h3>{module.title}</h3>
+      </nav>
       {moduleQuestions ? (
-        <QuestionEngine 
-          moduleData={moduleQuestions} 
-          title={module.title}
-        />
+        <QuestionEngine moduleData={moduleQuestions} title={module.title} />
       ) : (
-        <div className="error-box">
-          <p>Questions not found for {module?.title}.</p>
-        </div>
+        <p>Error: No questions found.</p>
       )}
     </div>
   );
