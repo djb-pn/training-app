@@ -1,25 +1,26 @@
-.dashboard-container { padding: 20px; max-width: 1200px; margin: 0 auto; }
-.dash-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
-.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+/* Universal Resets */
+body { margin: 0; padding: 0; background-color: #F5F5F5; font-family: 'Inter', sans-serif; display: block; min-height: 100vh; }
 
+/* Main App Container */
+.app-container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 40px 20px; box-sizing: border-box; }
+
+/* Dashboard Grid */
+.dashboard-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; width: 100%; }
+
+/* Card Styling - Matches Picks Gallery Style */
 .picks-card {
-  background: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  position: relative; overflow: hidden; cursor: pointer; transition: transform 0.2s;
-}
-.picks-card:hover { transform: translateY(-5px); }
-.card-accent { position: absolute; left: 0; top: 0; bottom: 0; width: 6px; }
-.card-body { padding: 30px 20px; text-align: center; }
-
-.list-menu { display: flex; flex-direction: column; gap: 15px; }
-.menu-row { 
-  background: white; padding: 20px; border-radius: 8px; border: 1px solid #eee;
-  display: flex; justify-content: space-between; align-items: center; cursor: pointer;
+  background: #ffffff; border-radius: 12px; padding: 40px; position: relative;
+  overflow: hidden; cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-left: 8px solid #670000;
+  text-align: center; display: flex; flexDirection: column; align-items: center;
 }
 
-.quiz-container { max-width: 600px; margin: 40px auto; padding: 20px; background: white; border-radius: 12px; }
-.options-grid { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
-.option-btn { padding: 15px; border: 1px solid #ddd; border-radius: 6px; background: none; cursor: pointer; text-align: left; font-size: 1rem; }
-.option-btn:hover { background: #f9f9f9; }
+.picks-card:hover { transform: translateY(-8px); box-shadow: 0 12px 30px rgba(0,0,0,0.1); }
 
-.progress-bar { height: 8px; background: #eee; border-radius: 4px; overflow: hidden; margin-bottom: 20px; }
-.progress-bar .fill { height: 100%; transition: width 0.3s; }
+/* Auth Styling */
+.auth-wrapper { height: 100vh; display: flex; align-items: center; justify-content: center; background: #595959; }
+.auth-card { background: white; padding: 50px; border-radius: 16px; width: 100%; max-width: 450px; text-align: center; }
+
+/* Buttons */
+.btn-maroon { background: #670000; color: white; border: none; padding: 14px 28px; border-radius: 8px; font-weight: bold; cursor: pointer; width: 100%; font-size: 1rem; }
+.btn-maroon:hover { background: #4d0000; }
