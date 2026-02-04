@@ -3,17 +3,17 @@ import { createTheme } from '@mui/material/styles';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#670000', // Maroon
+      main: '#670000', // Verified Maroon
     },
     secondary: {
-      main: '#595959', // Gray
+      main: '#595959', // Verified Gray
     },
     background: {
-      default: '#F5F5F5',
+      default: '#ffffff', // Verified White
     },
   },
   typography: {
-    fontFamily: 'Inter, system-ui, Avenir, Helvetica, Arial, sans-serif',
+    fontFamily: 'Inter, system-ui, sans-serif',
   },
 });
 

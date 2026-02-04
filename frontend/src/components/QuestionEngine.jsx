@@ -1,64 +1,65 @@
 import React, { useState, useEffect } from 'react';
-import theme from '../theme';
 
-const QuestionEngine = ({ moduleData, title, onBack, userStats }) => {
+const QuestionEngine = ({ moduleData, title, onBack, accentColor }) => {
   const [questions, setQuestions] = useState([]);
   const [currentIdx, setCurrentIdx] = useState(0);
   const [score, setScore] = useState(0);
-  const [wrongAnswers, setWrongAnswers] = useState([]);
-  const [showResult, setShowResult] = useState(false);
+  const [wrongQueue, setWrongQueue] = useState([]);
+  const [isFinished, setIsFinished] = useState(false);
 
   useEffect(() => {
     if (moduleData) {
-      // Flatten chapters into one array
       const allQ = Object.values(moduleData).flat();
-      // Simple Shuffle for Spaced Repetition feel
       setQuestions(allQ.sort(() => Math.random() - 0.5));
     }
   }, [moduleData]);
 
   const handleAnswer = (selected) => {
-    const correct = questions[currentIdx].answer;
-    if (selected === correct) {
+    const q = questions[currentIdx];
+    if (selected === q.answer) {
       setScore(s => s + 1);
     } else {
-      // Staggered Repetition: Add to "wrong" list to show at the end
-      setWrongAnswers(prev => [...prev, questions[currentIdx]]);
+      // Staggered Repetition: Move wrong answer to end of the queue
+      setWrongQueue(prev => [...prev, q]);
     }
 
     if (currentIdx + 1 < questions.length) {
       setCurrentIdx(currentIdx + 1);
+    } else if (wrongQueue.length > 0) {
+      // Loop back to incorrect items
+      setQuestions([...wrongQueue]);
+      setWrongQueue([]);
+      setCurrentIdx(0);
     } else {
-      setShowResult(true);
+      setIsFinished(true);
     }
   };
 
-  if (showResult) {
+  if (isFinished) {
     return (
-      <div className="quiz-container">
-        <h2>{title} Results</h2>
-        <div className="score-circle" style={{ borderColor: theme.colors.accent }}>
-          {Math.round((score / questions.length) * 100)}%
-        </div>
-        <p>Mastery: {score} of {questions.length} correct</p>
-        {wrongAnswers.length > 0 && <p className="review-text">Staggered Review: {wrongAnswers.length} items to re-study.</p>}
-        <button className="primary-btn" style={{ background: theme.colors.accent }} onClick={onBack}>Finish</button>
+      <div style={{ maxWidth: '600px', margin: '50px auto', padding: '40px', background: 'white', borderRadius: '12px', textAlign: 'center', boxShadow: '0 4px 20px rgba(0,0,0,0.1)' }}>
+        <h2 style={{ color: accentColor }}>{title} Complete</h2>
+        <p style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>Mastery: {Math.round((score / questions.length) * 100)}%</p>
+        <button onClick={onBack} style={{ padding: '12px 30px', background: accentColor, color: 'white', border: 'none', borderRadius: '6px', cursor: 'pointer' }}>Finish</button>
       </div>
     );
   }
 
-  if (questions.length === 0) return <div>Initializing questions...</div>;
-
   const q = questions[currentIdx];
+  if (!q) return <div style={{ textAlign: 'center', padding: '50px' }}>Loading...</div>;
 
   return (
-    <div className="quiz-container">
-      <div className="progress-bar"><div className="fill" style={{ width: `${(currentIdx/questions.length)*100}%`, background: theme.colors.accent }} /></div>
-      <p className="q-count">Question {currentIdx + 1} of {questions.length}</p>
-      <h3 className="question-text">{q.question}</h3>
-      <div className="options-grid">
+    <div style={{ maxWidth: '700px', margin: '40px auto', padding: '20px' }}>
+      <div style={{ height: '8px', background: '#eee', borderRadius: '4px', overflow: 'hidden', marginBottom: '20px' }}>
+        <div style={{ width: `${(currentIdx / questions.length) * 100}%`, height: '100%', background: accentColor, transition: 'width 0.3s' }} />
+      </div>
+      <button onClick={onBack} style={{ color: accentColor, background: 'none', border: 'none', cursor: 'pointer', marginBottom: '10px' }}>← Exit Quiz</button>
+      <h3 style={{ color: '#333', fontSize: '1.4rem' }}>{q.question}</h3>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: '30px' }}>
         {q.options.map((opt, i) => (
-          <button key={i} className="option-btn" onClick={() => handleAnswer(opt)}>{opt}</button>
+          <button key={i} onClick={() => handleAnswer(opt)} style={{ textAlign: 'left', padding: '20px', borderRadius: '8px', border: '1px solid #ddd', background: 'white', cursor: 'pointer', fontSize: '1.05rem' }}>
+            {opt}
+          </button>
         ))}
       </div>
     </div>
