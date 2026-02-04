@@ -59,15 +59,28 @@ function App() {
   }
 
   // 4. Quiz Engine (Loads the grouped questions)
+// ADD THIS SAFETY CHECK:
+const moduleQuestions = HearthDesignSpecialistQuestions[module?.title];
+
+if (!moduleQuestions) {
   return (
     <div className="container">
-      <button onClick={() => setModule(null)}>← Back to Modules</button>
-      <QuestionEngine 
-        moduleData={HearthDesignSpecialistQuestions[module.title]} 
-        title={module.title}
-      />
+       <button onClick={() => setModule(null)}>← Back</button>
+       <h2>Coming Soon</h2>
+       <p>Content for {module?.title} is still being developed.</p>
     </div>
   );
+}
+
+return (
+  <div className="container">
+    <button onClick={() => setModule(null)}>← Back to Modules</button>
+    <QuestionEngine 
+      moduleData={moduleQuestions} 
+      title={module.title}
+    />
+  </div>
+);
 }
 
 export default App;
