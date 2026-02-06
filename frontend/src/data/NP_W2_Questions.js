@@ -3,9 +3,9 @@ export const NursePractitionerW2Questions = {
     "General Principles": [
       {
         "id": 1001,
-        "question": "A nurse practitioner is performing a well-child examination on an 18-month-old toddler. According to the recommended sequence, which assessment should be performed LAST?",
-        "options": ["Heart and lung auscultation", "Abdominal palpation", "Inspection of the ears and throat", "General survey and observation"],
-        "answer": "Inspection of the ears and throat",
+        "question": "A nurse practitioner is performing a well-child examination on an 18-month-old toddler. According to the recommended sequence, which assessments should be performed LAST? (Select all that apply)",
+        "options": ["Heart auscultation", "Inspection of the ears", "Inspection of the mouth/throat", "Abdominal palpation"],
+        "answer": ["Inspection of the ears", "Inspection of the mouth/throat"],
         "source": "cite: 311, 616, 789"
       },
       {
@@ -107,6 +107,13 @@ export const NursePractitionerW2Questions = {
         "options": ["Romberg test", "Duck walk", "Adams forward bend test", "Tandem walking"],
         "answer": "Duck walk",
         "source": "cite: 412, 1479, 1665"
+      },
+      {
+        "id": 1046,
+        "question": "Which factors are known to affect body temperature in children? (Select all that apply)",
+        "options": ["Activity/Vigorous play", "Autoimmune disorders", "Environmental temperature", "Time of day (Circadian variation)"],
+        "answer": ["Activity/Vigorous play", "Autoimmune disorders", "Environmental temperature", "Time of day (Circadian variation)"],
+        "source": "cite: 482, 748, 948, 951"
       }
     ]
   },
@@ -114,21 +121,21 @@ export const NursePractitionerW2Questions = {
     "Reasoning Models": [
       {
         "id": 1016,
-        "question": "Which type of clinical reasoning is quick, often automatic, and based mainly on pattern recognition?",
+        "question": "Which type of clinical reasoning is defined as quick, often automatic, and based mainly on pattern recognition?",
         "options": ["Analytical (Type 2)", "Intuitive (Type 1)", "Hypothetico-deductive", "Rule-based logic"],
         "answer": "Intuitive (Type 1)",
         "source": "cite: 91, 3335, 3888"
       },
       {
         "id": 1017,
-        "question": "Which diagnostic logic model uses the 'VINDICATE' mnemonic to categorize etiologies like Neoplastic?",
-        "options": ["Intuitive reasoning", "Analytical reasoning", "Gestalt reasoning", "Hermeneutic reasoning"],
-        "answer": "Analytical reasoning",
+        "question": "Which diagnostic logic model uses the 'VINDICATE' mnemonic to categorize etiologies like Neoplastic? (Select all that apply)",
+        "options": ["Vascular", "Infectious", "Neoplastic", "Autoimmune"],
+        "answer": ["Vascular", "Infectious", "Neoplastic", "Autoimmune"],
         "source": "cite: 9, 1744, 3889"
       },
       {
         "id": 1018,
-        "question": "What percentage of a final clinical diagnosis is typically derived from the patient's history?",
+        "question": "Approximately what percentage of a final clinical diagnosis is typically derived from the patient's history?",
         "options": ["25%", "50%", "85%", "95%"],
         "answer": "85%",
         "source": "cite: 1734, 1870, 3405"
@@ -158,9 +165,9 @@ export const NursePractitionerW2Questions = {
       },
       {
         "id": 1022,
-        "question": "Which bias involves selecting only data that supports a clinician's preconceived diagnosis?",
-        "options": ["Anchoring heuristic", "Confirmation bias", "Outcome bias", "Omission bias"],
-        "answer": "Confirmation bias",
+        "question": "Which bias involves selecting only data that supports a clinician's preconceived diagnosis? (Select all that apply)",
+        "options": ["Anchoring heuristic", "Confirmation bias", "Outcome bias", "Selective filtering of evidence"],
+        "answer": ["Confirmation bias", "Selective filtering of evidence"],
         "source": "cite: 107, 4954, 5199"
       },
       {
@@ -172,7 +179,7 @@ export const NursePractitionerW2Questions = {
       },
       {
         "id": 1024,
-        "question": "A clinician choosing a benign diagnosis for ambiguous presentation recall safe cases is using which bias?",
+        "question": "A clinician choosing a benign diagnosis recall safe cases is using which bias?",
         "options": ["Frequency gambling", "Zebra retreat", "Availability heuristic", "Unpacking principle"],
         "answer": "Frequency gambling",
         "source": "cite: 4954"
@@ -183,6 +190,13 @@ export const NursePractitionerW2Questions = {
         "options": ["Forget names", "Focus only on the obvious diagnosis", "Order excessive diagnostics", "Avoid making a diagnosis"],
         "answer": "Focus only on the obvious diagnosis",
         "source": "cite: 4954, 4968"
+      },
+      {
+        "id": 1049,
+        "question": "Diagnostic errors most commonly occur due to which factors? (Select all that apply)",
+        "options": ["Subjectivity", "Confirmation bias", "Knowledge deficits", "Inexperience"],
+        "answer": ["Subjectivity", "Confirmation bias", "Knowledge deficits", "Inexperience"],
+        "source": "cite: 106, 109, 3355, 3896"
       }
     ]
   },
@@ -197,9 +211,9 @@ export const NursePractitionerW2Questions = {
       },
       {
         "id": 1027,
-        "question": "Physical examination findings, like 'HR 92 bpm', belong in which section?",
-        "options": ["Subjective", "Objective", "Assessment", "Plan"],
-        "answer": "Objective",
+        "question": "Physical examination findings belong in which section? (Select all that apply)",
+        "options": ["Subjective", "Objective", "Assessment", "Direct observations from touch"],
+        "answer": ["Objective", "Direct observations from touch"],
         "source": "cite: 1760, 2155, 3515"
       },
       {
@@ -222,6 +236,22 @@ export const NursePractitionerW2Questions = {
         "options": ["Subjective and Objective", "Objective and Plan", "Assessment and Plan", "Subjective and Assessment"],
         "answer": "Assessment and Plan",
         "source": "cite: 2158, 2220"
+      },
+      {
+        "id": 1032,
+        "question": "What does a 'negative finding' in documentation mean?",
+        "options": ["The patient was uncooperative", "The results were bad", "An expected symptom was absent", "The provider forgot to check"],
+        "answer": "An expected symptom was absent",
+        "source": "cite: 2447, 3514"
+      }
+    ],
+    "Health Maintenance": [
+      {
+        "id": 1031,
+        "question": "What is the primary goal of the 'Medical Home' model according to the AAP?",
+        "options": ["To provide accessible care", "To provide continuous care", "To provide family-centered care", "All of the above"],
+        "answer": "All of the above",
+        "source": "cite: 207, 1286, 3110"
       }
     ]
   },
@@ -243,9 +273,9 @@ export const NursePractitionerW2Questions = {
       },
       {
         "id": 1035,
-        "question": "The bell of the stethoscope is best suited for hearing which types of sounds?",
-        "options": ["High-pitched lung sounds", "Normal bowel sounds", "Low-pitched murmurs", "Friction rubs"],
-        "answer": "Low-pitched murmurs",
+        "question": "The bell of the stethoscope is best suited for hearing which types of sounds? (Select all that apply)",
+        "options": ["High-pitched lung sounds", "Low-pitched murmurs", "Extra heart sounds", "Friction rubs"],
+        "answer": ["Low-pitched murmurs", "Extra heart sounds"],
         "source": "cite: 691, 1715, 2897"
       },
       {
@@ -261,6 +291,18 @@ export const NursePractitionerW2Questions = {
         "options": ["Direct percussion", "Indirect percussion", "Blunt percussion", "Pneumatic percussion"],
         "answer": "Blunt percussion",
         "source": "cite: 678, 1117, 2889"
+      },
+      {
+        "id": 1048,
+        "question": "Which percussion sounds are correctly matched to their location? (Select all that apply)",
+        "options": [
+          "Resonance - Normal lung",
+          "Dullness - Liver",
+          "Tympany - Gastric air bubble",
+          "Flatness - Muscle or bone"
+        ],
+        "answer": ["Resonance - Normal lung", "Dullness - Liver", "Tympany - Gastric air bubble", "Flatness - Muscle or bone"],
+        "source": "cite: 801, 1118, 1125, 1836"
       }
     ],
     "Vital Signs Logic": [
@@ -280,9 +322,9 @@ export const NursePractitionerW2Questions = {
       },
       {
         "id": 1041,
-        "question": "What triggers the fever response by affecting the hypothalamus?",
-        "options": ["Antibiotics", "Endogenous pyrogens and prostaglandins", "Hypovolemia", "Decreased metabolic rate"],
-        "answer": "Endogenous pyrogens and prostaglandins",
+        "question": "What triggers the fever response by affecting the hypothalamus? (Select all that apply)",
+        "options": ["Antibiotics", "Endogenous pyrogens", "Prostaglandins", "Hypovolemia"],
+        "answer": ["Endogenous pyrogens", "Prostaglandins"],
         "source": "cite: 1779, 1909, 1937"
       },
       {
@@ -291,6 +333,15 @@ export const NursePractitionerW2Questions = {
         "options": ["Pulse Oximetry", "Height", "Pain Assessment", "Head Circumference"],
         "answer": "Pain Assessment",
         "source": "cite: 1776, 1906, 2093"
+      }
+    ],
+    "Geriatrics & Disabilities": [
+      {
+        "id": 1044,
+        "question": "Which tool is specifically designed to assess pain in patients with dementia? (Select all that apply)",
+        "options": ["Numeric scale (0-10)", "PAINAD scale", "Nonverbal cue observation", "FACES scale"],
+        "answer": ["PAINAD scale", "Nonverbal cue observation"],
+        "source": "cite: 1788, 1921"
       }
     ]
   }
