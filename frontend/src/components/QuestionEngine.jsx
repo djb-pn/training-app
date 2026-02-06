@@ -1,36 +1,31 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import ManualReferences from '../data/ManualReferences.json';
 
 const QuestionEngine = ({ moduleData, title, onBack, accent, userEmail }) => {
-  const [questions, setQuestions] = useState([]);
   const [currentIdx, setCurrentIdx] = useState(0);
   const [wrongQueue, setWrongQueue] = useState([]);
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [feedback, setFeedback] = useState(null); 
   const [isFinished, setIsFinished] = useState(false);
 
-  // 1. STABLE INITIALIZATION: Process and shuffle questions ONLY ONCE when moduleData changes
-  useEffect(() => {
-    if (moduleData) {
-      const allQ = Object.values(moduleData).flat().map(q => {
-        // Create a definitive "Locked" version of the question for this session
-        const isSATA = Array.isArray(q.answer);
-        return {
-          ...q,
-          isSATA,
-          // Store original answer as the source of truth
-          truth: q.answer, 
-          // Shuffle options once and store them as the visual truth
-          displayOptions: [...q.options].sort(() => Math.random() - 0.5)
-        };
-      });
-      // Shuffle the entire deck once
-      setQuestions(allQ.sort(() => Math.random() - 0.5));
-    }
+  // 1. LOCK THE DECK: useMemo ensures the questions and their internal shuffles 
+  // are calculated ONCE and never change until the module itself changes.
+  const questions = useMemo(() => {
+    if (!moduleData) return [];
+    return Object.values(moduleData).flat().map(q => {
+      const isSATA = Array.isArray(q.answer);
+      return {
+        ...q,
+        isSATA,
+        truth: q.answer,
+        // The display order is now locked into the question object itself
+        displayOptions: [...q.options].sort(() => Math.random() - 0.5)
+      };
+    }).sort(() => Math.random() - 0.5);
   }, [moduleData]);
 
   const handleToggleOption = (opt) => {
-    if (feedback) return; // Prevent clicking after answer is submitted
+    if (feedback) return;
     const q = questions[currentIdx];
     
     if (q.isSATA) {
@@ -38,7 +33,6 @@ const QuestionEngine = ({ moduleData, title, onBack, accent, userEmail }) => {
         prev.includes(opt) ? prev.filter(i => i !== opt) : [...prev, opt]
       );
     } else {
-      // For single choice, evaluate immediately
       evaluateAnswer([opt]);
     }
   };
@@ -48,28 +42,21 @@ const QuestionEngine = ({ moduleData, title, onBack, accent, userEmail }) => {
     let isCorrect = false;
 
     if (q.isSATA) {
-      // SATA Logic: Length must match and every item must be present in the truth array
       isCorrect = userSelections.length === q.truth.length && 
                   userSelections.every(val => q.truth.includes(val));
     } else {
-      // Single Choice Logic: Compare strings
       isCorrect = userSelections[0] === q.truth;
     }
     
     const referenceText = ManualReferences[q.source] || q.source;
-    
-    setFeedback({ 
-      correct: isCorrect, 
-      source: referenceText, 
-      userChoices: userSelections 
-    });
+    setFeedback({ correct: isCorrect, source: referenceText, userChoices: userSelections });
 
-    // Record progress to Cloudflare Worker
+    // Sync progress to DB
     fetch('https://api-training.picksgallery.com/progress', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userEmail, questionId: q.id, correct: isCorrect })
-    }).catch(e => console.error("Sync failed"));
+    }).catch(e => console.error("DB Sync failed"));
 
     if (!isCorrect) {
       setWrongQueue(prev => [...prev, q]);
@@ -82,17 +69,15 @@ const QuestionEngine = ({ moduleData, title, onBack, accent, userEmail }) => {
     if (currentIdx + 1 < questions.length) {
       setCurrentIdx(currentIdx + 1);
     } else if (wrongQueue.length > 0) {
-      // Re-run missed questions
-      setQuestions([...wrongQueue.sort(() => Math.random() - 0.5)]);
-      setWrongQueue([]);
-      setCurrentIdx(0);
+      // End of round: If there are wrongs, they will be reviewed in a fresh session.
+      setIsFinished(true); 
     } else {
       setIsFinished(true);
     }
   };
 
   const q = questions[currentIdx];
-  if (!q) return <div style={{ textAlign: 'center', padding: '50px' }}>Loading Question Bank...</div>;
+  if (!q) return <div style={{ textAlign: 'center', padding: '50px' }}>Loading...</div>;
 
   return (
     <div style={{ maxWidth: '800px', margin: '40px auto', padding: '20px' }}>
@@ -114,28 +99,26 @@ const QuestionEngine = ({ moduleData, title, onBack, accent, userEmail }) => {
           let bgColor = 'white';
           let border = '1px solid #ddd';
           
-          // Show selection before submitting
           if (selectedOptions.includes(opt)) {
             border = `2px solid ${accent}`;
           }
 
-          // Feedback Logic
           if (feedback) {
             const isPartofCorrectAnswer = q.isSATA ? q.truth.includes(opt) : opt === q.truth;
             const wasChosenByUser = feedback.userChoices.includes(opt);
             
             if (isPartofCorrectAnswer) {
-                bgColor = '#e6fffa'; // Light Green
+                bgColor = '#e6fffa'; 
                 border = '2px solid #2f855a';
             } else if (wasChosenByUser && !isPartofCorrectAnswer) {
-                bgColor = '#fff5f5'; // Light Red
+                bgColor = '#fff5f5'; 
                 border = '2px solid #c53030';
             }
           }
 
           return (
             <button key={i} disabled={!!feedback} onClick={() => handleToggleOption(opt)} 
-              style={{ textAlign: 'left', padding: '22px', borderRadius: '10px', border, fontSize: '1.15rem', background: bgColor, cursor: feedback ? 'default' : 'pointer', transition: 'all 0.2s' }}>
+              style={{ textAlign: 'left', padding: '22px', borderRadius: '10px', border, fontSize: '1.15rem', background: bgColor, cursor: feedback ? 'default' : 'pointer' }}>
               {opt}
             </button>
           );
@@ -144,18 +127,18 @@ const QuestionEngine = ({ moduleData, title, onBack, accent, userEmail }) => {
 
       {q.isSATA && !feedback && (
         <button onClick={() => evaluateAnswer(selectedOptions)} disabled={selectedOptions.length === 0}
-          style={{ marginTop: '20px', padding: '15px 30px', background: accent, color: 'white', border: 'none', borderRadius: '8px', cursor: 'pointer', width: '100%', fontWeight: 'bold', fontSize: '1.2rem' }}>
+          style={{ marginTop: '20px', padding: '15px 30px', background: accent, color: 'white', border: 'none', borderRadius: '8px', cursor: 'pointer', width: '100%', fontWeight: 'bold' }}>
           Submit Answer
         </button>
       )}
 
       {feedback && (
-        <div style={{ marginTop: '30px', padding: '30px', borderRadius: '12px', background: feedback.correct ? '#f0fff4' : '#fff5f5', border: `2px solid ${feedback.correct ? '#c6f6d5' : '#fed7d7'}`, boxShadow: '0 4px 10px rgba(0,0,0,0.05)' }}>
-          <h4 style={{ margin: '0 0 10px 0', color: feedback.correct ? '#2f855a' : '#c53030', fontSize: '1.4rem' }}>
+        <div style={{ marginTop: '30px', padding: '30px', borderRadius: '12px', background: feedback.correct ? '#f0fff4' : '#fff5f5', border: `2px solid ${feedback.correct ? '#c6f6d5' : '#fed7d7'}` }}>
+          <h4 style={{ margin: '0 0 10px 0', color: feedback.correct ? '#2f855a' : '#c53030' }}>
             {feedback.correct ? 'Correct!' : 'Incorrect'}
           </h4>
-          <p style={{ fontSize: '1.1rem', color: '#444', lineHeight: '1.6' }}><strong>Manual Reference:</strong> {feedback.source}</p>
-          <button onClick={nextQuestion} style={{ marginTop: '20px', padding: '12px 30px', background: accent, color: 'white', border: 'none', borderRadius: '6px', cursor: 'pointer', fontWeight: 'bold' }}>Continue</button>
+          <p><strong>Reference:</strong> {feedback.source}</p>
+          <button onClick={nextQuestion} style={{ marginTop: '20px', padding: '12px 30px', background: accent, color: 'white', border: 'none', borderRadius: '6px', cursor: 'pointer' }}>Continue</button>
         </div>
       )}
     </div>
