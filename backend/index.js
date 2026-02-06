@@ -59,17 +59,43 @@ export default {
         return new Response(JSON.stringify({ email: auth.email }), { headers: corsHeaders });
       }
 
-      // --- 3. RECORD PROGRESS (Mastery) ---
+      // --- 3. RECORD PROGRESS ---
+      // D1 Schema (verified via PRAGMA table_info):
+      //   user_id TEXT (PK1), question_id TEXT (PK2), first_attempt_correct INTEGER,
+      //   ease_factor REAL default 2.5, interval_days INTEGER default 0,
+      //   next_review DATETIME, total_attempts INTEGER default 0
+      //
+      // On first insert: records first_attempt_correct and sets total_attempts = 1.
+      // On conflict (retry): bumps total_attempts but NEVER overwrites first_attempt_correct.
       if (url.pathname === "/progress" && request.method === "POST") {
-        const { userEmail, questionId, correct } = await request.json();
-        await env.DB.prepare(
-          "INSERT INTO progress (email, question_id, is_correct, updated_at) VALUES (?, ?, ?, ?) ON CONFLICT(email, question_id) DO UPDATE SET is_correct=excluded.is_correct, updated_at=excluded.updated_at"
-        ).bind(userEmail, questionId, correct ? 1 : 0, new Date().toISOString()).run();
-        
+        const { userEmail, questionId, correct, isFirstAttempt } = await request.json();
+
+        await env.DB.prepare(`
+          INSERT INTO progress (user_id, question_id, first_attempt_correct, total_attempts)
+          VALUES (?, ?, ?, 1)
+          ON CONFLICT(user_id, question_id) DO UPDATE SET
+            total_attempts = progress.total_attempts + 1
+        `).bind(userEmail, questionId, correct ? 1 : 0).run();
+
         return new Response(JSON.stringify({ success: true }), { headers: corsHeaders });
       }
 
-      // --- 4. REPORT ERROR ---
+      // --- 4. GET PROGRESS ---
+      // Returns all progress rows for a user so the frontend can compute per-module stats.
+      if (url.pathname === "/progress" && request.method === "GET") {
+        const email = url.searchParams.get("email");
+        if (!email) {
+          return new Response(JSON.stringify({ error: "email parameter required" }), { status: 400, headers: corsHeaders });
+        }
+
+        const { results } = await env.DB.prepare(
+          "SELECT question_id, first_attempt_correct, total_attempts FROM progress WHERE user_id = ?"
+        ).bind(email).all();
+
+        return new Response(JSON.stringify({ progress: results || [] }), { headers: corsHeaders });
+      }
+
+      // --- 5. REPORT ERROR ---
       if (url.pathname === "/report-question" && request.method === "POST") {
         const { userEmail, questionId, note, context } = await request.json();
         await fetch("https://api.resend.com/emails", {
