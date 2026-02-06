@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AppConfig, HDS_Modules } from './AppConfiguration';
 import { HearthDesignSpecialistQuestions } from './data/HDS_Sales_Questions';
+import { NursePractitionerW2Questions } from './data/NP_W2_Questions'; // New track import
 import QuestionEngine from './components/QuestionEngine';
 
 function App() {
@@ -55,7 +56,9 @@ function App() {
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', width: '100vw', background: BRAND.gray }}>
         <div style={{ background: BRAND.white, padding: '50px', borderRadius: '16px', textAlign: 'center', width: '400px', boxShadow: '0 10px 25px rgba(0,0,0,0.2)' }}>
           <h1 style={{ color: BRAND.maroon }}>Training Portal</h1>
-          {authStatus === 'sent' ? <p>Email sent to <strong>{email}</strong>!</p> : (
+          {authStatus === 'verifying' ? <p>Verifying link...</p> : authStatus === 'sent' ? (
+            <p>Email sent to <strong>{email}</strong>!</p>
+          ) : (
             <form onSubmit={requestMagicLink}>
               <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email address" required 
                 style={{ width: '100%', padding: '15px', marginBottom: '20px', borderRadius: '8px', border: '2px solid #eee' }} />
@@ -69,7 +72,6 @@ function App() {
     );
   }
 
-  // Dashboard View
   if (!view.path) {
     return (
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '40px 20px' }}>
@@ -80,10 +82,10 @@ function App() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '30px' }}>
           {AppConfig.study_areas.map(area => (
             <div key={area.id} onClick={() => setView({...view, path: area})} 
-              style={{ background: 'white', padding: '40px', borderRadius: '12px', borderLeft: `10px solid ${BRAND.maroon}`, cursor: 'pointer', boxShadow: '0 4px 15px rgba(0,0,0,0.05)', textAlign: 'center' }}>
+              style={{ background: 'white', padding: '40px', borderRadius: '12px', borderLeft: `12px solid ${BRAND.maroon}`, cursor: 'pointer', boxShadow: '0 4px 15px rgba(0,0,0,0.05)', textAlign: 'center' }}>
               <span style={{ fontSize: '4rem' }}>{area.icon}</span>
               <h2 style={{ color: BRAND.gray }}>{area.title}</h2>
-              <button style={{ background: BRAND.maroon, color: 'white', border: 'none', padding: '12px 25px', borderRadius: '6px' }}>EXPLORE</button>
+              <button style={{ background: BRAND.maroon, color: BRAND.white, border: 'none', padding: '12px 25px', borderRadius: '6px' }}>EXPLORE</button>
             </div>
           ))}
         </div>
@@ -91,11 +93,10 @@ function App() {
     );
   }
 
-  // Module List View
   if (!view.module) {
     const items = !view.section ? view.path.sections : HDS_Modules;
     return (
-      <div style={{ maxWidth: '800px', margin: '0 auto', padding: '60px 20px' }}>
+      <div style={{ maxWidth: '800px', margin: '0 auto', padding: '40px 20px' }}>
         <button onClick={() => view.section ? setView({...view, section: null}) : setView({...view, path: null})} style={{ color: BRAND.maroon, background: 'none', border: 'none', fontWeight: 'bold', marginBottom: '30px', cursor: 'pointer' }}>← Back</button>
         <h1 style={{ color: BRAND.gray }}>{!view.section ? view.path.title : view.section.title}</h1>
         {items.map(item => (
@@ -109,10 +110,13 @@ function App() {
     );
   }
 
-  // Quiz View
   return (
     <QuestionEngine 
-      moduleData={HearthDesignSpecialistQuestions[view.module.title]} 
+      moduleData={
+        view.path.id === "NP_PATH" 
+        ? NursePractitionerW2Questions[view.module.title] 
+        : HearthDesignSpecialistQuestions[view.module.title]
+      } 
       title={view.module.title}
       userEmail={user.email}
       onBack={() => setView({...view, module: null})}
