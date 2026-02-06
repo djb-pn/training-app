@@ -11,17 +11,23 @@ const QuestionEngine = ({ moduleData, title, onBack, accent, userEmail }) => {
 
   useEffect(() => {
     if (moduleData) {
-      const allQ = Object.values(moduleData).flat().map(q => ({
-        ...q,
-        options: [...q.options].sort(() => Math.random() - 0.5) // Randomize answer placement
-      }));
-      setQuestions(allQ.sort(() => Math.random() - 0.5));
+      // PRESERVE TRUTH: Map questions to keep the 'correctAnswer' stable before shuffling UI options
+      const preparedQ = Object.values(moduleData).flat().map(q => {
+        return {
+          ...q,
+          correctAnswer: q.answer, // Locked truth
+          shuffledOptions: [...q.options].sort(() => Math.random() - 0.5) // UI only
+        };
+      });
+      setQuestions(preparedQ.sort(() => Math.random() - 0.5));
     }
   }, [moduleData]);
 
   const handleToggleOption = (opt) => {
     if (feedback) return;
-    const isSATA = Array.isArray(questions[currentIdx].answer);
+    const q = questions[currentIdx];
+    const isSATA = Array.isArray(q.correctAnswer);
+    
     if (isSATA) {
       setSelectedOptions(prev => 
         prev.includes(opt) ? prev.filter(i => i !== opt) : [...prev, opt]
@@ -33,14 +39,16 @@ const QuestionEngine = ({ moduleData, title, onBack, accent, userEmail }) => {
 
   const checkAnswer = (selections) => {
     const q = questions[currentIdx];
-    const isSATA = Array.isArray(q.answer);
+    const isSATA = Array.isArray(q.correctAnswer);
     let isCorrect = false;
 
     if (isSATA) {
-      isCorrect = selections.length === q.answer.length && 
-                  selections.every(val => q.answer.includes(val));
+      // Logic for Select All That Apply 
+      isCorrect = selections.length === q.correctAnswer.length && 
+                  selections.every(val => q.correctAnswer.includes(val));
     } else {
-      isCorrect = selections[0] === q.answer;
+      // Single choice logic [cite: 1002]
+      isCorrect = selections[0] === q.correctAnswer;
     }
     
     const referenceText = ManualReferences[q.source] || q.source;
@@ -66,7 +74,7 @@ const QuestionEngine = ({ moduleData, title, onBack, accent, userEmail }) => {
   const q = questions[currentIdx];
   if (!q) return <div style={{ textAlign: 'center', padding: '50px' }}>Loading...</div>;
 
-  const isSATA = Array.isArray(q.answer);
+  const isSATA = Array.isArray(q.correctAnswer);
 
   return (
     <div style={{ maxWidth: '800px', margin: '40px auto', padding: '20px' }}>
@@ -82,21 +90,21 @@ const QuestionEngine = ({ moduleData, title, onBack, accent, userEmail }) => {
       </h3>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: '30px' }}>
-        {q.options.map((opt, i) => {
+        {q.shuffledOptions.map((opt, i) => {
           let bgColor = 'white';
           let border = '1px solid #ddd';
           
           if (selectedOptions.includes(opt)) {
-            bgColor = '#f0f0f0';
+            bgColor = '#f9f9f9';
             border = `2px solid ${accent}`;
           }
 
           if (feedback) {
-            const isCorrectAnswer = isSATA ? q.answer.includes(opt) : opt === q.answer;
-            const wasSelected = feedback.selections.includes(opt);
+            const isActuallyCorrect = isSATA ? q.correctAnswer.includes(opt) : opt === q.correctAnswer;
+            const userSelectedThis = feedback.selections.includes(opt);
             
-            if (isCorrectAnswer) bgColor = '#e6fffa';
-            else if (wasSelected && !isCorrectAnswer) bgColor = '#fff5f5';
+            if (isActuallyCorrect) bgColor = '#e6fffa'; // Correct answers always turn green
+            else if (userSelectedThis && !isActuallyCorrect) bgColor = '#fff5f5'; // Wrong user choice turns red
           }
 
           return (
@@ -120,8 +128,8 @@ const QuestionEngine = ({ moduleData, title, onBack, accent, userEmail }) => {
           <h4 style={{ margin: '0 0 10px 0', color: feedback.correct ? '#2f855a' : '#c53030' }}>
             {feedback.correct ? 'Correct!' : 'Incorrect'}
           </h4>
-          <p><strong>Reference:</strong> {feedback.source}</p>
-          <button onClick={nextQuestion} style={{ marginTop: '20px', padding: '12px 30px', background: accent, color: 'white', border: 'none', borderRadius: '6px', cursor: 'pointer' }}>Continue</button>
+          <p style={{ lineHeight: '1.5' }}><strong>Reference:</strong> {feedback.source}</p>
+          <button onClick={nextQuestion} style={{ marginTop: '20px', padding: '12px 30px', background: accent, color: 'white', border: 'none', borderRadius: '6px', cursor: 'pointer', fontWeight: 'bold' }}>Continue</button>
         </div>
       )}
     </div>
