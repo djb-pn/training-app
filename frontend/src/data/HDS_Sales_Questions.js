@@ -232,8 +232,7 @@ export const HearthDesignSpecialistQuestions = {
         "question": "What is the best location for a vertical venting system?",
         "options": ["On an exterior wall.", "Through the center of the home (the warm envelope).", "Through a window.", "Running horizontally along the siding."],
         "answer": "Through the center of the home (the warm envelope).",
-        "explanation": "Keeping the vent warm inside the house envelope maximizes draft and reduces creosote/condensation.",
-        "source": ""
+        "explanation": "Keeping the vent warm inside the house envelope maximizes draft and reduces creosote/condensation."
       },
       {
         "id": 29,
@@ -600,48 +599,42 @@ export const HearthDesignSpecialistQuestions = {
         "question": "What creates 'Natural Draft'?",
         "options": ["A fan blowing air up the flue.", "The temperature difference between hot flue gases and cooler outdoor air.", "The wind blowing across the chimney cap.", "Opening a window."],
         "answer": "The temperature difference between hot flue gases and cooler outdoor air.",
-        "explanation": "This temperature differential creates buoyancy; hot air rises, creating suction.",
-        "source": ""
+        "explanation": "This temperature differential creates buoyancy; hot air rises, creating suction."
       },
       {
         "id": 73,
         "question": "What is 'Flow' in a venting system?",
         "options": ["The pressure measurement in Pascals.", "The volume of gases passing through the system as a result of draft.", "The speed of the wind outside.", "The material the pipe is made of."],
         "answer": "The volume of gases passing through the system as a result of draft.",
-        "explanation": "Draft is the force (pressure); Flow is the result (movement of gas volume).",
-        "source": ""
+        "explanation": "Draft is the force (pressure); Flow is the result (movement of gas volume)."
       },
       {
         "id": 74,
         "question": "What happens if a chimney is too large for the appliance?",
         "options": ["Draft increases because there is more room.", "Draft decreases because gases cool too quickly and move slower.", "Efficiency increases.", "Nothing changes."],
         "answer": "Draft decreases because gases cool too quickly and move slower.",
-        "explanation": "Excessive volume causes rapid cooling, killing the buoyancy needed for strong draft.",
-        "source": ""
+        "explanation": "Excessive volume causes rapid cooling, killing the buoyancy needed for strong draft."
       },
       {
         "id": 75,
         "question": "What is a 'competing source of negative pressure' in a home?",
         "options": ["A kitchen range exhaust fan.", "A closed window.", "A ceiling fan.", "A refrigerator."],
         "answer": "A kitchen range exhaust fan.",
-        "explanation": "Exhaust fans suck air out of the house, potentially overpowering the chimney's natural draft.",
-        "source": ""
+        "explanation": "Exhaust fans suck air out of the house, potentially overpowering the chimney's natural draft."
       },
       {
         "id": 76,
         "question": "What is a 'Blower Door Test' used for?",
         "options": ["To test the durability of a door hinge.", "To measure the airtightness of a building.", "To see if the blower works.", "To clean the chimney."],
         "answer": "To measure the airtightness of a building.",
-        "explanation": "It quantifies air leakage, helping determine if makeup air is needed for combustion appliances.",
-        "source": ""
+        "explanation": "It quantifies air leakage, helping determine if makeup air is needed for combustion appliances."
       },
       {
         "id": 77,
         "question": "If a mechanical vent fan is located at the termination (end) of the vent, what is the pressure inside the vent?",
         "options": ["Positive.", "Negative.", "Neutral.", "Atmospheric."],
         "answer": "Negative.",
-        "explanation": "Pulling air from the end creates a vacuum (negative pressure) throughout the pipe.",
-        "source": ""
+        "explanation": "Pulling air from the end creates a vacuum (negative pressure) throughout the pipe."
       }
     ],
     "Chapter 11: Installation Planning": [
@@ -650,48 +643,42 @@ export const HearthDesignSpecialistQuestions = {
         "question": "What is the definition of a 'Combustible Material'?",
         "options": ["Any material that is painted red.", "Material made of wood, compressed paper, or plant fibers that will ignite and burn.", "Only materials that explode.", "Steel and brick."],
         "answer": "Material made of wood, compressed paper, or plant fibers that will ignite and burn.",
-        "explanation": "Even flame-proofed or plastered wood is considered combustible in hearth standards.",
-        "source": ""
+        "explanation": "Even flame-proofed or plastered wood is considered combustible in hearth standards."
       },
       {
         "id": 79,
         "question": "Is standard drywall (gypsum board) considered combustible?",
         "options": ["No, it is rock.", "Yes, because of the paper facing.", "Only if it is painted.", "Only if it is wet."],
         "answer": "Yes, because of the paper facing.",
-        "explanation": "The paper facing on drywall can ignite, so it is treated as a combustible material.",
-        "source": ""
+        "explanation": "The paper facing on drywall can ignite, so it is treated as a combustible material."
       },
       {
         "id": 80,
         "question": "What is the '3-2-10 Rule' for chimney termination?",
         "options": ["3 feet wide, 2 feet deep, 10 feet tall.", "3 feet above the roof penetration, and 2 feet higher than anything within 10 feet horizontally.", "3 elbows max, 2 feet horizontal, 10 feet vertical.", "3 inches clearance, 2 inches overlap, 10 inches support."],
         "answer": "3 feet above the roof penetration, and 2 feet higher than anything within 10 feet horizontally.",
-        "explanation": "This rule ensures the chimney clears roof turbulence zones for proper draft and safety.",
-        "source": ""
+        "explanation": "This rule ensures the chimney clears roof turbulence zones for proper draft and safety."
       },
       {
         "id": 81,
         "question": "Why should an exterior chimney chase be insulated?",
         "options": ["To keep the house warm.", "To prevent 'cold hearth syndrome' and keep flue gases warm for better draft.", "To structurally support the pipe.", "It is required by law everywhere."],
         "answer": "To prevent 'cold hearth syndrome' and keep flue gases warm for better draft.",
-        "explanation": "Insulation reduces heat loss, preventing flow reversal and creosote buildup.",
-        "source": ""
+        "explanation": "Insulation reduces heat loss, preventing flow reversal and creosote buildup."
       },
       {
         "id": 82,
         "question": "What is the EPA 'Lead RRP' Rule?",
         "options": ["A rule about recycling plastic.", "A regulation requiring certification for renovations disturbing paint in pre-1978 housing.", "A standard for lead-free gasoline.", "A rule for disposal of old stoves."],
         "answer": "A regulation requiring certification for renovations disturbing paint in pre-1978 housing.",
-        "explanation": "It protects against lead dust contamination during renovation/repair work.",
-        "source": ""
+        "explanation": "It protects against lead dust contamination during renovation/repair work."
       },
       {
         "id": 83,
         "question": "How do you calculate the floor protection size for a corner installation?",
         "options": ["Guess.", "Use the formula: Distance to front = (Rear clearance x 1.414) + (Width / 2) + Depth.", "Just measure 18 inches from the wall.", "Use the diagonal of the room."],
         "answer": "Use the formula: Distance to front = (Rear clearance x 1.414) + (Width / 2) + Depth.",
-        "explanation": "This geometric formula ensures the pad covers the required distance from the appliance face.",
-        "source": ""
+        "explanation": "This geometric formula ensures the pad covers the required distance from the appliance face."
       }
     ],
     "Chapter 12: Communication with Owners": [
@@ -700,32 +687,28 @@ export const HearthDesignSpecialistQuestions = {
         "question": "What is a safe way to dispose of ashes?",
         "options": ["Vacuum them immediately.", "Place them in a metal container with a tight-fitting lid on a non-combustible surface.", "Throw them in the trash can.", "Dump them in the garden while hot."],
         "answer": "Place them in a metal container with a tight-fitting lid on a non-combustible surface.",
-        "explanation": "Ashes can contain live embers for days; plastic or paper containers can melt or ignite.",
-        "source": ""
+        "explanation": "Ashes can contain live embers for days; plastic or paper containers can melt or ignite."
       },
       {
         "id": 85,
         "question": "What does the 'Dollar Bill Test' check?",
         "options": ["The price of the stove.", "The seal of the door gasket.", "The draft of the chimney.", "The moisture of the wood."],
         "answer": "The seal of the door gasket.",
-        "explanation": "If a dollar bill pulls out easily from a closed door, the gasket seal is compromised.",
-        "source": ""
+        "explanation": "If a dollar bill pulls out easily from a closed door, the gasket seal is compromised."
       },
       {
         "id": 86,
         "question": "Why should you never use a standard household vacuum for cold ash?",
         "options": ["It is too noisy.", "Fine ash passes through the filter and can ruin the motor or blow back into the room.", "It is illegal.", "It makes the vacuum smell good."],
         "answer": "Fine ash passes through the filter and can ruin the motor or blow back into the room.",
-        "explanation": "Standard filters are too coarse for ash; specialized ash vacuums are required.",
-        "source": ""
+        "explanation": "Standard filters are too coarse for ash; specialized ash vacuums are required."
       },
       {
         "id": 87,
         "question": "How often should a chimney be inspected?",
         "options": ["Every 5 years.", "At least once a year.", "Only when smoke comes into the room.", "Never, if it works fine."],
         "answer": "At least once a year.",
-        "explanation": "Annual inspections identify creosote buildup or structural damage before they become hazards.",
-        "source": ""
+        "explanation": "Annual inspections identify creosote buildup or structural damage before they become hazards."
       }
     ]
   },
@@ -736,184 +719,161 @@ export const HearthDesignSpecialistQuestions = {
         "question": "What is Creosote?",
         "options": ["A type of wood.", "A cleaning chemical.", "A flammable byproduct of incomplete combustion that condenses in the chimney.", "The ash left after burning."],
         "answer": "A flammable byproduct of incomplete combustion that condenses in the chimney.",
-        "explanation": "It is unburned fuel vapor that solidifies and poses a severe fire hazard.",
-        "source": ""
+        "explanation": "It is unburned fuel vapor that solidifies and poses a severe fire hazard."
       },
       {
         "id": 89,
         "question": "What are the four stages of wood combustion?",
         "options": ["Heating, Burning, Smoking, Cooling.", "Moisture Evaporation, Vaporization, Gas Vapor Ignition, Char Burning.", "Lighting, Flaming, Glowing, Dying.", "Solid, Liquid, Gas, Plasma."],
         "answer": "Moisture Evaporation, Vaporization, Gas Vapor Ignition, Char Burning.",
-        "explanation": "These stages describe the chemical process of converting wood into heat and energy.",
-        "source": ""
+        "explanation": "These stages describe the chemical process of converting wood into heat and energy."
       },
       {
         "id": 90,
         "question": "What is the difference between HHV and LHV efficiency?",
         "options": ["HHV is for gas, LHV is for wood.", "HHV includes the energy of water vapor condensation; LHV subtracts it.", "LHV is always higher than HHV.", "There is no difference."],
         "answer": "HHV includes the energy of water vapor condensation; LHV subtracts it.",
-        "explanation": "North American standards use HHV (Higher Heating Value) which accounts for all potential energy.",
-        "source": ""
+        "explanation": "North American standards use HHV (Higher Heating Value) which accounts for all potential energy."
       },
       {
         "id": 91,
         "question": "What is a 'Catalytic Combustor'?",
         "options": ["A fan that blows air.", "A device that lowers the ignition temperature of smoke gases to burn them cleaner.", "A type of wood.", "A thermostat."],
         "answer": "A device that lowers the ignition temperature of smoke gases to burn them cleaner.",
-        "explanation": "It allows smoke to burn at 500°F instead of 1100°F, increasing efficiency and reducing emissions.",
-        "source": ""
+        "explanation": "It allows smoke to burn at 500°F instead of 1100°F, increasing efficiency and reducing emissions."
       },
       {
         "id": 92,
         "question": "What is the maximum recommended moisture content for firewood?",
         "options": ["10%", "20%", "35%", "50%"],
         "answer": "20%",
-        "explanation": "Moisture above 20% wastes heat boiling off water and promotes creosote formation.",
-        "source": ""
+        "explanation": "Moisture above 20% wastes heat boiling off water and promotes creosote formation."
       },
       {
         "id": 93,
         "question": "What is the recommended minimum chimney height for a woodstove?",
         "options": ["8 feet.", "10 feet.", "12 feet.", "15 feet."],
         "answer": "15 feet.",
-        "explanation": "This height is generally required to generate sufficient natural draft for proper operation.",
-        "source": ""
+        "explanation": "This height is generally required to generate sufficient natural draft for proper operation."
       },
       {
         "id": 94,
         "question": "Can you use single-wall stovepipe to penetrate a wall or ceiling?",
         "options": ["Yes, if you use a thimble.", "No, never.", "Yes, if it is painted black.", "Only in a garage."],
         "answer": "No, never.",
-        "explanation": "Single-wall pipe cannot contain a chimney fire safely; listed chimney or pass-through systems must be used.",
-        "source": ""
+        "explanation": "Single-wall pipe cannot contain a chimney fire safely; listed chimney or pass-through systems must be used."
       },
       {
         "id": 95,
         "question": "What is 'Full Relining' for a fireplace insert?",
         "options": ["Painting the inside of the firebox.", "Installing a continuous liner from the appliance outlet to the top of the chimney.", "Installing a short pipe into the damper.", "Replacing the bricks."],
         "answer": "Installing a continuous liner from the appliance outlet to the top of the chimney.",
-        "explanation": "This ensures a properly sized, safe, and cleanable flue, solving draft and safety issues.",
-        "source": ""
+        "explanation": "This ensures a properly sized, safe, and cleanable flue, solving draft and safety issues."
       },
       {
         "id": 96,
         "question": "What is the purpose of a 'block-off plate'?",
         "options": ["To stop the fire.", "To seal the damper area and prevent room air from escaping up the chimney.", "To hold the wood.", "To block the view."],
         "answer": "To seal the damper area and prevent room air from escaping up the chimney.",
-        "explanation": "It prevents heat loss and ensures the chimney draws from the appliance, not the room.",
-        "source": ""
+        "explanation": "It prevents heat loss and ensures the chimney draws from the appliance, not the room."
       },
       {
         "id": 97,
         "question": "Why should trash never be burned in a woodstove?",
         "options": ["It smells bad.", "It produces toxic fumes and can cause chimney fires or corrosion.", "It burns too fast.", "It is too expensive."],
         "answer": "It produces toxic fumes and can cause chimney fires or corrosion.",
-        "explanation": "Chemicals in trash damage the appliance and create dangerous emissions.",
-        "source": ""
+        "explanation": "Chemicals in trash damage the appliance and create dangerous emissions."
       },
       {
         "id": 98,
         "question": "What should a homeowner do first if a chimney fire occurs?",
         "options": ["Open the door to check.", "Evacuate the house and call the fire department.", "Throw water on the fire.", "Close the damper."],
         "answer": "Evacuate the house and call the fire department.",
-        "explanation": "Safety of life is priority #1; chimney fires can spread rapidly to the structure.",
-        "source": ""
+        "explanation": "Safety of life is priority #1; chimney fires can spread rapidly to the structure."
       },
       {
         "id": 99,
         "question": "What is 'Overfiring'?",
         "options": ["Burning too much wood at once, causing damage to the appliance.", "Firing the installer.", "Starting the fire from the top down.", "Using the wrong kind of match."],
         "answer": "Burning too much wood at once, causing damage to the appliance.",
-        "explanation": "Excessive heat can warp metal, crack masonry, and void warranties.",
-        "source": ""
+        "explanation": "Excessive heat can warp metal, crack masonry, and void warranties."
       },
       {
         "id": 100,
         "question": "What instrument is highly recommended for customers to check firewood quality?",
         "options": ["A tape measure.", "A moisture meter.", "A scale.", "A thermometer."],
         "answer": "A moisture meter.",
-        "explanation": "It provides an objective reading of fuel dryness, preventing the use of wet wood.",
-        "source": ""
+        "explanation": "It provides an objective reading of fuel dryness, preventing the use of wet wood."
       },
       {
         "id": 101,
         "question": "What is the maximum horizontal run allowed for a woodstove connector?",
         "options": ["There is no limit.", "10 feet.", "No more than 50% of the vertical chimney height.", "2 feet."],
         "answer": "No more than 50% of the vertical chimney height.",
-        "explanation": "NFPA 211 limits horizontal runs to maintain adequate draft.",
-        "source": ""
+        "explanation": "NFPA 211 limits horizontal runs to maintain adequate draft."
       },
       {
         "id": 102,
         "question": "What is the minimum clearance for a single-wall chimney connector to combustibles?",
         "options": ["6 inches.", "12 inches.", "18 inches.", "36 inches."],
         "answer": "18 inches.",
-        "explanation": "This is the standard required clearance unless an approved reduction system is used.",
-        "source": ""
+        "explanation": "This is the standard required clearance unless an approved reduction system is used."
       },
       {
         "id": 103,
         "question": "What is the 'Pyrolysis' zone in wood combustion?",
         "options": ["The ash pit.", "The stage where chemical structure breaks down and releases gases.", "The chimney cap.", "The glass door."],
         "answer": "The stage where chemical structure breaks down and releases gases.",
-        "explanation": "Pyrolysis releases the hydrocarbon gases that provide the majority of the heat.",
-        "source": ""
+        "explanation": "Pyrolysis releases the hydrocarbon gases that provide the majority of the heat."
       },
       {
         "id": 104,
         "question": "Why should a woodstove door not be left open during operation?",
         "options": ["It lets the heat out.", "It causes overfiring and potential smoke spillage.", "It breaks the hinges.", "It scares the dog."],
         "answer": "It causes overfiring and potential smoke spillage.",
-        "explanation": "Uncontrolled air intake leads to dangerously high temperatures and loss of draft control.",
-        "source": ""
+        "explanation": "Uncontrolled air intake leads to dangerously high temperatures and loss of draft control."
       },
       {
         "id": 105,
         "question": "What is the primary maintenance task for a catalytic combustor?",
         "options": ["Washing it.", "Replacing it every month.", "Gentle brushing or vacuuming to remove fly ash.", "Oiling it."],
         "answer": "Gentle brushing or vacuuming to remove fly ash.",
-        "explanation": "Ash blocks the cells; cleaning restores flow and function.",
-        "source": ""
+        "explanation": "Ash blocks the cells; cleaning restores flow and function."
       },
       {
         "id": 106,
         "question": "What indicates that a catalytic combustor needs replacement?",
         "options": ["It changes color.", "It stops glowing.", "It is physically crumbling or cracked, and performance has dropped.", "It is one year old."],
         "answer": "It is physically crumbling or cracked, and performance has dropped.",
-        "explanation": "Physical deterioration and lack of heat output signal end of life.",
-        "source": ""
+        "explanation": "Physical deterioration and lack of heat output signal end of life."
       },
       {
         "id": 107,
         "question": "What is the benefit of a 'hybrid' woodstove?",
         "options": ["It burns gas and wood.", "It uses both catalytic and non-catalytic technology for clean burns.", "It is part electric.", "It has two doors."],
         "answer": "It uses both catalytic and non-catalytic technology for clean burns.",
-        "explanation": "Hybrids combine the low-burn efficiency of catalysts with the high-burn performance of baffles.",
-        "source": ""
+        "explanation": "Hybrids combine the low-burn efficiency of catalysts with the high-burn performance of baffles."
       },
       {
         "id": 108,
         "question": "Why is 'seasoned' wood important?",
         "options": ["It tastes better.", "It lights easier and produces more heat because water doesn't have to be boiled off.", "It is lighter.", "It is cheaper."],
         "answer": "It lights easier and produces more heat because water doesn't have to be boiled off.",
-        "explanation": "Dry wood allows energy to go into heat production rather than steam generation.",
-        "source": ""
+        "explanation": "Dry wood allows energy to go into heat production rather than steam generation."
       },
       {
         "id": 109,
         "question": "What is the '3-foot, 2-foot, 10-foot' rule?",
         "options": ["A rule for firewood storage.", "The minimum height requirement for chimney termination above a roof.", "The size of the hearth pad.", "The distance to furniture."],
         "answer": "The minimum height requirement for chimney termination above a roof.",
-        "explanation": "Chimneys must be 3' above the roof penetration and 2' higher than anything within 10'.",
-        "source": ""
+        "explanation": "Chimneys must be 3' above the roof penetration and 2' higher than anything within 10'."
       },
       {
         "id": 110,
         "question": "What is the danger of a 'cold hearth' syndrome?",
         "options": ["The floor gets cold.", "Cold air reverses flow down the chimney, causing smoke spillage at startup.", "The fire won't light.", "The glass breaks."],
         "answer": "Cold air reverses flow down the chimney, causing smoke spillage at startup.",
-        "explanation": "Exterior chimneys are prone to cooling, which creates a downdraft that pushes smoke into the room.",
-        "source": ""
+        "explanation": "Exterior chimneys are prone to cooling, which creates a downdraft that pushes smoke into the room."
       }
     ],
     "Chapter 14: Gas Hearth Systems": [
@@ -922,8 +882,7 @@ export const HearthDesignSpecialistQuestions = {
         "question": "What is the specific gravity of Propane gas compared to air?",
         "options": ["0.60 (Lighter than air)", "1.00 (Same as air)", "1.52 (Heavier than air)", "2.00 (Twice as heavy)"],
         "answer": "1.52 (Heavier than air)",
-        "explanation": "Because it is heavier than air, leaking propane sinks and pools in low areas, posing an explosion hazard.",
-        "source": ""
+        "explanation": "Because it is heavier than air, leaking propane sinks and pools in low areas, posing an explosion hazard."
       },
       {
         "id": 112,
@@ -996,8 +955,7 @@ export const HearthDesignSpecialistQuestions = {
         "question": "Why are 'fines' (dust) in pellet bags a problem?",
         "options": ["They cause allergies.", "They can jam augers and block airflow.", "They burn too hot.", "They are expensive."],
         "answer": "They can jam augers and block airflow.",
-        "explanation": "Excess fines disrupt the fuel feed and can create air flow resistance in the hopper or burn pot.",
-        "source": ""
+        "explanation": "Excess fines disrupt the fuel feed and can create air flow resistance in the hopper or burn pot."
       },
       {
         "id": 121,
@@ -1256,8 +1214,7 @@ export const HearthDesignSpecialistQuestions = {
         "question": "What is a 'hybrid' pellet appliance?",
         "options": ["One that burns oil and pellets.", "An appliance designed to burn both wood pellets and other biomass fuels like corn.", "A stove with a battery.", "A stove that makes electricity."],
         "answer": "An appliance designed to burn both wood pellets and other biomass fuels like corn.",
-        "explanation": "These units often have specialized burn pots and agitators to handle the higher ash/clinkers of biomass.",
-        "source": ""
+        "explanation": "These units often have specialized burn pots and agitators to handle the higher ash/clinkers of biomass."
       }
     ],
     "Comprehensive Review: Coal & Electric": [
@@ -1342,8 +1299,7 @@ export const HearthDesignSpecialistQuestions = {
         "question": "Why are 'unvented' logs prohibited in factory-built fireplaces unless specifically listed?",
         "options": ["They produce too much heat.", "The firebox may not be designed to withstand the specific heat characteristics, creating a fire hazard.", "They are too heavy.", "They don't fit."],
         "answer": "The firebox may not be designed to withstand the specific heat characteristics, creating a fire hazard.",
-        "explanation": "UL 127 requires specific testing for unvented logs to ensure the firebox won't overheat.",
-        "source": ""
+        "explanation": "UL 127 requires specific testing for unvented logs to ensure the firebox won't overheat."
       },
       {
         "id": 162,
@@ -1374,8 +1330,7 @@ export const HearthDesignSpecialistQuestions = {
         "question": "Why should you not use a 'heat reclaimer' on a modern EPA woodstove?",
         "options": ["It is illegal.", "It extracts too much heat from the flue, causing draft failure and creosote.", "It melts the pipe.", "It makes too much noise."],
         "answer": "It extracts too much heat from the flue, causing draft failure and creosote.",
-        "explanation": "High-efficiency stoves already have low flue temps; robbing more heat kills the draft.",
-        "source": ""
+        "explanation": "High-efficiency stoves already have low flue temps; robbing more heat kills the draft."
       },
       {
         "id": 166,
@@ -1406,16 +1361,14 @@ export const HearthDesignSpecialistQuestions = {
         "question": "Why are 'vent-free' appliances not subject to 'altitude derating'?",
         "options": ["They have a fan.", "They rely on the ODS pilot to shut down if oxygen is insufficient, rather than fixed orifices.", "They don't use gas.", "They are magic."],
         "answer": "They rely on the ODS pilot to shut down if oxygen is insufficient, rather than fixed orifices.",
-        "explanation": "The Oxygen Depletion Sensor will simply shut the unit off if the altitude makes the air too thin.",
-        "source": ""
+        "explanation": "The Oxygen Depletion Sensor will simply shut the unit off if the altitude makes the air too thin."
       },
       {
         "id": 170,
         "question": "What is the danger of using 'Galvanized' pipe for woodstove venting?",
         "options": ["It rusts.", "The zinc coating can vaporize at high temperatures, creating toxic fumes.", "It is too heavy.", "It is too expensive."],
         "answer": "The zinc coating can vaporize at high temperatures, creating toxic fumes.",
-        "explanation": "Galvanized pipe is for air ducts, not high-heat solid fuel exhaust; black steel or stainless is required.",
-        "source": ""
+        "explanation": "Galvanized pipe is for air ducts, not high-heat solid fuel exhaust; black steel or stainless is required."
       }
     ]
   }
