@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { AppConfig, HDS_Modules } from './AppConfiguration';
 import { HearthDesignSpecialistQuestions } from './data/HDS_Sales_Questions';
 import { NursePractitionerW2Questions } from './data/NP_W2_Questions';
+import { NursePractitionerW3Questions } from './data/NP_W3_Questions';
 import QuestionEngine from './components/QuestionEngine';
 
 // ---------------------------------------------------------------------------
@@ -275,9 +276,10 @@ function App() {
   // =========================================================================
   if (view.section && !view.module) {
     const isNP = view.path.id === "NP_PATH";
-    const questionsObj = isNP ? NursePractitionerW2Questions : HearthDesignSpecialistQuestions;
+    const npQuestions = view.section.id === "NP_W3" ? NursePractitionerW3Questions : NursePractitionerW2Questions;
+    const questionsObj = isNP ? npQuestions : HearthDesignSpecialistQuestions;
     const items = isNP 
-      ? Object.keys(NursePractitionerW2Questions).map(key => ({ id: key, title: key }))
+      ? Object.keys(npQuestions).map(key => ({ id: key, title: key }))
       : HDS_Modules;
 
     // Compute per-module progress
@@ -325,7 +327,8 @@ function App() {
   // QUESTION ENGINE
   // =========================================================================
   const isNP = view.path.id === "NP_PATH";
-  const questionsObj = isNP ? NursePractitionerW2Questions : HearthDesignSpecialistQuestions;
+  const npQuestions = view.section.id === "NP_W3" ? NursePractitionerW3Questions : NursePractitionerW2Questions;
+  const questionsObj = isNP ? npQuestions : HearthDesignSpecialistQuestions;
 
   return (
     <QuestionEngine 
