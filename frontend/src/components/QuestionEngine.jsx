@@ -43,8 +43,11 @@ const QuestionEngine = ({ moduleData, title, onBack, accent, userEmail }) => {
       isCorrect = userSelections[0] === q.answer;
     }
     
-    const referenceText = ManualReferences[q.source] || q.source;
-    setFeedback({ correct: isCorrect, source: referenceText, userChoices: userSelections });
+    // Build explanation text: prefer explanation field, fall back to ManualReferences lookup, then raw source
+    const explanation = q.explanation || null;
+    const referenceText = q.source ? (ManualReferences[q.source] || q.source) : null;
+
+    setFeedback({ correct: isCorrect, explanation, source: referenceText, userChoices: userSelections });
 
     // DB Sync
     fetch('https://api-training.picksgallery.com/progress', {
@@ -97,7 +100,8 @@ const QuestionEngine = ({ moduleData, title, onBack, accent, userEmail }) => {
           if (selectedOptions.includes(opt)) border = `2px solid ${accent}`;
 
           if (feedback) {
-            const isCorrectAnswer = isSATA ? q.answer.includes(opt) : opt === q.answer;
+            const isCorrectAnswer = isSATA ? 
+              q.answer.includes(opt) : opt === q.answer;
             const userSelectedThis = feedback.userChoices.includes(opt);
             
             if (isCorrectAnswer) {
@@ -130,7 +134,16 @@ const QuestionEngine = ({ moduleData, title, onBack, accent, userEmail }) => {
           <h4 style={{ margin: '0 0 10px 0', color: feedback.correct ? '#2f855a' : '#c53030' }}>
             {feedback.correct ? 'Correct!' : 'Incorrect'}
           </h4>
-          <p><strong>Reference:</strong> {feedback.source}</p>
+          {feedback.explanation && (
+            <p style={{ margin: '0 0 8px 0', fontSize: '1.05rem', lineHeight: '1.5', color: '#333' }}>
+              {feedback.explanation}
+            </p>
+          )}
+          {feedback.source && (
+            <p style={{ margin: '0', fontSize: '0.85rem', color: '#888', fontStyle: 'italic' }}>
+              Source: {feedback.source}
+            </p>
+          )}
           <button onClick={nextQuestion} style={{ marginTop: '20px', padding: '12px 30px', background: accent, color: 'white', border: 'none', borderRadius: '6px', cursor: 'pointer' }}>Continue</button>
         </div>
       )}
