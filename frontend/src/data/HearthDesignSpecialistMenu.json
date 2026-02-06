@@ -9,18 +9,23 @@
     },
     {
       "id": "M2",
-      "title": "Module 2: Client Assessment & Products",
-      "chapters": [3, 4, 5, 8]
+      "title": "Module 2: Client & Home Assessment",
+      "chapters": [3, 4, 5]
     },
     {
       "id": "M3",
-      "title": "Module 3: Technical Standards",
-      "chapters": [6, 7, 9]
+      "title": "Module 3: Technical Foundations",
+      "chapters": [6, 7, 8, 9]
     },
     {
       "id": "M4",
-      "title": "Module 4: Installation & Fuel Types",
-      "chapters": [10, 11, 12, 13, 14, 15]
+      "title": "Module 4: Installation & Wood Systems",
+      "chapters": [10, 11, 12, 13]
+    },
+    {
+      "id": "M5",
+      "title": "Module 5: Gas, Pellet & Other Systems",
+      "chapters": [14, 15, 16]
     }
   ]
 }
