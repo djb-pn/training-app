@@ -11,7 +11,7 @@ const hds_batch_1 = [
       "They handle all warranty claims and manufacturer communications on behalf of the shop."
     ],
     answer: "They act as the conduit between the client and the rest of the team, directing the relationship.",
-    [cite_start]explanation: "The Specialist is usually the first point of contact and guides the client through sales, installation, and ownership [cite: 275-276]."
+    explanation: "The Specialist is usually the first point of contact and guides the client through sales, installation, and ownership [cite: 275-276]."
   },
   {
     id: "HDS-002",
@@ -23,7 +23,7 @@ const hds_batch_1 = [
       "They are interchangeable terms."
     ],
     answer: "A feature is a product characteristic; a benefit is the reason the customer buys it.",
-    [cite_start]explanation: "Features describe the product (e.g., hopper size), while benefits describe the advantage to the user (e.g., less refilling)[cite: 371]."
+    explanation: "Features describe the product (e.g., hopper size), while benefits describe the advantage to the user (e.g., less refilling)[cite: 371]."
   },
   {
     id: "HDS-003",
@@ -35,7 +35,7 @@ const hds_batch_1 = [
       "50% Listening / 50% Talking"
     ],
     answer: "75% Listening / 25% Talking",
-    [cite_start]explanation: "Listening more allows the Specialist to gather the necessary information to guide the sale effectively[cite: 357]."
+    explanation: "Listening more allows the Specialist to gather the necessary information to guide the sale effectively[cite: 357]."
   },
   {
     id: "HDS-004",
@@ -47,7 +47,7 @@ const hds_batch_1 = [
       "They make the customer feel like they are being formally interrogated about their choices."
     ],
     answer: "They do not incite discussion or encourage the customer to open up.",
-    [cite_start]explanation: "Open-ended questions urge the homeowner to share details about their lifestyle and home that are critical for qualifying[cite: 355]."
+    explanation: "Open-ended questions urge the homeowner to share details about their lifestyle and home that are critical for qualifying[cite: 355]."
   },
   {
     id: "HDS-005",
@@ -59,7 +59,7 @@ const hds_batch_1 = [
       "This unit is EPA certified."
     ],
     answer: "You will save money on your monthly heating bill.",
-    [cite_start]explanation: "The other options are technical features; saving money is the positive result (benefit) for the customer[cite: 372]."
+    explanation: "The other options are technical features; saving money is the positive result (benefit) for the customer[cite: 372]."
   },
   {
     id: "HDS-006",
@@ -71,7 +71,7 @@ const hds_batch_1 = [
       "They are created by marketing firms and may show unapproved installations or general claims."
     ],
     answer: "They are created by marketing firms and may show unapproved installations or general claims.",
-    [cite_start]explanation: "Brochures prioritize aesthetics and may depict setups (like insufficient hearth extensions) that violate safety codes[cite: 388]."
+    explanation: "Brochures prioritize aesthetics and may depict setups (like insufficient hearth extensions) that violate safety codes[cite: 388]."
   },
   {
     id: "HDS-007",
@@ -83,7 +83,7 @@ const hds_batch_1 = [
       "Gently correct them by pointing out what you, as an expert, have found to be true."
     ],
     answer: "Gently correct them by pointing out what you, as an expert, have found to be true.",
-    [cite_start]explanation: "You must ensure they have correct information without offending them or being combative[cite: 424]."
+    explanation: "You must ensure they have correct information without offending them or being combative[cite: 424]."
   },
   {
     id: "HDS-008",
@@ -95,7 +95,7 @@ const hds_batch_1 = [
       "They are using terms incorrectly and may be confused by internet research."
     ],
     answer: "They are using terms incorrectly and may be confused by internet research.",
-    [cite_start]explanation: "Customers often confuse terminology (e.g., thinking a manufactured fireplace is an insert because it goes into a wall)[cite: 454]."
+    explanation: "Customers often confuse terminology (e.g., thinking a manufactured fireplace is an insert because it goes into a wall)[cite: 454]."
   },
   {
     id: "HDS-009",
@@ -107,7 +107,7 @@ const hds_batch_1 = [
       "They are browsing to compare prices with what they found online or at big box stores."
     ],
     answer: "They are there to buy or are making a serious inquiry.",
-    [cite_start]explanation: "In today's busy world, few people visit specialty retail stores without a serious intent or need[cite: 588]."
+    explanation: "In today's busy world, few people visit specialty retail stores without a serious intent or need[cite: 588]."
   },
   {
     id: "HDS-010",
@@ -119,7 +119,7 @@ const hds_batch_1 = [
       "The venting system, hearth pad, and all required accessories for the installation."
     ],
     answer: "Your expertise, service, and certification.",
-    [cite_start]explanation: "The value proposition includes the Specialist's knowledge and the business's support capabilities[cite: 464]."
+    explanation: "The value proposition includes the Specialist's knowledge and the business's support capabilities[cite: 464]."
   },
   {
     id: "HDS-011",
@@ -131,7 +131,7 @@ const hds_batch_1 = [
       "Providing backup heat during power outages when the central furnace is inoperable."
     ],
     answer: "Heating as much of the living area as possible for most of the cold weather.",
-    [cite_start]explanation: "Primary heat customers prioritize high efficiency and fuel costs over aesthetics[cite: 491]."
+    explanation: "Primary heat customers prioritize high efficiency and fuel costs over aesthetics[cite: 491]."
   },
   {
     id: "HDS-012",
@@ -143,7 +143,7 @@ const hds_batch_1 = [
       "Heating a specific area that is inadequately served by the central system."
     ],
     answer: "Heating a specific area that is inadequately served by the central system.",
-    [cite_start]explanation: "This target usually involves sizing a unit for a specific cold room or addition[cite: 494]."
+    explanation: "This target usually involves sizing a unit for a specific cold room or addition[cite: 494]."
   },
   {
     id: "HDS-013",
@@ -155,7 +155,7 @@ const hds_batch_1 = [
       "The unit must be a direct-vent gas appliance with battery-powered ignition."
     ],
     answer: "The unit must avoid reliance on utility company electricity.",
-    [cite_start]explanation: "To function during power outages, the appliance cannot depend on grid power for ignition or draft[cite: 499]."
+    explanation: "To function during power outages, the appliance cannot depend on grid power for ignition or draft[cite: 499]."
   },
   {
     id: "HDS-014",
@@ -167,7 +167,7 @@ const hds_batch_1 = [
       "Electric appliance"
     ],
     answer: "Cordwood appliance",
-    [cite_start]explanation: "Wood burning requires cutting, splitting, stacking, loading, and ash removal, representing high involvement[cite: 517]."
+    explanation: "Wood burning requires cutting, splitting, stacking, loading, and ash removal, representing high involvement[cite: 517]."
   },
   {
     id: "HDS-015",
@@ -179,7 +179,7 @@ const hds_batch_1 = [
       "A destructive test requiring removal of sections of the masonry for analysis."
     ],
     answer: "A video scan of the interior flue required upon changes to the system.",
-    [cite_start]explanation: "NFPA 211 requires a Level II inspection for any change in fuel type or appliance installation[cite: 545]."
+    explanation: "NFPA 211 requires a Level II inspection for any change in fuel type or appliance installation[cite: 545]."
   },
   {
     id: "HDS-016",
@@ -191,7 +191,7 @@ const hds_batch_1 = [
       "To improve the overall aesthetic appearance of the home from the street."
     ],
     answer: "To avoid negative pressure zones that cause poor draft.",
-    [cite_start]explanation: "Vents below the roof peak are susceptible to wind turbulence and negative pressure, reducing performance[cite: 551]."
+    explanation: "Vents below the roof peak are susceptible to wind turbulence and negative pressure, reducing performance[cite: 551]."
   },
   {
     id: "HDS-017",
@@ -203,7 +203,7 @@ const hds_batch_1 = [
       "To determine the appropriate interior finish colors and design options."
     ],
     answer: "To determine if makeup air is needed for combustion.",
-    [cite_start]explanation: "Tight homes may not provide enough natural infiltration for combustion air, leading to draft issues[cite: 566]."
+    explanation: "Tight homes may not provide enough natural infiltration for combustion air, leading to draft issues[cite: 566]."
   },
   {
     id: "HDS-018",
@@ -215,7 +215,7 @@ const hds_batch_1 = [
       "They rarely have staff with specialized product or installation knowledge."
     ],
     answer: "They rarely have staff with specialized product or installation knowledge.",
-    [cite_start]explanation: "The Specialist offers expertise in creating a complete system package that big box stores cannot match[cite: 571]."
+    explanation: "The Specialist offers expertise in creating a complete system package that big box stores cannot match[cite: 571]."
   },
   {
     id: "HDS-019",
@@ -227,7 +227,7 @@ const hds_batch_1 = [
       "The venting pipe and chimney components that exhaust the combustion gases."
     ],
     answer: "The entire finished wall, including mantel and surround.",
-    [cite_start]explanation: "Clients visualize the finished aesthetic, not just the appliance SKU; the Specialist must bundle the components[cite: 583]."
+    explanation: "Clients visualize the finished aesthetic, not just the appliance SKU; the Specialist must bundle the components[cite: 583]."
   },
   {
     id: "HDS-020",
@@ -239,7 +239,7 @@ const hds_batch_1 = [
       "Large units have proportionally higher installation costs without better performance."
     ],
     answer: "It can lead to overheating the room and inefficient low-burn operation.",
-    [cite_start]explanation: "An oversized unit will drive the user out of the room or be operated at dirty, inefficient low settings[cite: 611]."
+    explanation: "An oversized unit will drive the user out of the room or be operated at dirty, inefficient low settings[cite: 611]."
   },
   {
     id: "HDS-021",
@@ -251,7 +251,7 @@ const hds_batch_1 = [
       "Aesthetics and visual appeal should always be the primary design consideration."
     ],
     answer: "Safety first, performance second, aesthetics third.",
-    [cite_start]explanation: "The Specialist must prioritize a safe and functional vent layout over the client's desire to hide the pipe[cite: 623]."
+    explanation: "The Specialist must prioritize a safe and functional vent layout over the client's desire to hide the pipe[cite: 623]."
   },
   {
     id: "HDS-022",
@@ -263,7 +263,7 @@ const hds_batch_1 = [
       "Dealers apply the highest markup percentage to venting components."
     ],
     answer: "It is the 'engine' of the system and requires high-grade materials.",
-    [cite_start]explanation: "The venting drives the entire system; ensuring the client understands its value is critical to the sale[cite: 631]."
+    explanation: "The venting drives the entire system; ensuring the client understands its value is critical to the sale[cite: 631]."
   },
   {
     id: "HDS-023",
@@ -275,7 +275,7 @@ const hds_batch_1 = [
       "It cools the room temperature by circulating air away from the heat source."
     ],
     answer: "It moves heat away from the appliance but cannot push it down long hallways.",
-    [cite_start]explanation: "Blowers assist in moving air into the immediate room but are not central furnaces capable of whole-home distribution[cite: 642]."
+    explanation: "Blowers assist in moving air into the immediate room but are not central furnaces capable of whole-home distribution[cite: 642]."
   },
   {
     id: "HDS-024",
@@ -287,7 +287,7 @@ const hds_batch_1 = [
       "Heating every room in the house to the same consistent temperature."
     ],
     answer: "Heating the specific area where people spend time, allowing the central furnace to run less.",
-    [cite_start]explanation: "Zone heating creates a comfortable warm zone in the main living area while saving energy elsewhere[cite: 648]."
+    explanation: "Zone heating creates a comfortable warm zone in the main living area while saving energy elsewhere[cite: 648]."
   },
   {
     id: "HDS-025",
@@ -299,7 +299,7 @@ const hds_batch_1 = [
       "Make an educated guess based on similar products they have worked with before."
     ],
     answer: "Admit they don't know, research it, and get back to the client.",
-    [cite_start]explanation: "Providing incorrect information can be catastrophic; honesty builds trust and ensures safety[cite: 607]."
+    explanation: "Providing incorrect information can be catastrophic; honesty builds trust and ensures safety[cite: 607]."
   },
   {
     id: "HDS-026",
@@ -311,7 +311,7 @@ const hds_batch_1 = [
       "None, because only the certified installer carries liability for the project."
     ],
     answer: "Moral and legal responsibility to provide accurate safety information.",
-    [cite_start]explanation: "Giving advice on fire appliances carries an obligation to safety; negligence can lead to lawsuits[cite: 154]."
+    explanation: "Giving advice on fire appliances carries an obligation to safety; negligence can lead to lawsuits[cite: 154]."
   },
   {
     id: "HDS-027",
@@ -335,7 +335,7 @@ const hds_batch_1 = [
       "Mounted on an exterior wall where it can vent directly through the sidewall."
     ],
     answer: "Through the center of the home (the warm envelope).",
-    [cite_start]explanation: "Keeping the vent warm inside the house envelope maximizes draft and reduces creosote/condensation[cite: 625]."
+    explanation: "Keeping the vent warm inside the house envelope maximizes draft and reduces creosote/condensation[cite: 625]."
   },
   {
     id: "HDS-029",
@@ -347,7 +347,7 @@ const hds_batch_1 = [
       "To encourage manufacturers to recommend installation by NFI Certified Specialists."
     ],
     answer: "To encourage manufacturers to recommend installation by NFI Certified Specialists.",
-    [cite_start]explanation: "This program links manufacturers with certified professionals to reduce callbacks and increase safety[cite: 238]."
+    explanation: "This program links manufacturers with certified professionals to reduce callbacks and increase safety[cite: 238]."
   },
   {
     id: "HDS-030",
@@ -359,7 +359,7 @@ const hds_batch_1 = [
       "The appliance will burn at a higher temperature and produce more heat output."
     ],
     answer: "It voids the warranty and may cause safety hazards.",
-    [cite_start]explanation: "Listings are fuel-specific; unauthorized fuels can damage the unit and create fire risks[cite: 325]."
+    explanation: "Listings are fuel-specific; unauthorized fuels can damage the unit and create fire risks[cite: 325]."
   },
   {
     id: "HDS-031",
@@ -371,7 +371,7 @@ const hds_batch_1 = [
       "They serve as the manufacturer's local representative for warranty support."
     ],
     answer: "They have the final say on code interpretation and approval.",
-    [cite_start]explanation: "The AHJ enforces the code and can approve or reject installations based on their interpretation[cite: 1286]."
+    explanation: "The AHJ enforces the code and can approve or reject installations based on their interpretation[cite: 1286]."
   },
   {
     id: "HDS-032",
@@ -383,7 +383,7 @@ const hds_batch_1 = [
       "It indicates the person owns and operates a retail hearth products store."
     ],
     answer: "It recognizes individuals who have earned certifications in all three fuel types (Gas, Wood, Pellet).",
-    [cite_start]explanation: "MHP is the highest tier of NFI certification, demonstrating comprehensive expertise[cite: 176]."
+    explanation: "MHP is the highest tier of NFI certification, demonstrating comprehensive expertise[cite: 176]."
   },
   {
     id: "HDS-033",
@@ -395,7 +395,7 @@ const hds_batch_1 = [
       "To identify potential air leaks caused by poorly sealed electrical penetrations."
     ],
     answer: "To ensure the appliance's blower or control board can be powered without extension cords.",
-    [cite_start]explanation: "Most modern appliances require power; locating outlets is a critical step in the site assessment[cite: 540]."
+    explanation: "Most modern appliances require power; locating outlets is a critical step in the site assessment[cite: 540]."
   },
   {
     id: "HDS-034",
@@ -407,7 +407,7 @@ const hds_batch_1 = [
       "The air space trapped inside the firebox that feeds the combustion process."
     ],
     answer: "Air supplied to replace air exhausted by the appliance or other fans.",
-    [cite_start]explanation: "Tight homes require makeup air to prevent negative pressure and ensure proper drafting[cite: 566]."
+    explanation: "Tight homes require makeup air to prevent negative pressure and ensure proper drafting[cite: 566]."
   },
   {
     id: "HDS-035",
@@ -419,7 +419,7 @@ const hds_batch_1 = [
       "It violates manufacturer guidelines for presenting competing product information."
     ],
     answer: "It can lose a customer by offending their preferences or previous choices.",
-    [cite_start]explanation: "Focusing on the merits of a fuel is more effective than dwelling on the negatives of others[cite: 473]."
+    explanation: "Focusing on the merits of a fuel is more effective than dwelling on the negatives of others[cite: 473]."
   },
   {
     id: "HDS-036",
@@ -431,7 +431,7 @@ const hds_batch_1 = [
       "They establish the retail pricing for installation services in each market."
     ],
     answer: "They identify specific job tasks and knowledge required for safe installation.",
-    [cite_start]explanation: "This committee ensures the exam accurately reflects the real-world skills needed by professionals[cite: 182]."
+    explanation: "This committee ensures the exam accurately reflects the real-world skills needed by professionals[cite: 182]."
   },
   {
     id: "HDS-037",
@@ -443,7 +443,7 @@ const hds_batch_1 = [
       "The mandatory air space required between the appliance/vent and wood, drywall, or furniture."
     ],
     answer: "The mandatory air space required between the appliance/vent and wood, drywall, or furniture.",
-    [cite_start]explanation: "Maintaining this space prevents pyrolysis and ignition of building materials[cite: 1680]."
+    explanation: "Maintaining this space prevents pyrolysis and ignition of building materials[cite: 1680]."
   },
   {
     id: "HDS-038",
@@ -455,7 +455,7 @@ const hds_batch_1 = [
       "To enhance the visual appearance of the overall fireplace installation."
     ],
     answer: "To protect the floor from sparks, embers, and radiant heat.",
-    [cite_start]explanation: "Non-combustible extensions prevent floor fires from material falling out of the appliance[cite: 541]."
+    explanation: "Non-combustible extensions prevent floor fires from material falling out of the appliance[cite: 541]."
   },
   {
     id: "HDS-039",
@@ -467,7 +467,7 @@ const hds_batch_1 = [
       "It cools the house in summer by circulating air through the dormant chimney."
     ],
     answer: "It allows the central furnace to be turned down, saving fuel costs.",
-    [cite_start]explanation: "By heating only the occupied room, the homeowner saves on the cost of heating unused spaces[cite: 646]."
+    explanation: "By heating only the occupied room, the homeowner saves on the cost of heating unused spaces[cite: 646]."
   },
   {
     id: "HDS-040",
@@ -479,7 +479,7 @@ const hds_batch_1 = [
       "To ensure it is tested and approved for the specific installation (e.g., mobile home, alcove)."
     ],
     answer: "To ensure it is tested and approved for the specific installation (e.g., mobile home, alcove).",
-    [cite_start]explanation: "Listings dictate where and how an appliance can be legally and safely installed[cite: 265]."
+    explanation: "Listings dictate where and how an appliance can be legally and safely installed[cite: 265]."
   },
 ];
 
@@ -496,7 +496,7 @@ const hds_batch_2 = [
       "To maintain trust and keep them aware of the ETA of items and installation scheduling."
     ],
     answer: "To maintain trust and keep them aware of the ETA of items and installation scheduling.",
-    [cite_start]explanation: "Keeping the client informed prevents frustration and reinforces their decision to choose you [cite: 678-679]."
+    explanation: "Keeping the client informed prevents frustration and reinforces their decision to choose you [cite: 678-679]."
   },
   {
     id: "HDS-042",
@@ -508,7 +508,7 @@ const hds_batch_2 = [
       "The delivery driver relays the information when dropping off the equipment."
     ],
     answer: "The Hearth Design Specialist.",
-    [cite_start]explanation: "The Specialist acts as the liaison, ensuring the team knows what is required for the specific project [cite: 660-662]."
+    explanation: "The Specialist acts as the liaison, ensuring the team knows what is required for the specific project [cite: 660-662]."
   },
   {
     id: "HDS-043",
@@ -520,7 +520,7 @@ const hds_batch_2 = [
       "Combustion ceases."
     ],
     answer: "Combustion ceases.",
-    [cite_start]explanation: "All three elementsâ€”Fuel, Air, and Heatâ€”must be present for combustion to occur[cite: 697]."
+    explanation: "All three elementsâ€”Fuel, Air, and Heatâ€”must be present for combustion to occur[cite: 697]."
   },
   {
     id: "HDS-044",
@@ -532,7 +532,7 @@ const hds_batch_2 = [
       "Carbon monoxide, nitrogen dioxide, and visible particulate soot emissions."
     ],
     answer: "Water vapor, carbon dioxide, heat, and noncombustible ash.",
-    [cite_start]explanation: "Complete combustion efficiently breaks down fuel into harmless byproducts and heat[cite: 699]."
+    explanation: "Complete combustion efficiently breaks down fuel into harmless byproducts and heat[cite: 699]."
   },
   {
     id: "HDS-045",
@@ -544,7 +544,7 @@ const hds_batch_2 = [
       "450Â°F â€“ 550Â°F"
     ],
     answer: "450Â°F â€“ 550Â°F",
-    [cite_start]explanation: "Wood begins to ignite in this temperature range, necessitating clearance from combustibles[cite: 729]."
+    explanation: "Wood begins to ignite in this temperature range, necessitating clearance from combustibles[cite: 729]."
   },
   {
     id: "HDS-046",
@@ -556,7 +556,7 @@ const hds_batch_2 = [
       "It is odorless, colorless, and tasteless."
     ],
     answer: "It is odorless, colorless, and tasteless.",
-    [cite_start]explanation: "Its lack of sensory warning signs makes it highly dangerous without detection equipment[cite: 776]."
+    explanation: "Its lack of sensory warning signs makes it highly dangerous without detection equipment[cite: 776]."
   },
   {
     id: "HDS-047",
@@ -568,7 +568,7 @@ const hds_batch_2 = [
       "There is a gas line leak somewhere in the system that requires immediate attention."
     ],
     answer: "Incomplete combustion is occurring, and CO is likely present.",
-    [cite_start]explanation: "Aldehydes are a byproduct of incomplete combustion and usually accompany Carbon Monoxide [cite: 791-794]."
+    explanation: "Aldehydes are a byproduct of incomplete combustion and usually accompany Carbon Monoxide [cite: 791-794]."
   },
   {
     id: "HDS-048",
@@ -580,7 +580,7 @@ const hds_batch_2 = [
       "Torque, Thrust, Timing"
     ],
     answer: "Time, Temperature, Turbulence",
-    [cite_start]explanation: "These three factors determine how completely the fuel is burned[cite: 803]."
+    explanation: "These three factors determine how completely the fuel is burned[cite: 803]."
   },
   {
     id: "HDS-049",
@@ -592,7 +592,7 @@ const hds_batch_2 = [
       "The percentage of heat energy successfully moved into the living space."
     ],
     answer: "The percentage of the fuel's potential energy that is converted into heat.",
-    [cite_start]explanation: "It measures how well the appliance converts fuel into energy, distinct from heat transfer efficiency[cite: 818]."
+    explanation: "It measures how well the appliance converts fuel into energy, distinct from heat transfer efficiency[cite: 818]."
   },
   {
     id: "HDS-050",
@@ -604,7 +604,7 @@ const hds_batch_2 = [
       "It would make the room dangerously hot and create an overheating fire hazard."
     ],
     answer: "It would leave no heat for the chimney, causing draft failure and condensation.",
-    [cite_start]explanation: "Some heat must escape up the flue to maintain draft and prevent corrosive condensation[cite: 830]."
+    explanation: "Some heat must escape up the flue to maintain draft and prevent corrosive condensation[cite: 830]."
   },
   {
     id: "HDS-051",
@@ -616,7 +616,7 @@ const hds_batch_2 = [
       "It operates without any chimney or venting system and exhausts into the room."
     ],
     answer: "It is a tested system including firebox, venting, and components from one manufacturer.",
-    [cite_start]explanation: "Factory-built units are listed systems where components cannot be substituted [cite: 866-867]."
+    explanation: "Factory-built units are listed systems where components cannot be substituted [cite: 866-867]."
   },
   {
     id: "HDS-052",
@@ -628,7 +628,7 @@ const hds_batch_2 = [
       "It uses a fan to move air around the firebox and release it through grilles."
     ],
     answer: "It uses a fan to move air around the firebox and release it through grilles.",
-    [cite_start]explanation: "Circulating designs rely on convection (air movement) rather than just radiating heat from the face[cite: 902, 916]."
+    explanation: "Circulating designs rely on convection (air movement) rather than just radiating heat from the face[cite: 902, 916]."
   },
   {
     id: "HDS-053",
@@ -640,7 +640,7 @@ const hds_batch_2 = [
       "Create a new fireplace where none existed."
     ],
     answer: "Improve the efficiency of an existing open masonry or factory-built fireplace.",
-    [cite_start]explanation: "Inserts are retrofitted into existing fireboxes to stop heat loss and improve performance [cite: 953-956]."
+    explanation: "Inserts are retrofitted into existing fireboxes to stop heat loss and improve performance [cite: 953-956]."
   },
   {
     id: "HDS-054",
@@ -652,7 +652,7 @@ const hds_batch_2 = [
       "Cast Iron"
     ],
     answer: "Soapstone",
-    [cite_start]explanation: "Soapstone absorbs heat slowly but releases it over a longer period than metal [cite: 968-969]."
+    explanation: "Soapstone absorbs heat slowly but releases it over a longer period than metal [cite: 968-969]."
   },
   {
     id: "HDS-055",
@@ -664,7 +664,7 @@ const hds_batch_2 = [
       "UL 103"
     ],
     answer: "UL 127",
-    [cite_start]explanation: "UL 127 is the specific safety standard for factory-built fireplace systems[cite: 1079]."
+    explanation: "UL 127 is the specific safety standard for factory-built fireplace systems[cite: 1079]."
   },
   {
     id: "HDS-056",
@@ -676,7 +676,7 @@ const hds_batch_2 = [
       "UL 1482"
     ],
     answer: "UL 1482",
-    [cite_start]explanation: "UL 1482 tests freestanding stoves and inserts for safety and clearance requirements[cite: 1084]."
+    explanation: "UL 1482 tests freestanding stoves and inserts for safety and clearance requirements[cite: 1084]."
   },
   {
     id: "HDS-057",
@@ -688,7 +688,7 @@ const hds_batch_2 = [
       "Approved indicates the product ships with a comprehensive manufacturer warranty."
     ],
     answer: "Listed means tested by a lab; Approved means accepted by the Authority Having Jurisdiction (AHJ).",
-    explanation: "Listing is a manufacturer/lab process; [cite_start]Approval is a legal status granted by the local code official [cite: 1043-1045]."
+    explanation: "Listing is a manufacturer/lab process; Approval is a legal status granted by the local code official [cite: 1043-1045]."
   },
   {
     id: "HDS-058",
@@ -700,7 +700,7 @@ const hds_batch_2 = [
       "ANSI Z21.88"
     ],
     answer: "ANSI Z21.88",
-    [cite_start]explanation: "Z21.88 applies to heater-rated gas fireplaces that meet efficiency standards, unlike Z21.50 (Decorative)[cite: 1182]."
+    explanation: "Z21.88 applies to heater-rated gas fireplaces that meet efficiency standards, unlike Z21.50 (Decorative)[cite: 1182]."
   },
   {
     id: "HDS-059",
@@ -712,7 +712,7 @@ const hds_batch_2 = [
       "They cannot be equipped with a thermostat or any automated temperature controls."
     ],
     answer: "They must be limited to 10,000 BTU/hr input.",
-    [cite_start]explanation: "Safety standards restrict bedroom unvented units to 10,000 BTU to prevent oxygen depletion[cite: 1204]."
+    explanation: "Safety standards restrict bedroom unvented units to 10,000 BTU to prevent oxygen depletion[cite: 1204]."
   },
   {
     id: "HDS-060",
@@ -724,7 +724,7 @@ const hds_batch_2 = [
       "The owner or manager of the retail store selling the hearth appliance."
     ],
     answer: "The official or agency responsible for enforcing codes and approving installations.",
-    [cite_start]explanation: "The AHJ (e.g., fire marshal, building inspector) has the final legal say on installation compliance[cite: 1286]."
+    explanation: "The AHJ (e.g., fire marshal, building inspector) has the final legal say on installation compliance[cite: 1286]."
   },
   {
     id: "HDS-061",
@@ -736,7 +736,7 @@ const hds_batch_2 = [
       "The installer's professional judgment overrides both codes and listings."
     ],
     answer: "The manufacturer's instruction (conditions of listing).",
-    [cite_start]explanation: "Most codes (like IRC) state that if a code violates a listing condition, the listing prevails[cite: 1304]."
+    explanation: "Most codes (like IRC) state that if a code violates a listing condition, the listing prevails[cite: 1304]."
   },
   {
     id: "HDS-062",
@@ -748,7 +748,7 @@ const hds_batch_2 = [
       "A regulation limiting particulate emissions from new wood heaters."
     ],
     answer: "A regulation limiting particulate emissions from new wood heaters.",
-    [cite_start]explanation: "NSPS regulates the pollution (smoke/particulates) allowed from residential wood heaters[cite: 1343]."
+    explanation: "NSPS regulates the pollution (smoke/particulates) allowed from residential wood heaters[cite: 1343]."
   },
   {
     id: "HDS-063",
@@ -760,7 +760,7 @@ const hds_batch_2 = [
       "10.0 grams/hour"
     ],
     answer: "4.5 grams/hour",
-    [cite_start]explanation: "The 2015 update lowered the limit to 4.5 g/hr for both catalytic and non-catalytic stoves[cite: 1389]."
+    explanation: "The 2015 update lowered the limit to 4.5 g/hr for both catalytic and non-catalytic stoves[cite: 1389]."
   },
   {
     id: "HDS-064",
@@ -772,7 +772,7 @@ const hds_batch_2 = [
       "The unit must utilize single-wall stovepipe to conserve limited interior space."
     ],
     answer: "They must have outside combustion air and be secured to the floor.",
-    [cite_start]explanation: "HUD standards require outside air and structural securement for mobile home safety [cite: 1274-1276]."
+    explanation: "HUD standards require outside air and structural securement for mobile home safety [cite: 1274-1276]."
   },
   {
     id: "HDS-065",
@@ -784,7 +784,7 @@ const hds_batch_2 = [
       "Yes, all residential fireplaces must meet the same EPA certification as woodstoves."
     ],
     answer: "No, but there is a voluntary 'Qualified' program for low-mass fireplaces.",
-    [cite_start]explanation: "Open fireplaces are generally exempt from NSPS but can participate in a voluntary qualification program [cite: 1398-1401]."
+    explanation: "Open fireplaces are generally exempt from NSPS but can participate in a voluntary qualification program [cite: 1398-1401]."
   },
   {
     id: "HDS-066",
@@ -796,7 +796,7 @@ const hds_batch_2 = [
       "A requirement to use environmentally friendly paint on the building exterior."
     ],
     answer: "Additional efficiency or environmental standards (like LEED) above basic building codes.",
-    [cite_start]explanation: "These codes promote sustainability and may incentivize or require EPA-certified appliances[cite: 1412]."
+    explanation: "These codes promote sustainability and may incentivize or require EPA-certified appliances[cite: 1412]."
   },
   {
     id: "HDS-067",
@@ -808,7 +808,7 @@ const hds_batch_2 = [
       "The estimated number of hours required to complete the installation project."
     ],
     answer: "The mandatory air space between a heat source and combustible materials.",
-    [cite_start]explanation: "Clearance prevents pyrolysis and ignition of nearby walls or furniture[cite: 1678]."
+    explanation: "Clearance prevents pyrolysis and ignition of nearby walls or furniture[cite: 1678]."
   },
   {
     id: "HDS-068",
@@ -820,7 +820,7 @@ const hds_batch_2 = [
       "UL 1482"
     ],
     answer: "UL 1777",
-    [cite_start]explanation: "UL 1777 is the standard for testing metal and masonry chimney lining systems[cite: 1128]."
+    explanation: "UL 1777 is the standard for testing metal and masonry chimney lining systems[cite: 1128]."
   },
   {
     id: "HDS-069",
@@ -832,7 +832,7 @@ const hds_batch_2 = [
       "Chemical decomposition of material (like wood) caused by heat, lowering its ignition temperature."
     ],
     answer: "Chemical decomposition of material (like wood) caused by heat, lowering its ignition temperature.",
-    [cite_start]explanation: "Pyrolysis makes wood easier to ignite over time, which is why clearances must be maintained[cite: 1655]."
+    explanation: "Pyrolysis makes wood easier to ignite over time, which is why clearances must be maintained[cite: 1655]."
   },
   {
     id: "HDS-070",
@@ -844,7 +844,7 @@ const hds_batch_2 = [
       "Its estimated resale or replacement value for insurance appraisal purposes."
     ],
     answer: "Its resistance to heat flow (insulation value).",
-    [cite_start]explanation: "R-value measures how well the material protects the combustible floor from heat transfer[cite: 1108]."
+    explanation: "R-value measures how well the material protects the combustible floor from heat transfer[cite: 1108]."
   },
 ];
 
@@ -1346,7 +1346,7 @@ const hds_batch_4 = [
       "1.00 (Same as air)"
     ],
     answer: "1.52 (Heavier than air)",
-    [cite_start]explanation: "Because it is heavier than air, leaking propane sinks and pools in low areas, posing an explosion hazard[cite: 3779, 3872]."
+    explanation: "Because it is heavier than air, leaking propane sinks and pools in low areas, posing an explosion hazard[cite: 3779, 3872]."
   },
   {
     id: "HDS-112",
@@ -1358,7 +1358,7 @@ const hds_batch_4 = [
       "To shut off gas flow if oxygen levels drop below a safe limit."
     ],
     answer: "To shut off gas flow if oxygen levels drop below a safe limit.",
-    [cite_start]explanation: "The ODS is a mandatory safety device that cuts fuel if oxygen levels fall, preventing asphyxiation[cite: 4173]."
+    explanation: "The ODS is a mandatory safety device that cuts fuel if oxygen levels fall, preventing asphyxiation[cite: 4173]."
   },
   {
     id: "HDS-113",
@@ -1370,7 +1370,7 @@ const hds_batch_4 = [
       "6,000 BTU/hr"
     ],
     answer: "10,000 BTU/hr",
-    [cite_start]explanation: "Current standards restrict bedroom unvented units to 10,000 BTU/hr[cite: 1204, 4178]."
+    explanation: "Current standards restrict bedroom unvented units to 10,000 BTU/hr[cite: 1204, 4178]."
   },
   {
     id: "HDS-114",
@@ -1382,7 +1382,7 @@ const hds_batch_4 = [
       "A traditional clay tile or stainless steel masonry chimney liner system."
     ],
     answer: "Coaxial Direct Vent",
-    [cite_start]explanation: "Coaxial systems have an inner exhaust pipe and an outer intake pipe, sealing the combustion system [cite: 4389-4391]."
+    explanation: "Coaxial systems have an inner exhaust pipe and an outer intake pipe, sealing the combustion system [cite: 4389-4391]."
   },
   {
     id: "HDS-115",
@@ -1394,7 +1394,7 @@ const hds_batch_4 = [
       "24:1"
     ],
     answer: "10:1",
-    [cite_start]explanation: "Natural gas requires 10 cubic feet of air to burn 1 cubic foot of gas completely[cite: 3826]."
+    explanation: "Natural gas requires 10 cubic feet of air to burn 1 cubic foot of gas completely[cite: 3826]."
   },
   {
     id: "HDS-116",
@@ -1406,7 +1406,7 @@ const hds_batch_4 = [
       "It is a state tax requirement for appliances installed above the 2,000 ft line."
     ],
     answer: "Because the air is thinner, containing less oxygen per cubic foot.",
-    [cite_start]explanation: "Less oxygen requires less fuel to maintain the proper combustion ratio and prevent overfiring/sooting [cite: 3932-3933]."
+    explanation: "Less oxygen requires less fuel to maintain the proper combustion ratio and prevent overfiring/sooting [cite: 3932-3933]."
   },
   {
     id: "HDS-117",
@@ -1418,7 +1418,7 @@ const hds_batch_4 = [
       "The wall-mounted switch or remote control unit that signals the valve to open."
     ],
     answer: "The thermopile.",
-    [cite_start]explanation: "A thermopile generates enough millivoltage from heat to power the main operator head without external electricity [cite: 4158-4159]."
+    explanation: "A thermopile generates enough millivoltage from heat to power the main operator head without external electricity [cite: 4158-4159]."
   },
   {
     id: "HDS-118",
@@ -1430,7 +1430,7 @@ const hds_batch_4 = [
       "Automatic shutoff timers that power down the unit after a preset number of hours."
     ],
     answer: "A mandatory protective barrier (screen) to prevent burns.",
-    [cite_start]explanation: "To prevent severe burns, a certified barrier must be installed to prevent direct contact with the hot glass[cite: 4769]."
+    explanation: "To prevent severe burns, a certified barrier must be installed to prevent direct contact with the hot glass[cite: 4769]."
   },
   {
     id: "HDS-119",
@@ -1454,7 +1454,7 @@ const hds_batch_4 = [
       "They trigger respiratory allergies in sensitive individuals near the appliance."
     ],
     answer: "They can jam augers and block airflow.",
-    [cite_start]explanation: "Excess fines disrupt the fuel feed and can create air flow resistance in the hopper or burn pot [cite: 5006-5007]."
+    explanation: "Excess fines disrupt the fuel feed and can create air flow resistance in the hopper or burn pot [cite: 5006-5007]."
   },
   {
     id: "HDS-121",
@@ -1466,7 +1466,7 @@ const hds_batch_4 = [
       "Hopper lid switch."
     ],
     answer: "Hopper lid switch.",
-    [cite_start]explanation: "This interlock prevents user injury from the moving auger while loading fuel[cite: 5222]."
+    explanation: "This interlock prevents user injury from the moving auger while loading fuel[cite: 5222]."
   },
   {
     id: "HDS-122",
@@ -1478,7 +1478,7 @@ const hds_batch_4 = [
       "To prevent the stove from overheating if the combustion fan runs at full speed."
     ],
     answer: "To shut down the stove if the fire goes out (loss of proof of fire).",
-    [cite_start]explanation: "It stops fuel feed if operating temperatures are not reached or sustained, preventing unburned pile-up [cite: 5805-5806]."
+    explanation: "It stops fuel feed if operating temperatures are not reached or sustained, preventing unburned pile-up [cite: 5805-5806]."
   },
   {
     id: "HDS-123",
@@ -1490,7 +1490,7 @@ const hds_batch_4 = [
       "The minimum required distance from the vent termination to the nearest wall or property line."
     ],
     answer: "A calculation method that adds values for elbows and pipe length to determine flow resistance.",
-    [cite_start]explanation: "EVL quantifies restriction (e.g., 90Â° elbow = 5 ft) to ensure the exhaust fan can overcome it[cite: 6461, 6498]."
+    explanation: "EVL quantifies restriction (e.g., 90Â° elbow = 5 ft) to ensure the exhaust fan can overcome it[cite: 6461, 6498]."
   },
   {
     id: "HDS-124",
@@ -1502,7 +1502,7 @@ const hds_batch_4 = [
       "To create a cleaner and more professional appearance for the exterior finish."
     ],
     answer: "To prevent fly ash and flue gases from being pushed into the room.",
-    [cite_start]explanation: "Unlike natural draft, positive pressure pushes gas out; any leak becomes a source of pollution in the home[cite: 5539]."
+    explanation: "Unlike natural draft, positive pressure pushes gas out; any leak becomes a source of pollution in the home[cite: 5539]."
   },
   {
     id: "HDS-125",
@@ -1514,7 +1514,7 @@ const hds_batch_4 = [
       "A premium grade of biomass pellet manufactured from compressed corn stalks."
     ],
     answer: "A fused lump of silica and ash that can block air inlets.",
-    [cite_start]explanation: "Minerals in the fuel melt and fuse, requiring manual removal to maintain airflow [cite: 5920-5921]."
+    explanation: "Minerals in the fuel melt and fuse, requiring manual removal to maintain airflow [cite: 5920-5921]."
   },
   {
     id: "HDS-126",
@@ -1526,7 +1526,7 @@ const hds_batch_4 = [
       "There is no meaningful difference in ignition characteristics between the two."
     ],
     answer: "Corn ignites at a significantly higher temperature (500-700Â°F).",
-    [cite_start]explanation: "Corn requires a hotter ignition source and often a bed of wood pellets to start[cite: 5152]."
+    explanation: "Corn requires a hotter ignition source and often a bed of wood pellets to start[cite: 5152]."
   },
   {
     id: "HDS-127",
@@ -1538,7 +1538,7 @@ const hds_batch_4 = [
       "The ceramic glass viewing window cracks from the sudden pressure change in the firebox."
     ],
     answer: "The pressure switch detects the loss of flow and shuts off the auger.",
-    [cite_start]explanation: "The vacuum (pressure) switch is a critical safety device that monitors proper airflow[cite: 5823]."
+    explanation: "The vacuum (pressure) switch is a critical safety device that monitors proper airflow[cite: 5823]."
   },
   {
     id: "HDS-128",
@@ -1550,7 +1550,7 @@ const hds_batch_4 = [
       "Lignite"
     ],
     answer: "Anthracite",
-    [cite_start]explanation: "Anthracite (hard coal) burns cleaner and longer than softer bituminous varieties [cite: 7550-7551]."
+    explanation: "Anthracite (hard coal) burns cleaner and longer than softer bituminous varieties [cite: 7550-7551]."
   },
   {
     id: "HDS-129",
@@ -1562,7 +1562,7 @@ const hds_batch_4 = [
       "Coal is heavier than wood and requires a bottom grate rated for the additional weight."
     ],
     answer: "Coal releases most energy from glowing solid carbon, not gases, requiring oxygen to pass through the bed.",
-    [cite_start]explanation: "Unlike wood, coal burns primarily as fixed carbon, needing under-fire air [cite: 7599-7602]."
+    explanation: "Unlike wood, coal burns primarily as fixed carbon, needing under-fire air [cite: 7599-7602]."
   },
   {
     id: "HDS-130",
@@ -1574,7 +1574,7 @@ const hds_batch_4 = [
       "It increases the appraised home value more than any other type of hearth appliance."
     ],
     answer: "It can be installed anywhere with a standard outlet.",
-    [cite_start]explanation: "Ease of installation (no venting or gas) makes electric units highly versatile[cite: 7653]."
+    explanation: "Ease of installation (no venting or gas) makes electric units highly versatile[cite: 7653]."
   },
   {
     id: "HDS-131",
@@ -1586,7 +1586,7 @@ const hds_batch_4 = [
       "Yes, all electric fireplaces require a licensed electrician for installation by code."
     ],
     answer: "No, most plug into a standard wall outlet.",
-    [cite_start]explanation: "They are designed for DIY installation, though hardwired models may need an electrician [cite: 7653-7654]."
+    explanation: "They are designed for DIY installation, though hardwired models may need an electrician [cite: 7653-7654]."
   },
   {
     id: "HDS-132",
@@ -1598,7 +1598,7 @@ const hds_batch_4 = [
       "Watts = Volts x Amps"
     ],
     answer: "E = I x R (Voltage = Current x Resistance)",
-    [cite_start]explanation: "This formula relates Force (Volts), Intensity (Amps), and Resistance (Ohms)[cite: 7437]."
+    explanation: "This formula relates Force (Volts), Intensity (Amps), and Resistance (Ohms)[cite: 7437]."
   },
   {
     id: "HDS-133",
@@ -1610,7 +1610,7 @@ const hds_batch_4 = [
       "The multimeter battery is dead and the reading is unreliable until replaced."
     ],
     answer: "The circuit is complete (closed/continuous).",
-    [cite_start]explanation: "Zero resistance means electricity can flow freely through the component[cite: 7504]."
+    explanation: "Zero resistance means electricity can flow freely through the component[cite: 7504]."
   },
   {
     id: "HDS-134",
@@ -1622,7 +1622,7 @@ const hds_batch_4 = [
       "91,500"
     ],
     answer: "100,000",
-    [cite_start]explanation: "One therm equals 100,000 BTUs, a standard billing unit[cite: 7288]."
+    explanation: "One therm equals 100,000 BTUs, a standard billing unit[cite: 7288]."
   },
   {
     id: "HDS-135",
@@ -1634,7 +1634,7 @@ const hds_batch_4 = [
       "91,690"
     ],
     answer: "91,690",
-    [cite_start]explanation: "Liquid propane contains approximately 91,690 BTUs per gallon[cite: 7288]."
+    explanation: "Liquid propane contains approximately 91,690 BTUs per gallon[cite: 7288]."
   },
   {
     id: "HDS-136",
@@ -1646,7 +1646,7 @@ const hds_batch_4 = [
       "HHV accounts for the energy lost vaporizing water; LHV ignores that loss."
     ],
     answer: "HHV accounts for the energy lost vaporizing water; LHV ignores that loss.",
-    [cite_start]explanation: "HHV divides output by the *total* potential energy, including latent heat, resulting in a lower percentage [cite: 7248-7250]."
+    explanation: "HHV divides output by the *total* potential energy, including latent heat, resulting in a lower percentage [cite: 7248-7250]."
   },
   {
     id: "HDS-137",
@@ -1658,7 +1658,7 @@ const hds_batch_4 = [
       "A battery-powered DC circuit commonly used in millivolt gas valve control systems."
     ],
     answer: "A low-resistance path that allows current to bypass the load.",
-    [cite_start]explanation: "Shorts cause excessive current flow and can lead to damage or fire [cite: 7379-7385]."
+    explanation: "Shorts cause excessive current flow and can lead to damage or fire [cite: 7379-7385]."
   },
   {
     id: "HDS-138",
@@ -1670,7 +1670,7 @@ const hds_batch_4 = [
       "Input rating (BTU/hr) divided by fuel energy content, multiplied by fuel cost."
     ],
     answer: "Input rating (BTU/hr) divided by fuel energy content, multiplied by fuel cost.",
-    [cite_start]explanation: "This calculation determines the cost per hour of operation based on local rates [cite: 7289-7293]."
+    explanation: "This calculation determines the cost per hour of operation based on local rates [cite: 7289-7293]."
   },
   {
     id: "HDS-139",
@@ -1682,7 +1682,7 @@ const hds_batch_4 = [
       "Moisten your fingers to improve electrical contact with the multimeter probe tips."
     ],
     answer: "Disconnect power to the appliance.",
-    [cite_start]explanation: "Testing resistance on a live circuit can damage the meter and cause injury[cite: 7495]."
+    explanation: "Testing resistance on a live circuit can damage the meter and cause injury[cite: 7495]."
   },
   {
     id: "HDS-140",
@@ -1694,7 +1694,7 @@ const hds_batch_4 = [
       "It can operate on battery backup during a power outage."
     ],
     answer: "It can operate on battery backup during a power outage.",
-    [cite_start]explanation: "DC motors can run directly off batteries without an inverter, simplifying backup power[cite: 5630]."
+    explanation: "DC motors can run directly off batteries without an inverter, simplifying backup power[cite: 5630]."
   },
 ];
 
@@ -1711,7 +1711,7 @@ const hds_batch_5 = [
       "A minimum of 100 cubic feet of open space surrounding the appliance on all sides."
     ],
     answer: "512 cubic feet.",
-    [cite_start]explanation: "Alcoves smaller than 512 cubic feet can cause dangerous heat buildup unless the appliance is specifically listed for it[cite: 1671, 3017]."
+    explanation: "Alcoves smaller than 512 cubic feet can cause dangerous heat buildup unless the appliance is specifically listed for it[cite: 1671, 3017]."
   },
   {
     id: "HDS-142",
@@ -1723,7 +1723,7 @@ const hds_batch_5 = [
       "Upon the addition or replacement of an appliance with a dissimilar type."
     ],
     answer: "Upon the addition or replacement of an appliance with a dissimilar type.",
-    [cite_start]explanation: "Changing fuel types or adding an insert to an existing fireplace triggers a Level II inspection requirement [cite: 3090-3091]."
+    explanation: "Changing fuel types or adding an insert to an existing fireplace triggers a Level II inspection requirement [cite: 3090-3091]."
   },
   {
     id: "HDS-143",
@@ -1735,7 +1735,7 @@ const hds_batch_5 = [
       "It is prohibited by law in all fifty states regardless of appliance listing."
     ],
     answer: "It may overheat the fireplace components or void the warranty if not specifically tested for that model.",
-    [cite_start]explanation: "Unless listed for use with the specific fireplace model, inserts can compromise the safety of the zero-clearance system [cite: 3143-3144]."
+    explanation: "Unless listed for use with the specific fireplace model, inserts can compromise the safety of the zero-clearance system [cite: 3143-3144]."
   },
   {
     id: "HDS-144",
@@ -1747,7 +1747,7 @@ const hds_batch_5 = [
       "It must include a sealed window rated for high-temperature gas appliance exposure."
     ],
     answer: "At least 30% of the remaining horizontal periphery must be permanently open.",
-    [cite_start]explanation: "ANSI Z21.97 defines outdoor spaces to ensure adequate ventilation for combustion and exhaust dispersal[cite: 1218]."
+    explanation: "ANSI Z21.97 defines outdoor spaces to ensure adequate ventilation for combustion and exhaust dispersal[cite: 1218]."
   },
   {
     id: "HDS-145",
@@ -1759,7 +1759,7 @@ const hds_batch_5 = [
       "A dedicated resistance heater to prevent the propane from getting too cold."
     ],
     answer: "Ventilation openings at both the upper and lower levels.",
-    [cite_start]explanation: "Ventilation prevents gas pooling; openings are required at the top and bottom of the enclosure [cite: 4877-4878]."
+    explanation: "Ventilation prevents gas pooling; openings are required at the top and bottom of the enclosure [cite: 4877-4878]."
   },
   {
     id: "HDS-146",
@@ -1771,7 +1771,7 @@ const hds_batch_5 = [
       "To prevent birds and debris from entering and obstructing the vent termination."
     ],
     answer: "To limit excess draft in tall vertical runs, improving flame appearance.",
-    [cite_start]explanation: "Tall vents create strong draft that can lift flames off the burner; restrictors slow the flow to normalize the flame[cite: 4437]."
+    explanation: "Tall vents create strong draft that can lift flames off the burner; restrictors slow the flow to normalize the flame[cite: 4437]."
   },
   {
     id: "HDS-147",
@@ -1783,7 +1783,7 @@ const hds_batch_5 = [
       "Corn pellets are heavier per unit volume and create more physical wear on the pipe."
     ],
     answer: "Corn combustion can produce corrosive acids that attack standard stainless steel.",
-    [cite_start]explanation: "Venting manufacturers offer special multi-fuel pipe to resist the corrosive effects of corn exhaust [cite: 5209-5210]."
+    explanation: "Venting manufacturers offer special multi-fuel pipe to resist the corrosive effects of corn exhaust [cite: 5209-5210]."
   },
   {
     id: "HDS-148",
@@ -1795,7 +1795,7 @@ const hds_batch_5 = [
       "Physically connecting two separate hoppers together to increase total fuel capacity."
     ],
     answer: "Pellets getting stuck across the feed opening, preventing fuel flow.",
-    [cite_start]explanation: "Excessively long pellets (>1.5 inches) can lock together (bridge) and starve the fire [cite: 5025-5026]."
+    explanation: "Excessively long pellets (>1.5 inches) can lock together (bridge) and starve the fire [cite: 5025-5026]."
   },
   {
     id: "HDS-149",
@@ -1807,7 +1807,7 @@ const hds_batch_5 = [
       "A fan pulls air through the burn pot and exhausts it."
     ],
     answer: "A fan pulls air through the burn pot and exhausts it.",
-    [cite_start]explanation: "The fan is downstream of the firebox, creating a vacuum that pulls combustion air in [cite: 5503-5504]."
+    explanation: "The fan is downstream of the firebox, creating a vacuum that pulls combustion air in [cite: 5503-5504]."
   },
   {
     id: "HDS-150",
@@ -1831,7 +1831,7 @@ const hds_batch_5 = [
       "An appliance designed to burn both wood pellets and other biomass fuels like corn."
     ],
     answer: "An appliance designed to burn both wood pellets and other biomass fuels like corn.",
-    [cite_start]explanation: "These units often have specialized burn pots and agitators to handle the higher ash/clinkers of biomass [cite: 4907-4908]."
+    explanation: "These units often have specialized burn pots and agitators to handle the higher ash/clinkers of biomass [cite: 4907-4908]."
   },
   {
     id: "HDS-152",
@@ -1843,7 +1843,7 @@ const hds_batch_5 = [
       "It contains highly volatile gas that poses a risk of flash fires or explosions."
     ],
     answer: "It contains highly volatile gas that poses a risk of flash fires or explosions.",
-    [cite_start]explanation: "Its flash-fire characteristics make it suitable for open fireplaces but dangerous in controlled draft stoves [cite: 7551-7552]."
+    explanation: "Its flash-fire characteristics make it suitable for open fireplaces but dangerous in controlled draft stoves [cite: 7551-7552]."
   },
   {
     id: "HDS-153",
@@ -1855,7 +1855,7 @@ const hds_batch_5 = [
       "The temperature at which ash melts and forms clinkers."
     ],
     answer: "The temperature at which ash melts and forms clinkers.",
-    [cite_start]explanation: "Higher fusion temperatures are desirable to prevent the formation of hard clinkers that block air [cite: 7593-7594]."
+    explanation: "Higher fusion temperatures are desirable to prevent the formation of hard clinkers that block air [cite: 7593-7594]."
   },
   {
     id: "HDS-154",
@@ -1867,7 +1867,7 @@ const hds_batch_5 = [
       "20,000 BTUs"
     ],
     answer: "5,000 BTUs",
-    [cite_start]explanation: "Due to the 15-amp circuit limit of standard outlets, output is capped around 1500 watts (~5,000 BTUs)[cite: 7653]."
+    explanation: "Due to the 15-amp circuit limit of standard outlets, output is capped around 1500 watts (~5,000 BTUs)[cite: 7653]."
   },
   {
     id: "HDS-155",
@@ -1879,7 +1879,7 @@ const hds_batch_5 = [
       "$4.00 per hour"
     ],
     answer: "$0.40 per hour",
-    explanation: "40,000 / 100,000 (1 therm) = 0.4 therms/hr. [cite_start]0.4 * $1.00 = $0.40 [cite: 7294-7297]."
+    explanation: "40,000 / 100,000 (1 therm) = 0.4 therms/hr. 0.4 * $1.00 = $0.40 [cite: 7294-7297]."
   },
   {
     id: "HDS-156",
@@ -1891,7 +1891,7 @@ const hds_batch_5 = [
       "To provide additional cord length for flexible placement away from the wall outlet."
     ],
     answer: "To protect the delicate electronic control board from power spikes.",
-    [cite_start]explanation: "Control boards are computers; surges can destroy them, voiding warranties [cite: 5619-5620]."
+    explanation: "Control boards are computers; surges can destroy them, voiding warranties [cite: 5619-5620]."
   },
   {
     id: "HDS-157",
@@ -1903,7 +1903,7 @@ const hds_batch_5 = [
       "A thermopile measures air pressure."
     ],
     answer: "A thermopile is a series of thermocouples generating higher voltage (mV).",
-    [cite_start]explanation: "A single thermocouple generates ~30mV; a thermopile generates ~750mV to power main valves [cite: 7866-7867]."
+    explanation: "A single thermocouple generates ~30mV; a thermopile generates ~750mV to power main valves [cite: 7866-7867]."
   },
   {
     id: "HDS-158",
@@ -1915,7 +1915,7 @@ const hds_batch_5 = [
       "Because the factory paint coating will flake off permanently after the first fire."
     ],
     answer: "Because the curing process produces smoke and odors that can alarm unprepared owners.",
-    [cite_start]explanation: "High-temperature paint cures with heat; warning the client prevents panic during the first fire [cite: 2069-2070]."
+    explanation: "High-temperature paint cures with heat; warning the client prevents panic during the first fire [cite: 2069-2070]."
   },
   {
     id: "HDS-159",
@@ -1927,7 +1927,7 @@ const hds_batch_5 = [
       "Applying a coat of high-temperature sealant paint to the inside chimney walls."
     ],
     answer: "Warming the flue with a torch or newspaper to establish draft before lighting the main fire.",
-    [cite_start]explanation: "This overcomes the cold air plug in exterior chimneys, preventing initial smoke spillage[cite: 3403]."
+    explanation: "This overcomes the cold air plug in exterior chimneys, preventing initial smoke spillage[cite: 3403]."
   },
   {
     id: "HDS-160",
@@ -1951,7 +1951,7 @@ const hds_batch_5 = [
       "They do not physically fit inside the smaller dimensions of the factory firebox."
     ],
     answer: "The firebox may not be designed to withstand the specific heat characteristics, creating a fire hazard.",
-    [cite_start]explanation: "UL 127 requires specific testing for unvented logs to ensure the firebox won't overheat[cite: 1081]."
+    explanation: "UL 127 requires specific testing for unvented logs to ensure the firebox won't overheat[cite: 1081]."
   },
   {
     id: "HDS-162",
@@ -1963,7 +1963,7 @@ const hds_batch_5 = [
       "To regulate excessive draft by admitting room air into the flue."
     ],
     answer: "To regulate excessive draft by admitting room air into the flue.",
-    [cite_start]explanation: "It stabilizes draft in strong chimneys to prevent overfiring [cite: 2746-2748]."
+    explanation: "It stabilizes draft in strong chimneys to prevent overfiring [cite: 2746-2748]."
   },
   {
     id: "HDS-163",
@@ -1975,7 +1975,7 @@ const hds_batch_5 = [
       "Use standard oven cleaner spray and let it soak for improved residue removal."
     ],
     answer: "Never use abrasives and only clean when cool.",
-    [cite_start]explanation: "Abrasives scratch the ceramic coating, and cleaning while hot can cause burns or damage [cite: 2005-2006]."
+    explanation: "Abrasives scratch the ceramic coating, and cleaning while hot can cause burns or damage [cite: 2005-2006]."
   },
   {
     id: "HDS-164",
@@ -1999,7 +1999,7 @@ const hds_batch_5 = [
       "It is illegal under current EPA regulations and subject to substantial fines."
     ],
     answer: "It extracts too much heat from the flue, causing draft failure and creosote.",
-    [cite_start]explanation: "High-efficiency stoves already have low flue temps; robbing more heat kills the draft [cite: 2788-2789]."
+    explanation: "High-efficiency stoves already have low flue temps; robbing more heat kills the draft [cite: 2788-2789]."
   },
   {
     id: "HDS-166",
@@ -2011,7 +2011,7 @@ const hds_batch_5 = [
       "A type of roof flashing boot that seals the chimney penetration at the roofline."
     ],
     answer: "A direct vent cap that provides vertical rise on a horizontal termination to clear grade or debris.",
-    [cite_start]explanation: "Used in basements or low installations to get the intake/exhaust above snow/ground level[cite: 4644]."
+    explanation: "Used in basements or low installations to get the intake/exhaust above snow/ground level[cite: 4644]."
   },
   {
     id: "HDS-167",
@@ -2023,7 +2023,7 @@ const hds_batch_5 = [
       "Venting applies exclusively to gas appliances while ventilation applies to wood."
     ],
     answer: "Venting removes combustion products; Ventilation is the flow of air into/within the house.",
-    [cite_start]explanation: "Venting deals with exhaust; ventilation deals with the breathing of the home structure [cite: 4272-4273]."
+    explanation: "Venting deals with exhaust; ventilation deals with the breathing of the home structure [cite: 4272-4273]."
   },
   {
     id: "HDS-168",
@@ -2047,7 +2047,7 @@ const hds_batch_5 = [
       "They are exempt from all derating requirements due to a special regulatory waiver."
     ],
     answer: "They rely on the ODS pilot to shut down if oxygen is insufficient, rather than fixed orifices.",
-    [cite_start]explanation: "The Oxygen Depletion Sensor will simply shut the unit off if the altitude makes the air too thin [cite: 3939-3940]."
+    explanation: "The Oxygen Depletion Sensor will simply shut the unit off if the altitude makes the air too thin [cite: 3939-3940]."
   },
   {
     id: "HDS-170",
