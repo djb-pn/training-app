@@ -3,7 +3,7 @@ export const NursePractitionerW2Questions = {
     "General Principles": [
       {
         "id": 1001,
-        "question": "A nurse practitioner is performing a well-child examination on an 18-month-old toddler. According to the recommended sequence for this age group, which assessment should be performed LAST?",
+        "question": "A nurse practitioner is performing a well-child examination on an 18-month-old toddler. According to the recommended sequence, which assessment should be performed LAST?",
         "options": ["Heart and lung auscultation", "Abdominal palpation", "Inspection of the ears and throat", "General survey and observation"],
         "answer": "Inspection of the ears and throat",
         "source": "cite: 311, 616, 789"
@@ -61,7 +61,7 @@ export const NursePractitionerW2Questions = {
     "Development & Screening": [
       {
         "id": 1009,
-        "question": "According to AAP guidelines, formal developmental screening for autism (using the M-CHAT) should be performed at which two ages?",
+        "question": "According to AAP guidelines, formal developmental screening for autism using M-CHAT should be performed at which two ages?",
         "options": ["6 and 12 months", "9 and 30 months", "12 and 18 months", "18 and 24 months"],
         "answer": "9 and 30 months",
         "source": "cite: 320, 1393, 1597"
@@ -114,21 +114,21 @@ export const NursePractitionerW2Questions = {
     "Reasoning Models": [
       {
         "id": 1016,
-        "question": "Which type of clinical reasoning is defined as quick, often automatic, and based mainly on pattern recognition?",
+        "question": "Which type of clinical reasoning is quick, often automatic, and based mainly on pattern recognition?",
         "options": ["Analytical (Type 2)", "Intuitive (Type 1)", "Hypothetico-deductive", "Rule-based logic"],
         "answer": "Intuitive (Type 1)",
         "source": "cite: 91, 3335, 3888"
       },
       {
         "id": 1017,
-        "question": "Which diagnostic logic model uses the 'VINDICATE' mnemonic to categorize etiologies such as Vascular, Infectious, and Neoplastic?",
+        "question": "Which diagnostic logic model uses the 'VINDICATE' mnemonic to categorize etiologies like Neoplastic?",
         "options": ["Intuitive reasoning", "Analytical reasoning", "Gestalt reasoning", "Hermeneutic reasoning"],
         "answer": "Analytical reasoning",
         "source": "cite: 9, 1744, 3889"
       },
       {
         "id": 1018,
-        "question": "Approximately what percentage of a final clinical diagnosis is typically derived from the patient's history?",
+        "question": "What percentage of a final clinical diagnosis is typically derived from the patient's history?",
         "options": ["25%", "50%", "85%", "95%"],
         "answer": "85%",
         "source": "cite: 1734, 1870, 3405"
@@ -136,13 +136,13 @@ export const NursePractitionerW2Questions = {
       {
         "id": 1019,
         "question": "What is 'Occam's Razor' in the context of diagnostic reasoning?",
-        "options": ["The most complex explanation is usually correct", "A single diagnosis should explain all findings if possible", "The clinician should always miss the most common diagnosis", "Always order the most expensive test first"],
-        "answer": "A single diagnosis should explain all findings if possible",
+        "options": ["The complex explanation is correct", "A single diagnosis should explain all findings", "Miss the common diagnosis", "Order expensive tests first"],
+        "answer": "A single diagnosis should explain all findings",
         "source": "cite: 1748, 1885, 2366"
       },
       {
         "id": 1020,
-        "question": "Which term describes a preliminary diagnosis made while waiting for test results, such as presumptive strep with a pending culture?",
+        "question": "Which term describes a preliminary diagnosis waiting for test results, like presumptive strep?",
         "options": ["Final diagnosis", "Working diagnosis", "Differential diagnosis", "Rule-out diagnosis"],
         "answer": "Working diagnosis",
         "source": "cite: 1880, 3429, 3961"
@@ -158,7 +158,7 @@ export const NursePractitionerW2Questions = {
       },
       {
         "id": 1022,
-        "question": "Which bias involves selecting only the data that supports a clinician's preconceived diagnosis while ignoring contrary info?",
+        "question": "Which bias involves selecting only data that supports a clinician's preconceived diagnosis?",
         "options": ["Anchoring heuristic", "Confirmation bias", "Outcome bias", "Omission bias"],
         "answer": "Confirmation bias",
         "source": "cite: 107, 4954, 5199"
@@ -166,13 +166,13 @@ export const NursePractitionerW2Questions = {
       {
         "id": 1023,
         "question": "The 'Anchoring Heuristic' is best described as:",
-        "options": ["Focusing on rare diseases (zebras)", "Fixating on an initial piece of information", "Delaying a diagnosis unnecessarily", "Generalizing findings from one population to another"],
+        "options": ["Focusing on rare diseases", "Fixating on an initial piece of information", "Delaying a diagnosis", "Generalizing findings"],
         "answer": "Fixating on an initial piece of information",
         "source": "cite: 4954, 4980, 5152"
       },
       {
         "id": 1024,
-        "question": "A clinician who chooses a benign diagnosis for an ambiguous presentation because they recall a similar 'safe' case is using which bias?",
+        "question": "A clinician choosing a benign diagnosis for ambiguous presentation recall safe cases is using which bias?",
         "options": ["Frequency gambling", "Zebra retreat", "Availability heuristic", "Unpacking principle"],
         "answer": "Frequency gambling",
         "source": "cite: 4954"
@@ -180,7 +180,7 @@ export const NursePractitionerW2Questions = {
       {
         "id": 1025,
         "question": "The 'Sutton Slip' refers to the tendency to:",
-        "options": ["Forget the patient's name", "Focus only on the obvious diagnosis", "Order excessive diagnostics", "Avoid making any diagnosis"],
+        "options": ["Forget names", "Focus only on the obvious diagnosis", "Order excessive diagnostics", "Avoid making a diagnosis"],
         "answer": "Focus only on the obvious diagnosis",
         "source": "cite: 4954, 4968"
       }
@@ -190,14 +190,14 @@ export const NursePractitionerW2Questions = {
     "SOAP & Health Records": [
       {
         "id": 1026,
-        "question": "Patient-reported symptoms and history obtained using OLD CARTS are documented in which section of a clinical note?",
+        "question": "Patient-reported symptoms using OLD CARTS are documented in which section of a note?",
         "options": ["Subjective", "Objective", "Assessment", "Plan"],
         "answer": "Subjective",
         "source": "cite: 1759, 2154, 3514"
       },
       {
         "id": 1027,
-        "question": "Physical examination findings, such as 'HR 92 bpm' or 'Lungs clear to auscultation,' belong in which section?",
+        "question": "Physical examination findings, like 'HR 92 bpm', belong in which section?",
         "options": ["Subjective", "Objective", "Assessment", "Plan"],
         "answer": "Objective",
         "source": "cite: 1760, 2155, 3515"
@@ -212,32 +212,16 @@ export const NursePractitionerW2Questions = {
       {
         "id": 1029,
         "question": "The 'Assessment' section of a SOAP note should only include:",
-        "options": ["The patient's verbatim words", "Every chronic condition the patient has", "Problems addressed during that specific visit", "A list of every test ever performed"],
-        "answer": "Problems addressed during that specific visit",
+        "options": ["Patient's words", "Every chronic condition", "Problems addressed during specific visit", "Every test performed"],
+        "answer": "Problems addressed during specific visit",
         "source": "cite: 3461, 3540"
       },
       {
         "id": 1030,
-        "question": "In the APSO note format, which two sections are placed at the very beginning of the document?",
+        "question": "In the APSO note format, which two sections are placed at the beginning?",
         "options": ["Subjective and Objective", "Objective and Plan", "Assessment and Plan", "Subjective and Assessment"],
         "answer": "Assessment and Plan",
         "source": "cite: 2158, 2220"
-      }
-    ],
-    "Health Maintenance": [
-      {
-        "id": 1031,
-        "question": "What is the primary goal of the 'Medical Home' model according to the AAP?",
-        "options": ["To provide the cheapest care possible", "To provide accessible, continuous, and family-centered care", "To require all visits be done in the patient's actual house", "To eliminate the need for pediatricians"],
-        "answer": "To provide accessible, continuous, and family-centered care",
-        "source": "cite: 207, 1286, 3110"
-      },
-      {
-        "id": 1032,
-        "question": "What does a 'negative finding' in documentation mean?",
-        "options": ["The patient was uncooperative", "The results were bad", "An expected symptom or finding was absent", "The provider forgot to check the system"],
-        "answer": "An expected symptom or finding was absent",
-        "source": "cite: 2447, 3514"
       }
     ]
   },
@@ -252,7 +236,7 @@ export const NursePractitionerW2Questions = {
       },
       {
         "id": 1034,
-        "question": "Which percussion sound is low-pitched and hollow, typically heard over healthy lung tissue?",
+        "question": "Which percussion sound is hollow, heard over healthy lung tissue?",
         "options": ["Flatness", "Dullness", "Resonance", "Tympany"],
         "answer": "Resonance",
         "source": "cite: 801, 1122, 2504"
@@ -260,37 +244,30 @@ export const NursePractitionerW2Questions = {
       {
         "id": 1035,
         "question": "The bell of the stethoscope is best suited for hearing which types of sounds?",
-        "options": ["High-pitched lung sounds", "Normal bowel sounds", "Low-pitched murmurs and extra heart sounds", "Friction rubs"],
-        "answer": "Low-pitched murmurs and extra heart sounds",
+        "options": ["High-pitched lung sounds", "Normal bowel sounds", "Low-pitched murmurs", "Friction rubs"],
+        "answer": "Low-pitched murmurs",
         "source": "cite: 691, 1715, 2897"
       },
       {
         "id": 1036,
-        "question": "Which physical position involves the patient lying on their back with feet in stirrups for a pelvic exam?",
+        "question": "Which position involves the patient on their back with feet in stirrups?",
         "options": ["Sims", "Lithotomy", "Fowler's", "Trendelenburg"],
         "answer": "Lithotomy",
         "source": "cite: 1701, 2473"
       },
       {
         "id": 1037,
-        "question": "When assessing for costovertebral angle (CVA) tenderness, which percussion technique is used?",
+        "question": "When assessing for costovertebral angle tenderness, which technique is used?",
         "options": ["Direct percussion", "Indirect percussion", "Blunt percussion", "Pneumatic percussion"],
         "answer": "Blunt percussion",
         "source": "cite: 678, 1117, 2889"
-      },
-      {
-        "id": 1038,
-        "question": "Which percussion sound is very loud, booming, and often found in young lungs or with air trapping?",
-        "options": ["Resonance", "Hyperresonance", "Dullness", "Flatness"],
-        "answer": "Hyperresonance",
-        "source": "cite: 801, 1127, 2502"
       }
     ],
     "Vital Signs Logic": [
       {
         "id": 1039,
-        "question": "A blood pressure cuff that is too small for a patient's arm will cause what type of measurement error?",
-        "options": ["Falsely low reading", "Falsely high reading", "Accurate systolic, but low diastolic", "No error if the patient is quiet"],
+        "question": "A blood pressure cuff that is too small for a patient's arm causes what error?",
+        "options": ["Falsely low reading", "Falsely high reading", "Accurate systolic, low diastolic", "No error"],
         "answer": "Falsely high reading",
         "source": "cite: 479, 745, 2571"
       },
@@ -303,7 +280,7 @@ export const NursePractitionerW2Questions = {
       },
       {
         "id": 1041,
-        "question": "What triggers the fever response (pyrexia) by affecting the hypothalamus?",
+        "question": "What triggers the fever response by affecting the hypothalamus?",
         "options": ["Antibiotics", "Endogenous pyrogens and prostaglandins", "Hypovolemia", "Decreased metabolic rate"],
         "answer": "Endogenous pyrogens and prostaglandins",
         "source": "cite: 1779, 1909, 1937"
@@ -314,29 +291,6 @@ export const NursePractitionerW2Questions = {
         "options": ["Pulse Oximetry", "Height", "Pain Assessment", "Head Circumference"],
         "answer": "Pain Assessment",
         "source": "cite: 1776, 1906, 2093"
-      },
-      {
-        "id": 1043,
-        "question": "What is the expected pulse oximetry range for a healthy individual?",
-        "options": ["≥ 90%", "≥ 92%", "≥ 95%", "98% to 100% only"],
-        "answer": "≥ 95%",
-        "source": "cite: 1783, 1913"
-      }
-    ],
-    "Geriatrics & Disabilities": [
-      {
-        "id": 1044,
-        "question": "Which tool is specifically designed to assess pain in patients with dementia who cannot verbally report it?",
-        "options": ["FACES scale", "Numeric scale (0-10)", "PAINAD scale", "OLD CARTS scale"],
-        "answer": "PAINAD scale",
-        "source": "cite: 1788, 1921"
-      },
-      {
-        "id": 1045,
-        "question": "A patient with mobility impairment requires a transfer where they can bear some weight. Which transfer is best?",
-        "options": ["Two-person transfer", "Cradle transfer", "Pivot transfer", "Lifting hoist"],
-        "answer": "Pivot transfer",
-        "source": "cite: 1718, 2523"
       }
     ]
   }

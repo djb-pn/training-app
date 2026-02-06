@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AppConfig, HDS_Modules } from './AppConfiguration';
 import { HearthDesignSpecialistQuestions } from './data/HDS_Sales_Questions';
-import { NursePractitionerW2Questions } from './data/NP_W2_Questions'; // New track import
+import { NursePractitionerW2Questions } from './data/NP_W2_Questions'; // Ensure path is correct
 import QuestionEngine from './components/QuestionEngine';
 
 function App() {
@@ -85,7 +85,7 @@ function App() {
               style={{ background: 'white', padding: '40px', borderRadius: '12px', borderLeft: `12px solid ${BRAND.maroon}`, cursor: 'pointer', boxShadow: '0 4px 15px rgba(0,0,0,0.05)', textAlign: 'center' }}>
               <span style={{ fontSize: '4rem' }}>{area.icon}</span>
               <h2 style={{ color: BRAND.gray }}>{area.title}</h2>
-              <button style={{ background: BRAND.maroon, color: BRAND.white, border: 'none', padding: '12px 25px', borderRadius: '6px' }}>EXPLORE</button>
+              <button style={{ background: BRAND.maroon, color: 'white', border: 'none', padding: '12px 25px', borderRadius: '6px' }}>EXPLORE</button>
             </div>
           ))}
         </div>
@@ -94,13 +94,16 @@ function App() {
   }
 
   if (!view.module) {
-    const items = !view.section ? view.path.sections : HDS_Modules;
+    const items = view.path.id === "NP_PATH" 
+      ? Object.keys(NursePractitionerW2Questions).map(key => ({ id: key, title: key }))
+      : HDS_Modules;
+
     return (
       <div style={{ maxWidth: '800px', margin: '0 auto', padding: '40px 20px' }}>
         <button onClick={() => view.section ? setView({...view, section: null}) : setView({...view, path: null})} style={{ color: BRAND.maroon, background: 'none', border: 'none', fontWeight: 'bold', marginBottom: '30px', cursor: 'pointer' }}>← Back</button>
-        <h1 style={{ color: BRAND.gray }}>{!view.section ? view.path.title : view.section.title}</h1>
+        <h1 style={{ color: BRAND.gray }}>{view.path.title}</h1>
         {items.map(item => (
-          <div key={item.id} onClick={() => !view.section ? setView({...view, section: item}) : setView({...view, module: item})} 
+          <div key={item.id} onClick={() => setView({...view, module: item})} 
             style={{ background: 'white', padding: '30px', marginBottom: '15px', borderRadius: '10px', display: 'flex', justifyContent: 'space-between', borderLeft: `6px solid ${BRAND.maroon}`, cursor: 'pointer', boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }}>
             <h3 style={{ margin: 0, color: BRAND.gray }}>{item.title}</h3>
             <span style={{ color: BRAND.maroon, fontWeight: 'bold' }}>START →</span>
