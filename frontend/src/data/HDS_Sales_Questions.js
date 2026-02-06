@@ -1,5 +1,5 @@
 // --- HDS BATCH 1: Chapters 1-4 (Sales, Client, & Product Knowledge) ---
-export const HearthDesignSpecialistQuestions = {
+
 const hds_batch_1 = [
   {
     id: "HDS-001",
