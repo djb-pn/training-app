@@ -3,6 +3,7 @@ import { AppConfig, HDS_Modules } from './AppConfiguration';
 import { HearthDesignSpecialistQuestions } from './data/HDS_Sales_Questions';
 import { NursePractitionerW2Questions } from './data/NP_W2_Questions';
 import { NursePractitionerW3Questions } from './data/NP_W3_Questions';
+import { NursePractitionerW4Questions } from './data/NP_W4_Questions';
 import QuestionEngine from './components/QuestionEngine';
 
 // ---------------------------------------------------------------------------
@@ -276,7 +277,7 @@ function App() {
   // =========================================================================
   if (view.section && !view.module) {
     const isNP = view.path.id === "NP_PATH";
-    const npQuestions = view.section.id === "NP_W3" ? NursePractitionerW3Questions : NursePractitionerW2Questions;
+    const npQuestions = view.section.id === "NP_W4" ? NursePractitionerW4Questions : view.section.id === "NP_W3" ? NursePractitionerW3Questions : NursePractitionerW2Questions;
     const questionsObj = isNP ? npQuestions : HearthDesignSpecialistQuestions;
     const items = isNP 
       ? Object.keys(npQuestions).map(key => ({ id: key, title: key }))
@@ -327,7 +328,7 @@ function App() {
   // QUESTION ENGINE
   // =========================================================================
   const isNP = view.path.id === "NP_PATH";
-  const npQuestions = view.section.id === "NP_W3" ? NursePractitionerW3Questions : NursePractitionerW2Questions;
+  const npQuestions = view.section.id === "NP_W4" ? NursePractitionerW4Questions : view.section.id === "NP_W3" ? NursePractitionerW3Questions : NursePractitionerW2Questions;
   const questionsObj = isNP ? npQuestions : HearthDesignSpecialistQuestions;
 
   return (
