@@ -382,5 +382,95 @@ export const Chiocca12Flashcards = [
     id: "CHI12-070",
     question: "Why is hair distribution important when assessing children?",
     answer: "Hair distribution helps estimate sexual maturity. Precocious or delayed appearance of body hair may indicate hormonal disturbances."
+  },
+
+  // --- Additional: Anatomy & Development ---
+
+  {
+    id: "CHI12-071",
+    question: "What does the integumentary system consist of?",
+    answer: "The skin, hair, and nails."
+  },
+  {
+    id: "CHI12-072",
+    question: "How does the dermis supply the epidermis?",
+    answer: "The dermis is richly vascular and supplies the avascular epidermis with nutrition."
+  },
+  {
+    id: "CHI12-073",
+    question: "When does the skin achieve adult thickness and characteristics?",
+    answer: "During late adolescence. Skin development is a dynamic process that begins at 11 weeks' gestation and continues changing through childhood."
+  },
+  {
+    id: "CHI12-074",
+    question: "What is the relationship between the subcutaneous tissue and the dermis?",
+    answer: "The subcutaneous tissue contains the blood supply and nerves of the autonomic nervous system that support the dermis."
+  },
+
+  // --- Additional: Developmental Considerations ---
+
+  {
+    id: "CHI12-075",
+    question: "What causes dry hair in a child besides nutrition and hypothyroidism?",
+    answer: "Frequent swimming or shampooing, and application of chemical hair products."
+  },
+  {
+    id: "CHI12-076",
+    question: "What is seborrhea, and what are its common forms across age groups?",
+    answer: "Seborrhea is a condition of oily scales caused by sebaceous gland activity. It presents as cradle cap in infants and dandruff in adolescents."
+  },
+
+  // --- Additional: Physical Examination Preparation ---
+
+  {
+    id: "CHI12-077",
+    question: "How should a child be prepared before a skin examination?",
+    answer: "The child should remove all clothes and wear an age-appropriate patient gown. Preserve modesty, especially in sensitive areas (e.g., tinea cruris examination)."
+  },
+  {
+    id: "CHI12-078",
+    question: "Why must the provider be familiar with correct dermatologic terminology?",
+    answer: "Accurate terminology is essential to describe and diagnose dermatologic conditions in children. Terms describe lesion type, distribution, and pattern."
+  },
+
+  // --- Additional: Inspection Details ---
+
+  {
+    id: "CHI12-079",
+    question: "What is the difference between distribution and pattern when describing skin findings?",
+    answer: "Distribution refers to the location of the findings on the body. Pattern refers to the anatomic arrangement of the lesions (e.g., linear, grouped, annular)."
+  },
+  {
+    id: "CHI12-080",
+    question: "What should be inspected regarding birthmarks and vascular lesions?",
+    answer: "Inspect for the presence and type of birthmarks (congenital nevi) and vascular lesions. Document their size, location, and characteristics."
+  },
+  {
+    id: "CHI12-081",
+    question: "What is the significance of petechiae or purpuric lesions in children?",
+    answer: "Petechiae (pinpoint, non-blanching red/purple spots) and purpura may indicate bleeding disorders, vasculitis, or serious infections such as meningococcemia. They should always be noted during inspection."
+  },
+  {
+    id: "CHI12-082",
+    question: "Why should the skin be inspected for needle or 'track' marks?",
+    answer: "Track marks may indicate intravenous drug use. This is an important finding during skin inspection, particularly in adolescents."
+  },
+  {
+    id: "CHI12-083",
+    question: "What is acanthosis nigricans, and why is it significant?",
+    answer: "Dark, thickened, velvety patches of skin typically in the neck, axillae, or groin. It is associated with insulin resistance, type 2 diabetes, and obesity."
+  },
+
+  // --- Additional: Scalp & Hair Palpation ---
+
+  {
+    id: "CHI12-084",
+    question: "What is the proper procedure for palpating the scalp?",
+    answer: "While wearing gloves, palpate the hair and scalp, noting the texture of the hair and assessing for the presence of lesions."
+  },
+  {
+    id: "CHI12-085",
+    question: "What should be inspected when separating and lifting the hair?",
+    answer: "Inspect the hair shafts and the scalp underneath for lesions, nits, seborrhea, and areas of broken hair."
   }
 ];

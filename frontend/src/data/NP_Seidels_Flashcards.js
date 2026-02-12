@@ -304,5 +304,215 @@ export const SeidelsFlashcards = [
     id: "SEI-058",
     question: "What are orthostatic vital signs used for?",
     answer: "To detect orthostatic hypotension \u2014 measure BP and pulse lying, sitting, and standing. A drop in systolic \u226520 mmHg or diastolic \u226510 mmHg, or pulse increase \u226520 bpm is positive."
+  },
+
+  // --- Chapter 3 Additions: Infection Control & Techniques ---
+
+  {
+    id: "SEI-059",
+    question: "What are key safe injection practices?",
+    answer: "Aseptic technique, single-use needles and syringes, and proper disposal protocols. Never reuse needles or syringes."
+  },
+  {
+    id: "SEI-060",
+    question: "What are general precautions for infection control during physical exams?",
+    answer: "Clean equipment between uses and follow CDC guidelines to prevent healthcare-associated infections."
+  },
+  {
+    id: "SEI-061",
+    question: "Describe the recumbent (lateral) position and its use.",
+    answer: "Patient lies on side (right or left); used for heart/lung sounds and hip exams. Use pillows for support. Right lateral is used for rectal exams in males."
+  },
+  {
+    id: "SEI-062",
+    question: "What is the standard sequence of examination techniques?",
+    answer: "Inspection \u2192 Palpation \u2192 Percussion \u2192 Auscultation. Exception: for the abdomen, auscultate before percussion and palpation to avoid altering bowel sounds."
+  },
+  {
+    id: "SEI-063",
+    question: "Why is inspection always the first examination technique?",
+    answer: "It provides visual assessment without altering findings. Note symmetry, color, size, and movement. Use good lighting and compare bilateral sides."
+  },
+  {
+    id: "SEI-064",
+    question: "What does palpation assess?",
+    answer: "Texture, temperature, moisture, organ size/location, and masses. Use finger pads for superficial masses and the dorsum of the hand for temperature."
+  },
+  {
+    id: "SEI-065",
+    question: "What hand part is best for assessing superficial masses?",
+    answer: "Finger pads."
+  },
+  {
+    id: "SEI-066",
+    question: "What is percussion used for?",
+    answer: "Tapping body surfaces to assess underlying density and resonance of tissues and organs."
+  },
+  {
+    id: "SEI-067",
+    question: "List the five percussion sounds and what each indicates.",
+    answer: "Resonance (normal lung), hyperresonance (emphysema/pneumothorax), tympany (gas-filled structures), dullness (fluid or solid mass), flatness (muscle or bone)."
+  },
+  {
+    id: "SEI-068",
+    question: "What is auscultation?",
+    answer: "Listening with a stethoscope to assess body sounds. Classify sounds by intensity, pitch, duration, and quality. Requires a quiet room and bare skin contact."
+  },
+  {
+    id: "SEI-069",
+    question: "What is the diaphragm of the stethoscope used for?",
+    answer: "High-pitched sounds: lung sounds, bowel sounds, and normal heart sounds."
+  },
+  {
+    id: "SEI-070",
+    question: "What is the bell of the stethoscope used for?",
+    answer: "Low-pitched sounds: heart murmurs and extra heart sounds (S3, S4)."
+  },
+  {
+    id: "SEI-071",
+    question: "What general principles apply when examining patients with disabilities?",
+    answer: "ADA compliance, patient-centered care (ask the patient their preferences), and interprofessional collaboration (e.g., physical therapist for transfers)."
+  },
+
+  // --- Chapter 3 Additions: Equipment ---
+
+  {
+    id: "SEI-072",
+    question: "What is a stadiometer used for?",
+    answer: "Accurate height measurement for BMI calculation."
+  },
+  {
+    id: "SEI-073",
+    question: "What are the five sites for temperature measurement?",
+    answer: "Oral, axillary, tympanic, rectal, and temporal. Consider age and site-specific norms when interpreting."
+  },
+  {
+    id: "SEI-074",
+    question: "What is an ophthalmoscope used for?",
+    answer: "Fundus (retinal) examination; adjust the light setting based on pupil size."
+  },
+  {
+    id: "SEI-075",
+    question: "What tools are used to assess visual acuity?",
+    answer: "Snellen chart for distance vision and near-vision cards for close-up acuity."
+  },
+  {
+    id: "SEI-076",
+    question: "What is an otoscope used for?",
+    answer: "Examining the ear canal and tympanic membrane. Specula sizes vary by patient age."
+  },
+  {
+    id: "SEI-077",
+    question: "What does a tape measure assess in physical examination?",
+    answer: "Circumferences such as head circumference and waist circumference. Use a flexible tape measure."
+  },
+  {
+    id: "SEI-078",
+    question: "What is a penlight used for in physical examination?",
+    answer: "Assessing pupil response (direct and consensual) and inspecting the oral cavity and throat."
+  },
+  {
+    id: "SEI-079",
+    question: "How should examination equipment be maintained?",
+    answer: "Clean after each use and store properly to avoid damage. Calibrate regularly for accuracy."
+  },
+
+  // --- Chapter 4 Additions: Clinical Reasoning Steps ---
+
+  {
+    id: "SEI-080",
+    question: "What is the first step in the differential diagnosis process?",
+    answer: "Subjective data collection: chief concern (CC) in the patient's words, history of present illness (HPI using OLD CARTS), and past medical history (PMH)."
+  },
+  {
+    id: "SEI-081",
+    question: "What happens after subjective data is collected (Step 2)?",
+    answer: "Analyze the subjective data to form initial hypotheses; note pertinent positives and pertinent negatives."
+  },
+  {
+    id: "SEI-082",
+    question: "What is Step 3 in the diagnostic process (objective data)?",
+    answer: "Perform a focused physical exam guided by the history, starting with general appearance and vital signs."
+  },
+  {
+    id: "SEI-083",
+    question: "Why is the physical exam focused rather than comprehensive?",
+    answer: "It is guided by subjective data. For example, a patient with fever and nasal symptoms warrants focused ENT, lung, and abdominal exams rather than a full head-to-toe exam."
+  },
+  {
+    id: "SEI-084",
+    question: "When is further diagnostic data (labs/imaging) needed?",
+    answer: "When the history and PE do not confirm a diagnosis. Be judicious \u2014 balance the need for accurate diagnosis with cost and risk to the patient."
+  },
+  {
+    id: "SEI-085",
+    question: "When might a diagnosis unfold over time?",
+    answer: "When the initial encounter does not provide enough data; some diagnoses require multiple encounters and ongoing data collection."
+  },
+  {
+    id: "SEI-086",
+    question: "What errors are common with intuitive (Type 1) reasoning in novice clinicians?",
+    answer: "Novices lack extensive pattern libraries, making them prone to cognitive biases and premature closure. Analytical reasoning should supplement intuition in early practice."
+  },
+  {
+    id: "SEI-087",
+    question: "How should evaluation and management be prioritized?",
+    answer: "Based on urgency using the ABCs: Airway, Breathing, Circulation. Use clinical algorithms for common problems."
+  },
+
+  // --- Chapter 5 Additions: Health Record ---
+
+  {
+    id: "SEI-088",
+    question: "What are the purposes of the health record?",
+    answer: "Identify patient problems, form diagnoses, plan care, monitor treatment response, serve as a legal record, and facilitate interprofessional communication."
+  },
+  {
+    id: "SEI-089",
+    question: "Is health record information admissible in court?",
+    answer: "Yes \u2014 all health record information is court-admissible, making accurate and objective documentation essential."
+  },
+  {
+    id: "SEI-090",
+    question: "What is subjective data in the SOAP note?",
+    answer: "Information the patient tells you verbatim \u2014 their history, symptoms, and concerns. Include photos or illustrations if they help document findings."
+  },
+  {
+    id: "SEI-091",
+    question: "What is objective data in the SOAP note?",
+    answer: "Measurable data obtained from inspection, palpation, auscultation, and percussion \u2014 including PE findings, vital signs, and lab results."
+  },
+  {
+    id: "SEI-092",
+    question: "What is included in the Plan section of a SOAP note?",
+    answer: "Diagnostic tests ordered, therapeutic treatments, patient education, referrals, and reevaluation dates."
+  },
+  {
+    id: "SEI-093",
+    question: "What identifying information begins the health record?",
+    answer: "Patient problems, allergies, current medications, and immunizations list."
+  },
+
+  // --- Chapter 6 Additions: Vital Signs & Pain ---
+
+  {
+    id: "SEI-094",
+    question: "List all vital sign components.",
+    answer: "Temperature, pulse, respirations, blood pressure, pulse oximetry, and height/weight/BMI."
+  },
+  {
+    id: "SEI-095",
+    question: "What should be assessed when measuring the pulse?",
+    answer: "Rate (60\u2013100 bpm in adults), rhythm (regular vs. irregular), and amplitude. Use the apical pulse for irregular rhythms."
+  },
+  {
+    id: "SEI-096",
+    question: "Why should pain be reassessed after intervention?",
+    answer: "To evaluate the effectiveness of the treatment and adjust the management plan as needed."
+  },
+  {
+    id: "SEI-097",
+    question: "How do nutrition and ethnicity affect growth and vital signs?",
+    answer: "Nutrition influences pubertal changes and vital sign baselines. Ethnic variations can affect puberty onset timing, which in turn affects expected vital sign norms."
   }
 ];
