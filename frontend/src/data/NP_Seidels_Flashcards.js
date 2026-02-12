@@ -514,5 +514,43 @@ export const SeidelsFlashcards = [
     id: "SEI-097",
     question: "How do nutrition and ethnicity affect growth and vital signs?",
     answer: "Nutrition influences pubertal changes and vital sign baselines. Ethnic variations can affect puberty onset timing, which in turn affects expected vital sign norms."
+  },
+
+  // --- Previously merged/skipped cards restored as separate items ---
+
+  {
+    id: "SEI-098",
+    question: "What tips ensure accurate auscultation?",
+    answer: "Quiet room, bare skin (not through clothing), and proper stethoscope placement."
+  },
+  {
+    id: "SEI-099",
+    question: "What special equipment aids patients with mobility issues?",
+    answer: "Wheelchair scales and adjustable exam tables."
+  },
+  {
+    id: "SEI-100",
+    question: "What is the purpose of a height/weight scale?",
+    answer: "For BMI calculation; use a stadiometer for accurate height measurement."
+  },
+  {
+    id: "SEI-101",
+    question: "What is a stethoscope/Doppler used for?",
+    answer: "A stethoscope is used for auscultation of body sounds. A Doppler ultrasound is used to detect weak or difficult-to-palpate pulses."
+  },
+  {
+    id: "SEI-102",
+    question: "What is Step 5 in the diagnostic process (refining hypotheses)?",
+    answer: "Refinement of hypotheses with further data such as labs and imaging, ordered judiciously to balance diagnostic accuracy with cost and risk."
+  },
+  {
+    id: "SEI-103",
+    question: "What must be done after the history and physical exam?",
+    answer: "Organize, synthesize, and record data; include problems, diagnostics, and plan."
+  },
+  {
+    id: "SEI-104",
+    question: "What mnemonic is used for present illness in the health record?",
+    answer: "OLDARTS — similar to OLD CARTS but includes associated symptoms: Onset, Location, Duration, Aggravating/Relieving, Associated symptoms, Timing, Severity."
   }
 ];
