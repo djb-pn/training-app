@@ -4,7 +4,9 @@ import { HearthDesignSpecialistQuestions } from './data/HDS_Sales_Questions';
 import { NursePractitionerW2Questions } from './data/NP_W2_Questions';
 import { NursePractitionerW3Questions } from './data/NP_W3_Questions';
 import { NursePractitionerW4Questions } from './data/NP_W4_Questions';
+import { Ch8PediatricFlashcards } from './data/NP_Ch8_Flashcards';
 import QuestionEngine from './components/QuestionEngine';
+import FlashcardEngine from './components/FlashcardEngine';
 
 // ---------------------------------------------------------------------------
 // HELPER: Compute per-module stats from raw progress rows
@@ -269,6 +271,20 @@ function App() {
           </div>
         ))}
       </div>
+    );
+  }
+
+  // =========================================================================
+  // FLASHCARD DECK (standalone sections with type: "flashcard")
+  // =========================================================================
+  if (view.section?.type === 'flashcard') {
+    return (
+      <FlashcardEngine
+        cards={Ch8PediatricFlashcards}
+        title={view.section.title}
+        onBack={() => setView({ ...view, section: null })}
+        accent={BRAND.maroon}
+      />
     );
   }
 
