@@ -5,8 +5,17 @@ import { NursePractitionerW2Questions } from './data/NP_W2_Questions';
 import { NursePractitionerW3Questions } from './data/NP_W3_Questions';
 import { NursePractitionerW4Questions } from './data/NP_W4_Questions';
 import { Ch8PediatricFlashcards } from './data/NP_Ch8_Flashcards';
+import { SeidelsFlashcards } from './data/NP_Seidels_Flashcards';
+import { Chiocca12Flashcards } from './data/NP_Chiocca12_Flashcards';
 import QuestionEngine from './components/QuestionEngine';
 import FlashcardEngine from './components/FlashcardEngine';
+
+// Map flashcard section IDs to their card arrays
+const FLASHCARD_DECKS = {
+  NP_CH8_FC: Ch8PediatricFlashcards,
+  NP_SEIDELS_FC: SeidelsFlashcards,
+  NP_CHIOCCA12_FC: Chiocca12Flashcards,
+};
 
 // ---------------------------------------------------------------------------
 // HELPER: Compute per-module stats from raw progress rows
@@ -280,7 +289,7 @@ function App() {
   if (view.section?.type === 'flashcard') {
     return (
       <FlashcardEngine
-        cards={Ch8PediatricFlashcards}
+        cards={FLASHCARD_DECKS[view.section.id] || []}
         title={view.section.title}
         onBack={() => setView({ ...view, section: null })}
         accent={BRAND.maroon}

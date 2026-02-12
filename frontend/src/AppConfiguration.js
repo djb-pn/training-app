@@ -25,7 +25,9 @@ export const AppConfig = {
         { id: "NP_W2", title: "Week 2" },
         { id: "NP_W3", title: "Week 3" },
         { id: "NP_W4", title: "Week 4" },
-        { id: "NP_CH8_FC", title: "Ch. 8-9: Pediatric Assessment & Wellness", type: "flashcard" }
+        { id: "NP_CH8_FC", title: "Ch. 8-9: Pediatric Assessment & Wellness", type: "flashcard" },
+        { id: "NP_SEIDELS_FC", title: "Seidel's Ch. 3-6: Exam Techniques & Clinical Reasoning", type: "flashcard" },
+        { id: "NP_CHIOCCA12_FC", title: "Chiocca Ch. 12: Integumentary System", type: "flashcard" }
       ]
     }
   ]
