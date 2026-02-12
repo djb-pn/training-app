@@ -472,5 +472,28 @@ export const Chiocca12Flashcards = [
     id: "CHI12-085",
     question: "What should be inspected when separating and lifting the hair?",
     answer: "Inspect the hair shafts and the scalp underneath for lesions, nits, seborrhea, and areas of broken hair."
+  },
+
+  // --- Previously missed knowledge points ---
+
+  {
+    id: "CHI12-086",
+    question: "Besides assessing skin properties, what else does palpation aid in evaluating?",
+    answer: "Palpation also aids in assessing elevated skin lesions."
+  },
+  {
+    id: "CHI12-087",
+    question: "What is the normal finding when palpating a child's hair?",
+    answer: "Hair should feel soft or silky."
+  },
+  {
+    id: "CHI12-088",
+    question: "How does the immaturity of other body systems affect the integumentary system in children?",
+    answer: "The immaturity of multiple body systems in children can affect integumentary manifestations of illness (e.g., immature immune, circulatory, and endocrine systems influence how skin conditions present)."
+  },
+  {
+    id: "CHI12-089",
+    question: "Why is an accurate and complete history critical in integumentary assessment?",
+    answer: "An accurate and complete history is critical to help guide the physical examination of the integumentary system and reach an accurate diagnosis."
   }
 ];
