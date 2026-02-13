@@ -11,11 +11,11 @@ export const AppConfig = {
       title: "Hearth Specialists",
       icon: "🔥",
       sections: [
-        { id: "HDS_SALES", title: "Hearth Design Specialist (Sales)" },
-        { id: "HDS_FC", title: "HDS Study Guide (Flashcards)", type: "flashcard" },
-        { id: "CORE_KNOW", title: "Core Knowledge (Everyone)" },
-        { id: "GAS_SPEC", title: "Gas Specialist" },
-        { id: "WOOD_SPEC", title: "Wood Specialist" }
+        { id: "HDS_FC", title: "Hearth Design Specialist (Sales) - Flashcards", type: "flashcard" },
+        { id: "HDS_SALES", title: "Hearth Design Specialist (Sales) - Practice Test" },
+        { id: "CORE_KNOW", title: "Core Knowledge (Everyone) (Coming Soon)" },
+        { id: "GAS_SPEC", title: "Gas Specialist (Coming Soon)" },
+        { id: "WOOD_SPEC", title: "Wood Specialist (Coming Soon)" }
       ]
     },
     {

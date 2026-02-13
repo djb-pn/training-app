@@ -17,11 +17,11 @@
       "id": "HEARTH_PATH",
       "title": "Hearth Specialists",
       "sub_menus": [
-        { "id": "CORE_KNOW", "title": "Core Knowledge (Everyone)" },
-        { "id": "HDS_SALES", "title": "Hearth Design Specialist (Sales)" },
-        { "id": "HDS_FC", "title": "HDS Study Guide (Flashcards)" },
-        { "id": "GAS_SPEC", "title": "Gas Specialist" },
-        { "id": "WOOD_SPEC", "title": "Wood Specialist" }
+        { "id": "HDS_FC", "title": "Hearth Design Specialist (Sales) - Flashcards" },
+        { "id": "HDS_SALES", "title": "Hearth Design Specialist (Sales) - Practice Test" },
+        { "id": "CORE_KNOW", "title": "Core Knowledge (Everyone) (Coming Soon)" },
+        { "id": "GAS_SPEC", "title": "Gas Specialist (Coming Soon)" },
+        { "id": "WOOD_SPEC", "title": "Wood Specialist (Coming Soon)" }
       ]
     }
   ]
