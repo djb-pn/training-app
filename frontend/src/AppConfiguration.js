@@ -11,6 +11,13 @@ export const AppConfig = {
       title: "Hearth Specialists",
       icon: "🔥",
       sections: [
+        { id: "HDS_LINKS", title: "Training Links", type: "links", links: [
+          { label: "Hearth Online Training", url: "https://hpbef.learn.trakstar.com/" },
+          { label: "Napoleon Education (NED)", url: "https://ned.napoleon.com/#/public-dashboard" },
+          { label: "Napoleon Technical YouTube", url: "https://www.youtube.com/@wolfsteeltechnical" },
+          { label: "DRU (Maxitrol Valve Systems) Troubleshooter", url: "https://www.drufire.com/en-gb/dru-troubleshooter" },
+          { label: "FireParts.com (Manuals, Troubleshooting Guides)", url: "https://www.fire-parts.com/" }
+        ]},
         { id: "HDS_FC", title: "Hearth Design Specialist (Sales) - Flashcards", type: "flashcard" },
         { id: "HDS_SALES", title: "Hearth Design Specialist (Sales) - Practice Test" },
         { id: "CORE_KNOW", title: "Core Knowledge (Everyone) (Coming Soon)" },

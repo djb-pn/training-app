@@ -300,6 +300,28 @@ function App() {
   }
 
   // =========================================================================
+  // TRAINING LINKS (standalone sections with type: "links")
+  // =========================================================================
+  if (view.section?.type === 'links') {
+    return (
+      <div style={{ maxWidth: '800px', margin: '0 auto', padding: '40px 20px' }}>
+        <button onClick={() => setView({ ...view, section: null })}
+          style={{ color: BRAND.maroon, background: 'none', border: 'none', fontWeight: 'bold', marginBottom: '30px', cursor: 'pointer' }}>← Back</button>
+        <h1 style={{ color: BRAND.gray }}>{view.section.title}</h1>
+        {view.section.links.map((link, i) => (
+          <a key={i} href={link.url} target="_blank" rel="noopener noreferrer"
+            style={{ display: 'block', background: 'white', padding: '25px', marginBottom: '15px', borderRadius: '10px', borderLeft: `6px solid ${BRAND.maroon}`, textDecoration: 'none', boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <h3 style={{ margin: 0, color: BRAND.gray }}>{link.label}</h3>
+              <span style={{ color: BRAND.maroon, fontWeight: 'bold', fontSize: '0.85rem' }}>OPEN ↗</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    );
+  }
+
+  // =========================================================================
   // MODULE SELECTION (with progress bars)
   // =========================================================================
   if (view.section && !view.module) {
