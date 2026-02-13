@@ -7,6 +7,7 @@ import { NursePractitionerW4Questions } from './data/NP_W4_Questions';
 import { Ch8PediatricFlashcards } from './data/NP_Ch8_Flashcards';
 import { SeidelsFlashcards } from './data/NP_Seidels_Flashcards';
 import { Chiocca12Flashcards } from './data/NP_Chiocca12_Flashcards';
+import { HDSFlashcards } from './data/HDS_Flashcards';
 import QuestionEngine from './components/QuestionEngine';
 import FlashcardEngine from './components/FlashcardEngine';
 
@@ -15,6 +16,7 @@ const FLASHCARD_DECKS = {
   NP_CH8_FC: Ch8PediatricFlashcards,
   NP_SEIDELS_FC: SeidelsFlashcards,
   NP_CHIOCCA12_FC: Chiocca12Flashcards,
+  HDS_FC: HDSFlashcards,
 };
 
 // ---------------------------------------------------------------------------

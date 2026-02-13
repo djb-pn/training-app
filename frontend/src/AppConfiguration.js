@@ -12,6 +12,7 @@ export const AppConfig = {
       icon: "🔥",
       sections: [
         { id: "HDS_SALES", title: "Hearth Design Specialist (Sales)" },
+        { id: "HDS_FC", title: "HDS Study Guide (Flashcards)", type: "flashcard" },
         { id: "CORE_KNOW", title: "Core Knowledge (Everyone)" },
         { id: "GAS_SPEC", title: "Gas Specialist" },
         { id: "WOOD_SPEC", title: "Wood Specialist" }
@@ -38,11 +39,11 @@ export const AppConfig = {
  * to the specific modules found in HDS_Sales_Questions.js
  *
  * 5-Module Structure:
- *   M1 = Intro, Ch 1-2  (9 questions)
- *   M2 = Ch 3-5          (36 questions)
- *   M3 = Ch 6-9          (35 questions)
- *   M4 = Ch 10-13        (45 questions)
- *   M5 = Ch 14-16        (45 questions)
+ *   M1 = Intro, Ch 1-2  (18 questions)
+ *   M2 = Ch 3-5          (47 questions)
+ *   M3 = Ch 6-9          (49 questions)
+ *   M4 = Ch 10-13        (66 questions)
+ *   M5 = Ch 14-16        (70 questions)
  */
 export const HDS_Modules = [
   { id: "M1", title: "Module 1: Role & Sales Strategy" },
