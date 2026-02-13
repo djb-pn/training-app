@@ -18,6 +18,7 @@ export const AppConfig = {
           { label: "DRU (Maxitrol Valve Systems) Troubleshooter", url: "https://www.drufire.com/en-gb/dru-troubleshooter" },
           { label: "FireParts.com (Manuals, Troubleshooting Guides)", url: "https://www.fire-parts.com/" }
         ]},
+        { id: "HDS_MAP", title: "Hearth Design Specialist Learning Map", type: "learningmap" },
         { id: "HDS_FC", title: "Hearth Design Specialist (Sales) - Flashcards", type: "flashcard" },
         { id: "HDS_SALES", title: "Hearth Design Specialist (Sales) - Practice Test" },
         { id: "CORE_KNOW", title: "Core Knowledge (Everyone) (Coming Soon)" },

@@ -10,6 +10,7 @@ import { Chiocca12Flashcards } from './data/NP_Chiocca12_Flashcards';
 import { HDSFlashcards } from './data/HDS_Flashcards';
 import QuestionEngine from './components/QuestionEngine';
 import FlashcardEngine from './components/FlashcardEngine';
+import LearningMap from './components/LearningMap';
 
 // Map flashcard section IDs to their card arrays
 const FLASHCARD_DECKS = {
@@ -318,6 +319,18 @@ function App() {
           </a>
         ))}
       </div>
+    );
+  }
+
+  // =========================================================================
+  // LEARNING MAP (standalone sections with type: "learningmap")
+  // =========================================================================
+  if (view.section?.type === 'learningmap') {
+    return (
+      <LearningMap
+        onBack={() => setView({ ...view, section: null })}
+        brand={BRAND}
+      />
     );
   }
 
